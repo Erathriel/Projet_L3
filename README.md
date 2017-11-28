@@ -19,7 +19,7 @@ utiliser box2D (ou le moteur physique inclut dans gf)
 
 prendre les graphismes de http://kenney.nl/
 
-installer gf sur les ordi du lycée:
+installer gf sur les ordi de la fac:
 _DCMAKE_INSTALL_DIR = ~/local
 export PATH = $PATH:~/local/bin,~/local/games
 export LD_LIBRARY_PATH = $LD_LIBRARY_PATH:~/local/lib
@@ -29,3 +29,7 @@ commenter le code
 rapport technique
 
 soutenance (20 à 30 minutes)
+
+# Note :
+
+- Ne mettez pas de maj et d'espace dans les noms de repertoire pour un parcours de l'arborescence le plus simple possible svp
