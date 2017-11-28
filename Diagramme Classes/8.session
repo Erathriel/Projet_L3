@@ -1,0 +1,17 @@
+window_sizes 1920 1017 450 1465 865 104
+
+diagrams
+  active  classdiagram_ref 128008 // diag
+    1172 692 100 A4 0 0
+end
+show_stereotypes
+selected class_ref 128264 // Protagoniste
+open
+  class_ref 128008 // Objet
+  class_ref 128136 // Tuile
+  class_ref 128264 // Protagoniste
+  class_ref 128392 // Niveau
+  class_ref 128520 // Camera
+  class_ref 128648 // SortieNiv
+end
+end
