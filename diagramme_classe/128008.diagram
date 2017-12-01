@@ -20,7 +20,7 @@ classcanvas 128520 class_ref 128520 // Camera
   classdiagramsettings member_max_width 0 end
   xyzwh 659 215 2000 127 89
 end
-classcanvas 128904 class_ref 128648 // LevelExit
+classcanvas 128904 class_ref 128648 // levelExit
   classdiagramsettings member_max_width 0 end
   xyzwh 474 332 2000 115 65
 end

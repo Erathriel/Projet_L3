@@ -5,13 +5,13 @@ diagrams
     1172 692 100 A4 0 0
 end
 show_stereotypes
-selected class_ref 128648 // LevelExit
+selected class_ref 128648 // SortieNiv
 open
-  class_ref 128008 // Object
-  class_ref 128136 // Tile
-  class_ref 128264 // Protagonist
-  class_ref 128392 // Level
+  class_ref 128008 // Objet
+  class_ref 128136 // Tuile
+  class_ref 128264 // Protagoniste
+  class_ref 128392 // Niveau
   class_ref 128520 // Camera
-  class_ref 128648 // LevelExit
+  class_ref 128648 // SortieNiv
 end
 end
