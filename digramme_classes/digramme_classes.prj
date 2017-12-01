@@ -1,6 +1,6 @@
 format 215
-"Diagramme Classes"
-  revision 2
+"digramme_classes"
+  revision 4
   modified_by 8 "Evan"
 
 
@@ -317,7 +317,7 @@ ${inlines}
       end
     end
 
-    class 128648 "levelExit"
+    class 128648 "LevelExit"
       visibility package 
       cpp_decl "${comment}${template}class ${name}${inherit} {
 ${members}};
