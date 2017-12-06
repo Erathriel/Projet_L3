@@ -1,1 +1,0 @@
-/usr/bin/c++   -Wall -Wextra -std=c++11 -O2 -g   CMakeFiles/gf_info.dir/gf_info.cc.o  -o gf_info -rdynamic ../../library/libgf0.so.0.6.0 -lSDL2 -lpthread -lboost_filesystem -lboost_system -lfreetype -lz -lgcc_s -lgcc -Wl,-rpath,/home/evan/gf/build/library: 
