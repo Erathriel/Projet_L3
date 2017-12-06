@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/evan/Documents/Projet_L3/jeu/library/tools/gfdev_source_file.cc
+cstdarg
+-
+cstdlib
+-
+cstdio
+-
+

@@ -1,0 +1,1 @@
+/usr/bin/c++   -Wall -Wextra -std=c++11 -O2 -g   CMakeFiles/doc_full_template.dir/doc_full_template.cc.o  -o doc_full_template -rdynamic ../../library/libgf0.so.0.6.0 -lSDL2 -lpthread -lboost_filesystem -lboost_system -lfreetype -lz -lgcc_s -lgcc -Wl,-rpath,/home/evan/gf/build/library 
