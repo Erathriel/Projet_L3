@@ -1,5 +1,5 @@
-window_sizes 1920 1017 450 1465 867 104
-
+window_sizes 1855 951 450 1399 795 104
+cleanlooks_style
 diagrams
   active  classdiagram_ref 128008 // diag
     1172 692 100 A4 0 0
@@ -7,7 +7,6 @@ end
 show_stereotypes
 selected class_ref 128008 // Object
 open
-  class_ref 128392 // Level
-  class_ref 128520 // Camera
+  class_ref 128008 // Object
 end
 end

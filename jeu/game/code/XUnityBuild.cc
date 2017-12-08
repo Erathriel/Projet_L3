@@ -24,5 +24,5 @@
  * See: https://en.wikipedia.org/wiki/Single_Compilation_Unit
  */
 
-#include "local/Board.cc"
-#include "local/Grid.cc"
+#include "local/Level.cc"
+#include "local/Object.cc"

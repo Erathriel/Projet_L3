@@ -169,86 +169,86 @@ game/fast:
 	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/build
 .PHONY : game/fast
 
-code/gf_2048.o: code/gf_2048.cc.o
+code/local/Level.o: code/local/Level.cc.o
 
-.PHONY : code/gf_2048.o
-
-# target to build an object file
-code/gf_2048.cc.o:
-	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/gf_2048.cc.o
-.PHONY : code/gf_2048.cc.o
-
-code/gf_2048.i: code/gf_2048.cc.i
-
-.PHONY : code/gf_2048.i
-
-# target to preprocess a source file
-code/gf_2048.cc.i:
-	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/gf_2048.cc.i
-.PHONY : code/gf_2048.cc.i
-
-code/gf_2048.s: code/gf_2048.cc.s
-
-.PHONY : code/gf_2048.s
-
-# target to generate assembly for a file
-code/gf_2048.cc.s:
-	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/gf_2048.cc.s
-.PHONY : code/gf_2048.cc.s
-
-code/local/Board.o: code/local/Board.cc.o
-
-.PHONY : code/local/Board.o
+.PHONY : code/local/Level.o
 
 # target to build an object file
-code/local/Board.cc.o:
-	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/Board.cc.o
-.PHONY : code/local/Board.cc.o
+code/local/Level.cc.o:
+	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/Level.cc.o
+.PHONY : code/local/Level.cc.o
 
-code/local/Board.i: code/local/Board.cc.i
+code/local/Level.i: code/local/Level.cc.i
 
-.PHONY : code/local/Board.i
+.PHONY : code/local/Level.i
 
 # target to preprocess a source file
-code/local/Board.cc.i:
-	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/Board.cc.i
-.PHONY : code/local/Board.cc.i
+code/local/Level.cc.i:
+	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/Level.cc.i
+.PHONY : code/local/Level.cc.i
 
-code/local/Board.s: code/local/Board.cc.s
+code/local/Level.s: code/local/Level.cc.s
 
-.PHONY : code/local/Board.s
+.PHONY : code/local/Level.s
 
 # target to generate assembly for a file
-code/local/Board.cc.s:
-	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/Board.cc.s
-.PHONY : code/local/Board.cc.s
+code/local/Level.cc.s:
+	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/Level.cc.s
+.PHONY : code/local/Level.cc.s
 
-code/local/Grid.o: code/local/Grid.cc.o
+code/local/Object.o: code/local/Object.cc.o
 
-.PHONY : code/local/Grid.o
+.PHONY : code/local/Object.o
 
 # target to build an object file
-code/local/Grid.cc.o:
-	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/Grid.cc.o
-.PHONY : code/local/Grid.cc.o
+code/local/Object.cc.o:
+	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/Object.cc.o
+.PHONY : code/local/Object.cc.o
 
-code/local/Grid.i: code/local/Grid.cc.i
+code/local/Object.i: code/local/Object.cc.i
 
-.PHONY : code/local/Grid.i
+.PHONY : code/local/Object.i
 
 # target to preprocess a source file
-code/local/Grid.cc.i:
-	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/Grid.cc.i
-.PHONY : code/local/Grid.cc.i
+code/local/Object.cc.i:
+	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/Object.cc.i
+.PHONY : code/local/Object.cc.i
 
-code/local/Grid.s: code/local/Grid.cc.s
+code/local/Object.s: code/local/Object.cc.s
 
-.PHONY : code/local/Grid.s
+.PHONY : code/local/Object.s
 
 # target to generate assembly for a file
-code/local/Grid.cc.s:
-	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/Grid.cc.s
-.PHONY : code/local/Grid.cc.s
+code/local/Object.cc.s:
+	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/Object.cc.s
+.PHONY : code/local/Object.cc.s
+
+code/main.o: code/main.cc.o
+
+.PHONY : code/main.o
+
+# target to build an object file
+code/main.cc.o:
+	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/main.cc.o
+.PHONY : code/main.cc.o
+
+code/main.i: code/main.cc.i
+
+.PHONY : code/main.i
+
+# target to preprocess a source file
+code/main.cc.i:
+	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/main.cc.i
+.PHONY : code/main.cc.i
+
+code/main.s: code/main.cc.s
+
+.PHONY : code/main.s
+
+# target to generate assembly for a file
+code/main.cc.s:
+	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/main.cc.s
+.PHONY : code/main.cc.s
 
 # Help Target
 help:
@@ -263,15 +263,15 @@ help:
 	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... edit_cache"
-	@echo "... code/gf_2048.o"
-	@echo "... code/gf_2048.i"
-	@echo "... code/gf_2048.s"
-	@echo "... code/local/Board.o"
-	@echo "... code/local/Board.i"
-	@echo "... code/local/Board.s"
-	@echo "... code/local/Grid.o"
-	@echo "... code/local/Grid.i"
-	@echo "... code/local/Grid.s"
+	@echo "... code/local/Level.o"
+	@echo "... code/local/Level.i"
+	@echo "... code/local/Level.s"
+	@echo "... code/local/Object.o"
+	@echo "... code/local/Object.i"
+	@echo "... code/local/Object.s"
+	@echo "... code/main.o"
+	@echo "... code/main.i"
+	@echo "... code/main.s"
 .PHONY : help
 
 

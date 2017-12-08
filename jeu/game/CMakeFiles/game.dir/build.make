@@ -57,90 +57,90 @@ include game/CMakeFiles/game.dir/progress.make
 # Include the compile flags for this target's objects.
 include game/CMakeFiles/game.dir/flags.make
 
-game/CMakeFiles/game.dir/code/gf_2048.cc.o: game/CMakeFiles/game.dir/flags.make
-game/CMakeFiles/game.dir/code/gf_2048.cc.o: game/code/gf_2048.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/evan/Documents/Projet_L3/jeu/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object game/CMakeFiles/game.dir/code/gf_2048.cc.o"
-	cd /home/evan/Documents/Projet_L3/jeu/game && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/code/gf_2048.cc.o -c /home/evan/Documents/Projet_L3/jeu/game/code/gf_2048.cc
+game/CMakeFiles/game.dir/code/main.cc.o: game/CMakeFiles/game.dir/flags.make
+game/CMakeFiles/game.dir/code/main.cc.o: game/code/main.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/evan/Documents/Projet_L3/jeu/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object game/CMakeFiles/game.dir/code/main.cc.o"
+	cd /home/evan/Documents/Projet_L3/jeu/game && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/code/main.cc.o -c /home/evan/Documents/Projet_L3/jeu/game/code/main.cc
 
-game/CMakeFiles/game.dir/code/gf_2048.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/code/gf_2048.cc.i"
-	cd /home/evan/Documents/Projet_L3/jeu/game && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/evan/Documents/Projet_L3/jeu/game/code/gf_2048.cc > CMakeFiles/game.dir/code/gf_2048.cc.i
+game/CMakeFiles/game.dir/code/main.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/code/main.cc.i"
+	cd /home/evan/Documents/Projet_L3/jeu/game && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/evan/Documents/Projet_L3/jeu/game/code/main.cc > CMakeFiles/game.dir/code/main.cc.i
 
-game/CMakeFiles/game.dir/code/gf_2048.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/code/gf_2048.cc.s"
-	cd /home/evan/Documents/Projet_L3/jeu/game && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/evan/Documents/Projet_L3/jeu/game/code/gf_2048.cc -o CMakeFiles/game.dir/code/gf_2048.cc.s
+game/CMakeFiles/game.dir/code/main.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/code/main.cc.s"
+	cd /home/evan/Documents/Projet_L3/jeu/game && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/evan/Documents/Projet_L3/jeu/game/code/main.cc -o CMakeFiles/game.dir/code/main.cc.s
 
-game/CMakeFiles/game.dir/code/gf_2048.cc.o.requires:
+game/CMakeFiles/game.dir/code/main.cc.o.requires:
 
-.PHONY : game/CMakeFiles/game.dir/code/gf_2048.cc.o.requires
+.PHONY : game/CMakeFiles/game.dir/code/main.cc.o.requires
 
-game/CMakeFiles/game.dir/code/gf_2048.cc.o.provides: game/CMakeFiles/game.dir/code/gf_2048.cc.o.requires
-	$(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/gf_2048.cc.o.provides.build
-.PHONY : game/CMakeFiles/game.dir/code/gf_2048.cc.o.provides
+game/CMakeFiles/game.dir/code/main.cc.o.provides: game/CMakeFiles/game.dir/code/main.cc.o.requires
+	$(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/main.cc.o.provides.build
+.PHONY : game/CMakeFiles/game.dir/code/main.cc.o.provides
 
-game/CMakeFiles/game.dir/code/gf_2048.cc.o.provides.build: game/CMakeFiles/game.dir/code/gf_2048.cc.o
-
-
-game/CMakeFiles/game.dir/code/local/Board.cc.o: game/CMakeFiles/game.dir/flags.make
-game/CMakeFiles/game.dir/code/local/Board.cc.o: game/code/local/Board.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/evan/Documents/Projet_L3/jeu/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object game/CMakeFiles/game.dir/code/local/Board.cc.o"
-	cd /home/evan/Documents/Projet_L3/jeu/game && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/code/local/Board.cc.o -c /home/evan/Documents/Projet_L3/jeu/game/code/local/Board.cc
-
-game/CMakeFiles/game.dir/code/local/Board.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/code/local/Board.cc.i"
-	cd /home/evan/Documents/Projet_L3/jeu/game && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/evan/Documents/Projet_L3/jeu/game/code/local/Board.cc > CMakeFiles/game.dir/code/local/Board.cc.i
-
-game/CMakeFiles/game.dir/code/local/Board.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/code/local/Board.cc.s"
-	cd /home/evan/Documents/Projet_L3/jeu/game && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/evan/Documents/Projet_L3/jeu/game/code/local/Board.cc -o CMakeFiles/game.dir/code/local/Board.cc.s
-
-game/CMakeFiles/game.dir/code/local/Board.cc.o.requires:
-
-.PHONY : game/CMakeFiles/game.dir/code/local/Board.cc.o.requires
-
-game/CMakeFiles/game.dir/code/local/Board.cc.o.provides: game/CMakeFiles/game.dir/code/local/Board.cc.o.requires
-	$(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/Board.cc.o.provides.build
-.PHONY : game/CMakeFiles/game.dir/code/local/Board.cc.o.provides
-
-game/CMakeFiles/game.dir/code/local/Board.cc.o.provides.build: game/CMakeFiles/game.dir/code/local/Board.cc.o
+game/CMakeFiles/game.dir/code/main.cc.o.provides.build: game/CMakeFiles/game.dir/code/main.cc.o
 
 
-game/CMakeFiles/game.dir/code/local/Grid.cc.o: game/CMakeFiles/game.dir/flags.make
-game/CMakeFiles/game.dir/code/local/Grid.cc.o: game/code/local/Grid.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/evan/Documents/Projet_L3/jeu/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object game/CMakeFiles/game.dir/code/local/Grid.cc.o"
-	cd /home/evan/Documents/Projet_L3/jeu/game && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/code/local/Grid.cc.o -c /home/evan/Documents/Projet_L3/jeu/game/code/local/Grid.cc
+game/CMakeFiles/game.dir/code/local/Level.cc.o: game/CMakeFiles/game.dir/flags.make
+game/CMakeFiles/game.dir/code/local/Level.cc.o: game/code/local/Level.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/evan/Documents/Projet_L3/jeu/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object game/CMakeFiles/game.dir/code/local/Level.cc.o"
+	cd /home/evan/Documents/Projet_L3/jeu/game && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/code/local/Level.cc.o -c /home/evan/Documents/Projet_L3/jeu/game/code/local/Level.cc
 
-game/CMakeFiles/game.dir/code/local/Grid.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/code/local/Grid.cc.i"
-	cd /home/evan/Documents/Projet_L3/jeu/game && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/evan/Documents/Projet_L3/jeu/game/code/local/Grid.cc > CMakeFiles/game.dir/code/local/Grid.cc.i
+game/CMakeFiles/game.dir/code/local/Level.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/code/local/Level.cc.i"
+	cd /home/evan/Documents/Projet_L3/jeu/game && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/evan/Documents/Projet_L3/jeu/game/code/local/Level.cc > CMakeFiles/game.dir/code/local/Level.cc.i
 
-game/CMakeFiles/game.dir/code/local/Grid.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/code/local/Grid.cc.s"
-	cd /home/evan/Documents/Projet_L3/jeu/game && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/evan/Documents/Projet_L3/jeu/game/code/local/Grid.cc -o CMakeFiles/game.dir/code/local/Grid.cc.s
+game/CMakeFiles/game.dir/code/local/Level.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/code/local/Level.cc.s"
+	cd /home/evan/Documents/Projet_L3/jeu/game && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/evan/Documents/Projet_L3/jeu/game/code/local/Level.cc -o CMakeFiles/game.dir/code/local/Level.cc.s
 
-game/CMakeFiles/game.dir/code/local/Grid.cc.o.requires:
+game/CMakeFiles/game.dir/code/local/Level.cc.o.requires:
 
-.PHONY : game/CMakeFiles/game.dir/code/local/Grid.cc.o.requires
+.PHONY : game/CMakeFiles/game.dir/code/local/Level.cc.o.requires
 
-game/CMakeFiles/game.dir/code/local/Grid.cc.o.provides: game/CMakeFiles/game.dir/code/local/Grid.cc.o.requires
-	$(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/Grid.cc.o.provides.build
-.PHONY : game/CMakeFiles/game.dir/code/local/Grid.cc.o.provides
+game/CMakeFiles/game.dir/code/local/Level.cc.o.provides: game/CMakeFiles/game.dir/code/local/Level.cc.o.requires
+	$(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/Level.cc.o.provides.build
+.PHONY : game/CMakeFiles/game.dir/code/local/Level.cc.o.provides
 
-game/CMakeFiles/game.dir/code/local/Grid.cc.o.provides.build: game/CMakeFiles/game.dir/code/local/Grid.cc.o
+game/CMakeFiles/game.dir/code/local/Level.cc.o.provides.build: game/CMakeFiles/game.dir/code/local/Level.cc.o
+
+
+game/CMakeFiles/game.dir/code/local/Object.cc.o: game/CMakeFiles/game.dir/flags.make
+game/CMakeFiles/game.dir/code/local/Object.cc.o: game/code/local/Object.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/evan/Documents/Projet_L3/jeu/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object game/CMakeFiles/game.dir/code/local/Object.cc.o"
+	cd /home/evan/Documents/Projet_L3/jeu/game && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/code/local/Object.cc.o -c /home/evan/Documents/Projet_L3/jeu/game/code/local/Object.cc
+
+game/CMakeFiles/game.dir/code/local/Object.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/code/local/Object.cc.i"
+	cd /home/evan/Documents/Projet_L3/jeu/game && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/evan/Documents/Projet_L3/jeu/game/code/local/Object.cc > CMakeFiles/game.dir/code/local/Object.cc.i
+
+game/CMakeFiles/game.dir/code/local/Object.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/code/local/Object.cc.s"
+	cd /home/evan/Documents/Projet_L3/jeu/game && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/evan/Documents/Projet_L3/jeu/game/code/local/Object.cc -o CMakeFiles/game.dir/code/local/Object.cc.s
+
+game/CMakeFiles/game.dir/code/local/Object.cc.o.requires:
+
+.PHONY : game/CMakeFiles/game.dir/code/local/Object.cc.o.requires
+
+game/CMakeFiles/game.dir/code/local/Object.cc.o.provides: game/CMakeFiles/game.dir/code/local/Object.cc.o.requires
+	$(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/Object.cc.o.provides.build
+.PHONY : game/CMakeFiles/game.dir/code/local/Object.cc.o.provides
+
+game/CMakeFiles/game.dir/code/local/Object.cc.o.provides.build: game/CMakeFiles/game.dir/code/local/Object.cc.o
 
 
 # Object files for target game
 game_OBJECTS = \
-"CMakeFiles/game.dir/code/gf_2048.cc.o" \
-"CMakeFiles/game.dir/code/local/Board.cc.o" \
-"CMakeFiles/game.dir/code/local/Grid.cc.o"
+"CMakeFiles/game.dir/code/main.cc.o" \
+"CMakeFiles/game.dir/code/local/Level.cc.o" \
+"CMakeFiles/game.dir/code/local/Object.cc.o"
 
 # External object files for target game
 game_EXTERNAL_OBJECTS =
 
-game/game: game/CMakeFiles/game.dir/code/gf_2048.cc.o
-game/game: game/CMakeFiles/game.dir/code/local/Board.cc.o
-game/game: game/CMakeFiles/game.dir/code/local/Grid.cc.o
+game/game: game/CMakeFiles/game.dir/code/main.cc.o
+game/game: game/CMakeFiles/game.dir/code/local/Level.cc.o
+game/game: game/CMakeFiles/game.dir/code/local/Object.cc.o
 game/game: game/CMakeFiles/game.dir/build.make
 game/game: library/libgf0.so.0.6.0
 game/game: /usr/lib/x86_64-linux-gnu/libSDL2.so
@@ -157,9 +157,9 @@ game/CMakeFiles/game.dir/build: game/game
 
 .PHONY : game/CMakeFiles/game.dir/build
 
-game/CMakeFiles/game.dir/requires: game/CMakeFiles/game.dir/code/gf_2048.cc.o.requires
-game/CMakeFiles/game.dir/requires: game/CMakeFiles/game.dir/code/local/Board.cc.o.requires
-game/CMakeFiles/game.dir/requires: game/CMakeFiles/game.dir/code/local/Grid.cc.o.requires
+game/CMakeFiles/game.dir/requires: game/CMakeFiles/game.dir/code/main.cc.o.requires
+game/CMakeFiles/game.dir/requires: game/CMakeFiles/game.dir/code/local/Level.cc.o.requires
+game/CMakeFiles/game.dir/requires: game/CMakeFiles/game.dir/code/local/Object.cc.o.requires
 
 .PHONY : game/CMakeFiles/game.dir/requires
 

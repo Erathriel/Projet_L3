@@ -2,6 +2,20 @@
 
 http://gamedevframework.github.io/v0.6.0/build_and_install.html
 
+# Modifier/ajouter du code au projet
+
+Tout ce qui est à modifier est dans /jeu/game normalement.
+Le main est dans code/, les autres .cc dans code/local.
+Lorsque vous ajoutez un .cc, il faut:
+-modifier le CMakeLists.txt du dossier game et ajouter les .cc là où le commentaire l'indique
+-modifier code/XUnityBuild.cc et y ajouter les .cc également
+
+Pour compiler, mettez-vous dans /jeu, faire
+cmake .
+puis
+make
+L'exécutable "game" sera dans /jeu/game.
+
 # Petit rappel pour les commandes linux git
 
 - git pull : mettre à jour sa version local

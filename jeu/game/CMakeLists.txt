@@ -1,17 +1,17 @@
 
-set(GAME_DATA_DIR "${CMAKE_INSTALL_PREFIX}/share/game/jeu")
+set(GAME_DATA_DIR "${CMAKE_CURRENT_SOURCE_DIR}/data")
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/code/config.h.in ${CMAKE_CURRENT_BINARY_DIR}/config.h @ONLY)
 
 if (GF_SINGLE_COMPILTATION_UNIT)
   add_executable(game
-    code/gf_2048.cc
+    code/main.cc
     code/XUnityBuild.cc
   )
 else()
   add_executable(game
-    code/gf_2048.cc
-    code/local/Board.cc
-    code/local/Grid.cc
+    code/main.cc
+    code/local/Level.cc     #ajouter tout les .cc ici
+    code/local/Object.cc
   )
 endif()
 

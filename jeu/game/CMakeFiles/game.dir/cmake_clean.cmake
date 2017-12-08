@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/game.dir/code/gf_2048.cc.o"
-  "CMakeFiles/game.dir/code/local/Board.cc.o"
-  "CMakeFiles/game.dir/code/local/Grid.cc.o"
+  "CMakeFiles/game.dir/code/main.cc.o"
+  "CMakeFiles/game.dir/code/local/Level.cc.o"
+  "CMakeFiles/game.dir/code/local/Object.cc.o"
   "game.pdb"
   "game"
 )
