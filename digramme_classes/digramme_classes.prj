@@ -1,14 +1,15 @@
 format 215
 "digramme_classes"
-  revision 4
+  revision 5
   modified_by 8 "Evan"
+  cpp_root_dir "C:\\Users\\Evan\\Documents\\Nouveau dossier\\"
 
 
   
   // class settings
   default_attribute_visibility private default_relation_visibility private default_operation_visibility public
   
-  classdiagramsettings draw_all_relations yes hide_attributes no hide_operations no hide_getset_operations no show_members_full_definition no show_members_visibility no show_members_stereotype no show_members_context no show_members_multiplicity no show_members_initialization no show_attribute_modifiers no member_max_width 127 show_parameter_dir yes show_parameter_name yes package_name_in_tab no class_drawing_mode natural drawing_language uml show_context_mode no auto_label_position yes show_relation_modifiers no show_relation_visibility no show_infonote no shadow yes gradient none show_stereotype_properties no end
+  classdiagramsettings draw_all_relations yes hide_attributes no hide_operations no hide_getset_operations no show_members_full_definition yes show_members_visibility yes show_members_stereotype yes show_members_context no show_members_multiplicity no show_members_initialization no show_attribute_modifiers no member_max_width 127 show_parameter_dir yes show_parameter_name yes package_name_in_tab no class_drawing_mode natural drawing_language uml show_context_mode no auto_label_position yes show_relation_modifiers no show_relation_visibility no show_infonote no shadow yes gradient none show_stereotype_properties no end
   
   usecasediagramsettings package_name_in_tab no show_context_mode no auto_label_position yes draw_all_relations yes class_drawing_mode actor shadow yes gradient none show_stereotype_properties no end
   
@@ -72,7 +73,7 @@ format 215
       mysql_decl ""
       
       attribute 128264 "position"
-	private explicit_type ""
+	private explicit_type "float"
 	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
 "
 	java_decl ""
@@ -84,21 +85,21 @@ format 215
       end
 
       operation 128264 "display"
-	public explicit_return_type ""
+	preserve_cpp_body_indent public explicit_return_type "void"
 	nparams 0
 	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
 "
 	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
   ${body}}
 "
-	
-	
-	
+	preserve_java_body_indent 
+	preserve_php_body_indent 
+	preserve_python_body_indent 
 	
       end
 
       attribute 128776 "appearence"
-	private explicit_type ""
+	private explicit_type "any"
 	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
 "
 	java_decl ""
@@ -111,6 +112,7 @@ format 215
 
       classrelation 128392 // <composition>
 	relation 128392 *---
+	  stereotype "list"
 	  a role_name "" private
 	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
 "
@@ -133,7 +135,7 @@ format 215
       mysql_decl ""
       
       attribute 128136 "type"
-	private explicit_type ""
+	private explicit_type "int"
 	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
 "
 	java_decl ""
@@ -146,6 +148,7 @@ format 215
 
       classrelation 128008 // <dependency>
 	relation 128008 -_->
+	  stereotype "instantiate"
 	  a public
 	    cpp default "#include in source"
 	    classrelation_ref 128008 // <dependency>
@@ -164,21 +167,21 @@ format 215
       mysql_decl ""
       
       operation 128392 "controle"
-	public explicit_return_type ""
+	preserve_cpp_body_indent public explicit_return_type "void"
 	nparams 0
 	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
 "
 	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
   ${body}}
 "
-	
-	
-	
+	preserve_java_body_indent 
+	preserve_php_body_indent 
+	preserve_python_body_indent 
 	
       end
 
       attribute 128392 "currentAction"
-	private explicit_type ""
+	private explicit_type "int"
 	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
 "
 	java_decl ""
@@ -191,6 +194,7 @@ format 215
 
       classrelation 128136 // <dependency>
 	relation 128136 -_->
+	  stereotype "instantiate"
 	  a public
 	    cpp default "#include in source"
 	    classrelation_ref 128136 // <dependency>
@@ -198,16 +202,16 @@ format 215
       end
 
       operation 128520 "collisions"
-	public explicit_return_type ""
+	preserve_cpp_body_indent public explicit_return_type "void"
 	nparams 0
 	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
 "
 	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
   ${body}}
 "
-	
-	
-	
+	preserve_java_body_indent 
+	preserve_php_body_indent 
+	preserve_python_body_indent 
 	
       end
 
@@ -239,17 +243,17 @@ format 215
       mysql_decl ""
       
       operation 128008 "generate"
-	public explicit_return_type ""
+	preserve_cpp_body_indent public explicit_return_type "void"
 	nparams 0
 	
-	
-	
-	
+	preserve_java_body_indent 
+	preserve_php_body_indent 
+	preserve_python_body_indent 
 	
       end
 
       attribute 128520 "number"
-	private explicit_type ""
+	private explicit_type "int"
 	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
 "
 	java_decl ""
@@ -279,7 +283,7 @@ ${inlines}
       mysql_decl ""
       
       attribute 128648 "position"
-	private explicit_type ""
+	private explicit_type "float"
 	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
 "
 	java_decl ""
@@ -292,6 +296,7 @@ ${inlines}
 
       classrelation 128904 // <composition>
 	relation 128648 *---
+	  stereotype "set"
 	  a role_name "" private
 	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
 "
@@ -303,16 +308,16 @@ ${inlines}
       end
 
       operation 128776 "followProtag"
-	public explicit_return_type ""
+	preserve_cpp_body_indent public explicit_return_type "void"
 	nparams 0
 	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
 "
 	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
   ${body}}
 "
-	
-	
-	
+	preserve_java_body_indent 
+	preserve_php_body_indent 
+	preserve_python_body_indent 
 	
       end
     end
@@ -332,6 +337,7 @@ ${inlines}
       
       classrelation 128264 // <dependency>
 	relation 128264 -_->
+	  stereotype "instantiate"
 	  a public
 	    cpp default "#include in source"
 	    classrelation_ref 128264 // <dependency>
@@ -339,18 +345,99 @@ ${inlines}
       end
 
       operation 128648 "endLevel"
-	public explicit_return_type ""
+	preserve_cpp_body_indent public explicit_return_type "void"
 	nparams 0
 	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
 "
 	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
   ${body}}
 "
-	
-	
-	
+	preserve_java_body_indent 
+	preserve_php_body_indent 
+	preserve_python_body_indent 
 	
       end
     end
   end
+
+  deploymentview 128008 "depl"
+    //deployment diagram settings
+    deploymentdiagramsettings
+     end
+    artifact 128136 "Object"
+      stereotype "source"
+      associated_elems
+	class_ref 128008 // Object
+      end
+    end
+
+    artifact 128264 "Tile"
+      stereotype "source"
+      associated_elems
+	class_ref 128136 // Tile
+      end
+    end
+
+    artifact 128392 "Protagonist"
+      stereotype "source"
+      associated_elems
+	class_ref 128264 // Protagonist
+      end
+    end
+
+    artifact 128008 "Level"
+      stereotype "source"
+      associated_elems
+	class_ref 128392 // Level
+      end
+    end
+
+    artifact 128520 "Camera"
+      stereotype "source"
+      cpp_h "#ifndef ${NAMESPACE}_${NAME}_H
+#define ${NAMESPACE}_${NAME}_H
+
+${comment}
+${includes}
+${declarations}
+${namespace_start}
+${definition}
+${namespace_end}
+#endif
+"
+      cpp_src "${comment}
+${includes}
+${namespace_start}
+${members}
+${namespace_end}"
+      associated_elems
+	class_ref 128520 // Camera
+      end
+    end
+
+    artifact 128648 "LevelExit"
+      stereotype "source"
+      cpp_h "#ifndef ${NAMESPACE}_${NAME}_H
+#define ${NAMESPACE}_${NAME}_H
+
+${comment}
+${includes}
+${declarations}
+${namespace_start}
+${definition}
+${namespace_end}
+#endif
+"
+      cpp_src "${comment}
+${includes}
+${namespace_start}
+${members}
+${namespace_end}"
+      associated_elems
+	class_ref 128648 // LevelExit
+      end
+    end
+  end
+preserve_bodies
+
 end

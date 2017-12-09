@@ -14,7 +14,7 @@ classcanvas 128264 class_ref 128264 // Protagonist
 end
 classcanvas 128392 class_ref 128392 // Level
   classdiagramsettings member_max_width 0 end
-  xyzwh 188 74 2000 139 87
+  xyzwh 189 78 2000 139 87
 end
 classcanvas 128520 class_ref 128520 // Camera
   classdiagramsettings member_max_width 0 end
@@ -25,27 +25,27 @@ classcanvas 128904 class_ref 128648 // LevelExit
   xyzwh 474 332 2000 115 65
 end
 relationcanvas 128648 relation_ref 128008 // <dependency>
-  from ref 128136 z 2001 to ref 128008
+  from ref 128136 z 2001 stereotype "<<instantiate>>" xyz 374 219 3000 to ref 128008
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 128776 relation_ref 128136 // <dependency>
-  from ref 128264 z 2001 to ref 128008
+  from ref 128264 z 2001 stereotype "<<instantiate>>" xyz 369 289 3000 to ref 128008
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 129032 relation_ref 128264 // <dependency>
-  from ref 128904 z 2001 to ref 128008
-  no_role_a no_role_b
-  no_multiplicity_a no_multiplicity_b
-end
-relationcanvas 129160 relation_ref 128392 // <composition>
-  from ref 128008 z 2001 to ref 128392
+  from ref 128904 z 2001 stereotype "<<instantiate>>" xyz 369 343 3000 to ref 128008
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 129416 relation_ref 128648 // <composition>
-  from ref 128520 z 2001 to ref 128264
+  from ref 128520 z 2001 stereotype "<<set>>" xyz 610 260 3000 to ref 128264
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129544 relation_ref 128392 // <composition>
+  from ref 128008 z 2001 stereotype "<<list>>" xyz 240 208 3000 to ref 128392
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
