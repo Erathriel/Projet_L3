@@ -5,7 +5,8 @@ diagrams
     1171 688 100 A4 0 0
 end
 show_stereotypes
-selected class_ref 128392 // Level
+selected 
+  package_ref 129 // digramme_classes
 open
   classview_ref 128008 // diag
   deploymentview_ref 128008 // depl
