@@ -9,37 +9,201 @@ game/CMakeFiles/game.dir/code/local/Level.cpp.o
  /home/evan/Documents/Projet_L3/jeu/game/code/local/Level.cpp
  /home/evan/Documents/Projet_L3/jeu/game/code/local/Level.h
  /home/evan/Documents/Projet_L3/jeu/game/code/local/Object.h
+ include/gf/Anchor.h
+ include/gf/ArrayRef.h
+ include/gf/Blend.h
+ include/gf/Circ.h
+ include/gf/Color.h
+ include/gf/Drawable.h
+ include/gf/Image.h
+ include/gf/Math.h
+ include/gf/Matrix.h
+ include/gf/Path.h
+ include/gf/Polygon.h
+ include/gf/Portability.h
+ include/gf/PrimitiveType.h
+ include/gf/Range.h
+ include/gf/Rect.h
+ include/gf/Region.h
+ include/gf/RenderStates.h
+ include/gf/RenderTarget.h
+ include/gf/RenderWindow.h
+ include/gf/Shader.h
+ include/gf/Shape.h
+ include/gf/Shapes.h
+ include/gf/StringRef.h
+ include/gf/Texture.h
+ include/gf/Transform.h
+ include/gf/Transformable.h
+ include/gf/Vector.h
+ include/gf/VectorOps.h
+ include/gf/Vertex.h
+ include/gf/VertexArray.h
+ include/gf/VertexBuffer.h
+ include/gf/View.h
 game/CMakeFiles/game.dir/code/local/LevelExit.cpp.o
  /home/evan/Documents/Projet_L3/jeu/game/code/local/Level.h
  /home/evan/Documents/Projet_L3/jeu/game/code/local/LevelExit.cpp
  /home/evan/Documents/Projet_L3/jeu/game/code/local/LevelExit.h
  /home/evan/Documents/Projet_L3/jeu/game/code/local/Object.h
+ include/gf/Anchor.h
+ include/gf/ArrayRef.h
+ include/gf/Blend.h
+ include/gf/Circ.h
+ include/gf/Color.h
+ include/gf/Drawable.h
+ include/gf/Image.h
+ include/gf/Math.h
+ include/gf/Matrix.h
+ include/gf/Path.h
+ include/gf/Polygon.h
+ include/gf/Portability.h
+ include/gf/PrimitiveType.h
+ include/gf/Range.h
+ include/gf/Rect.h
+ include/gf/Region.h
+ include/gf/RenderStates.h
+ include/gf/RenderTarget.h
+ include/gf/RenderWindow.h
+ include/gf/Shader.h
+ include/gf/Shape.h
+ include/gf/Shapes.h
+ include/gf/StringRef.h
+ include/gf/Texture.h
+ include/gf/Transform.h
+ include/gf/Transformable.h
+ include/gf/Vector.h
+ include/gf/VectorOps.h
+ include/gf/Vertex.h
+ include/gf/VertexArray.h
+ include/gf/VertexBuffer.h
+ include/gf/View.h
 game/CMakeFiles/game.dir/code/local/Object.cpp.o
  /home/evan/Documents/Projet_L3/jeu/game/code/local/Level.h
  /home/evan/Documents/Projet_L3/jeu/game/code/local/Object.cpp
  /home/evan/Documents/Projet_L3/jeu/game/code/local/Object.h
+ include/gf/Anchor.h
+ include/gf/ArrayRef.h
+ include/gf/Blend.h
+ include/gf/Circ.h
+ include/gf/Color.h
+ include/gf/Drawable.h
+ include/gf/Image.h
+ include/gf/Math.h
+ include/gf/Matrix.h
+ include/gf/Path.h
+ include/gf/Polygon.h
+ include/gf/Portability.h
+ include/gf/PrimitiveType.h
+ include/gf/Range.h
+ include/gf/Rect.h
+ include/gf/Region.h
+ include/gf/RenderStates.h
+ include/gf/RenderTarget.h
+ include/gf/RenderWindow.h
+ include/gf/Shader.h
+ include/gf/Shape.h
+ include/gf/Shapes.h
+ include/gf/StringRef.h
+ include/gf/Texture.h
+ include/gf/Transform.h
+ include/gf/Transformable.h
+ include/gf/Vector.h
+ include/gf/VectorOps.h
+ include/gf/Vertex.h
+ include/gf/VertexArray.h
+ include/gf/VertexBuffer.h
+ include/gf/View.h
 game/CMakeFiles/game.dir/code/local/Protagonist.cpp.o
  /home/evan/Documents/Projet_L3/jeu/game/code/local/Camera.h
  /home/evan/Documents/Projet_L3/jeu/game/code/local/Level.h
  /home/evan/Documents/Projet_L3/jeu/game/code/local/Object.h
  /home/evan/Documents/Projet_L3/jeu/game/code/local/Protagonist.cpp
  /home/evan/Documents/Projet_L3/jeu/game/code/local/Protagonist.h
+ include/gf/Anchor.h
+ include/gf/ArrayRef.h
+ include/gf/Blend.h
+ include/gf/Circ.h
+ include/gf/Color.h
+ include/gf/Drawable.h
+ include/gf/Image.h
+ include/gf/Math.h
+ include/gf/Matrix.h
+ include/gf/Path.h
+ include/gf/Polygon.h
+ include/gf/Portability.h
+ include/gf/PrimitiveType.h
+ include/gf/Range.h
+ include/gf/Rect.h
+ include/gf/Region.h
+ include/gf/RenderStates.h
+ include/gf/RenderTarget.h
+ include/gf/RenderWindow.h
+ include/gf/Shader.h
+ include/gf/Shape.h
+ include/gf/Shapes.h
+ include/gf/StringRef.h
+ include/gf/Texture.h
+ include/gf/Transform.h
+ include/gf/Transformable.h
+ include/gf/Vector.h
+ include/gf/VectorOps.h
+ include/gf/Vertex.h
+ include/gf/VertexArray.h
+ include/gf/VertexBuffer.h
+ include/gf/View.h
 game/CMakeFiles/game.dir/code/local/Tile.cpp.o
  /home/evan/Documents/Projet_L3/jeu/game/code/local/Level.h
  /home/evan/Documents/Projet_L3/jeu/game/code/local/Object.h
  /home/evan/Documents/Projet_L3/jeu/game/code/local/Tile.cpp
  /home/evan/Documents/Projet_L3/jeu/game/code/local/Tile.h
+ include/gf/Anchor.h
+ include/gf/ArrayRef.h
+ include/gf/Blend.h
+ include/gf/Circ.h
+ include/gf/Color.h
+ include/gf/Drawable.h
+ include/gf/Image.h
+ include/gf/Math.h
+ include/gf/Matrix.h
+ include/gf/Path.h
+ include/gf/Polygon.h
+ include/gf/Portability.h
+ include/gf/PrimitiveType.h
+ include/gf/Range.h
+ include/gf/Rect.h
+ include/gf/Region.h
+ include/gf/RenderStates.h
+ include/gf/RenderTarget.h
+ include/gf/RenderWindow.h
+ include/gf/Shader.h
+ include/gf/Shape.h
+ include/gf/Shapes.h
+ include/gf/StringRef.h
+ include/gf/Texture.h
+ include/gf/Transform.h
+ include/gf/Transformable.h
+ include/gf/Vector.h
+ include/gf/VectorOps.h
+ include/gf/Vertex.h
+ include/gf/VertexArray.h
+ include/gf/VertexBuffer.h
+ include/gf/View.h
 game/CMakeFiles/game.dir/code/main.cc.o
  /home/evan/Documents/Projet_L3/jeu/game/code/local/Level.h
  /home/evan/Documents/Projet_L3/jeu/game/code/local/Object.h
  /home/evan/Documents/Projet_L3/jeu/game/code/main.cc
  game/config.h
  include/gf/Action.h
+ include/gf/Anchor.h
+ include/gf/ArrayRef.h
  include/gf/AssetManager.h
  include/gf/Blend.h
+ include/gf/Circ.h
  include/gf/Clock.h
  include/gf/Color.h
  include/gf/Control.h
+ include/gf/Drawable.h
  include/gf/EntityContainer.h
  include/gf/Event.h
  include/gf/Flags.h
@@ -49,9 +213,11 @@ game/CMakeFiles/game.dir/code/main.cc.o
  include/gf/Keyboard.h
  include/gf/Library.h
  include/gf/Log.h
+ include/gf/Math.h
  include/gf/Matrix.h
  include/gf/Mouse.h
  include/gf/Path.h
+ include/gf/Polygon.h
  include/gf/Portability.h
  include/gf/PrimitiveType.h
  include/gf/Range.h
@@ -63,12 +229,19 @@ game/CMakeFiles/game.dir/code/main.cc.o
  include/gf/ResourceManager.h
  include/gf/Rune.h
  include/gf/Shader.h
+ include/gf/Shape.h
+ include/gf/Shapes.h
  include/gf/StringRef.h
  include/gf/Texture.h
  include/gf/Time.h
  include/gf/Transform.h
+ include/gf/Transformable.h
  include/gf/Types.h
  include/gf/Vector.h
+ include/gf/VectorOps.h
+ include/gf/Vertex.h
+ include/gf/VertexArray.h
+ include/gf/VertexBuffer.h
  include/gf/View.h
  include/gf/ViewContainer.h
  include/gf/Views.h

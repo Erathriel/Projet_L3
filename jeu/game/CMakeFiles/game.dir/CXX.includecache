@@ -35,6 +35,14 @@ Object.h
 /home/evan/Documents/Projet_L3/jeu/game/code/local/Object.h
 
 /home/evan/Documents/Projet_L3/jeu/game/code/local/Object.h
+gf/Color.h
+-
+gf/RenderWindow.h
+-
+gf/Shapes.h
+-
+gf/Vector.h
+-
 Level.h
 /home/evan/Documents/Projet_L3/jeu/game/code/local/Level.h
 
@@ -83,6 +91,10 @@ gf/Views.h
 -
 gf/Window.h
 -
+gf/Shapes.h
+-
+gf/Vector.h
+-
 local/Level.h
 /home/evan/Documents/Projet_L3/jeu/game/code/local/Level.h
 local/Object.h
@@ -110,6 +122,14 @@ include/gf/Mouse.h
 Portability.h
 include/gf/Portability.h
 
+include/gf/Anchor.h
+
+include/gf/ArrayRef.h
+array
+-
+vector
+-
+
 include/gf/AssetManager.h
 vector
 -
@@ -121,6 +141,14 @@ include/gf/Portability.h
 include/gf/Blend.h
 Portability.h
 include/gf/Portability.h
+
+include/gf/Circ.h
+Portability.h
+include/gf/Portability.h
+Vector.h
+include/gf/Vector.h
+VectorOps.h
+include/gf/VectorOps.h
 
 include/gf/Clock.h
 chrono
@@ -139,6 +167,12 @@ include/gf/Vector.h
 include/gf/Control.h
 Portability.h
 include/gf/Portability.h
+
+include/gf/Drawable.h
+Portability.h
+include/gf/Portability.h
+RenderStates.h
+include/gf/RenderStates.h
 
 include/gf/EntityContainer.h
 type_traits
@@ -226,6 +260,14 @@ map
 Portability.h
 include/gf/Portability.h
 
+include/gf/Math.h
+cmath
+-
+limits
+-
+Portability.h
+include/gf/Portability.h
+
 include/gf/Matrix.h
 cstddef
 -
@@ -243,6 +285,18 @@ boost/filesystem.hpp
 -
 boost/functional/hash.hpp
 -
+
+include/gf/Polygon.h
+vector
+-
+ArrayRef.h
+include/gf/ArrayRef.h
+Matrix.h
+include/gf/Matrix.h
+Portability.h
+include/gf/Portability.h
+Vector.h
+include/gf/Vector.h
 
 include/gf/Portability.h
 
@@ -350,6 +404,34 @@ include/gf/Texture.h
 Vector.h
 include/gf/Vector.h
 
+include/gf/Shape.h
+Portability.h
+include/gf/Portability.h
+Transformable.h
+include/gf/Transformable.h
+VertexArray.h
+include/gf/VertexArray.h
+VertexBuffer.h
+include/gf/VertexBuffer.h
+
+include/gf/Shapes.h
+cstddef
+-
+vector
+-
+Circ.h
+include/gf/Circ.h
+Polygon.h
+include/gf/Polygon.h
+Portability.h
+include/gf/Portability.h
+Rect.h
+include/gf/Rect.h
+Shape.h
+include/gf/Shape.h
+Vector.h
+include/gf/Vector.h
+
 include/gf/StringRef.h
 cstring
 -
@@ -390,6 +472,20 @@ include/gf/Rect.h
 Vector.h
 include/gf/Vector.h
 
+include/gf/Transformable.h
+Anchor.h
+include/gf/Anchor.h
+Drawable.h
+include/gf/Drawable.h
+Matrix.h
+include/gf/Matrix.h
+Portability.h
+include/gf/Portability.h
+Rect.h
+include/gf/Rect.h
+Vector.h
+include/gf/Vector.h
+
 include/gf/Types.h
 Portability.h
 include/gf/Portability.h
@@ -407,6 +503,52 @@ type_traits
 -
 Portability.h
 include/gf/Portability.h
+
+include/gf/VectorOps.h
+cmath
+-
+algorithm
+-
+type_traits
+-
+Math.h
+include/gf/Math.h
+Vector.h
+include/gf/Vector.h
+
+include/gf/Vertex.h
+Color.h
+include/gf/Color.h
+Portability.h
+include/gf/Portability.h
+Vector.h
+include/gf/Vector.h
+
+include/gf/VertexArray.h
+cstddef
+-
+vector
+-
+Drawable.h
+include/gf/Drawable.h
+Portability.h
+include/gf/Portability.h
+PrimitiveType.h
+include/gf/PrimitiveType.h
+Rect.h
+include/gf/Rect.h
+Vertex.h
+include/gf/Vertex.h
+
+include/gf/VertexBuffer.h
+cstddef
+-
+cstdint
+-
+Portability.h
+include/gf/Portability.h
+PrimitiveType.h
+include/gf/PrimitiveType.h
 
 include/gf/View.h
 Matrix.h
