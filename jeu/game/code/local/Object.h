@@ -16,7 +16,7 @@ class Object {
   private:
     void * appearence;
 
-    Level ;
+    //Level level;
 
 };
 #endif

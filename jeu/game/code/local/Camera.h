@@ -8,7 +8,7 @@ class Camera {
   private:
     float position;
 
-    Protagonist ;
+    //Protagonist ;
 
 
   public:

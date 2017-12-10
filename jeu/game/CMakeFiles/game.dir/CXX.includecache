@@ -6,7 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/evan/Documents/Projet_L3/jeu/game/code/local/Level.cc
+/home/evan/Documents/Projet_L3/jeu/game/code/local/Camera.cpp
+Camera.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/Camera.h
+
+/home/evan/Documents/Projet_L3/jeu/game/code/local/Camera.h
+Protagonist.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/Protagonist.h
+
+/home/evan/Documents/Projet_L3/jeu/game/code/local/Level.cpp
 Level.h
 /home/evan/Documents/Projet_L3/jeu/game/code/local/Level.h
 
@@ -14,11 +22,39 @@ Level.h
 Object.h
 /home/evan/Documents/Projet_L3/jeu/game/code/local/Object.h
 
-/home/evan/Documents/Projet_L3/jeu/game/code/local/Object.cc
+/home/evan/Documents/Projet_L3/jeu/game/code/local/LevelExit.cpp
+LevelExit.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/LevelExit.h
+Object.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/Object.h
+
+/home/evan/Documents/Projet_L3/jeu/game/code/local/LevelExit.h
+
+/home/evan/Documents/Projet_L3/jeu/game/code/local/Object.cpp
 Object.h
 /home/evan/Documents/Projet_L3/jeu/game/code/local/Object.h
 
 /home/evan/Documents/Projet_L3/jeu/game/code/local/Object.h
+Level.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/Level.h
+
+/home/evan/Documents/Projet_L3/jeu/game/code/local/Protagonist.cpp
+Protagonist.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/Protagonist.h
+Object.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/Object.h
+
+/home/evan/Documents/Projet_L3/jeu/game/code/local/Protagonist.h
+Camera.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/Camera.h
+
+/home/evan/Documents/Projet_L3/jeu/game/code/local/Tile.cpp
+Tile.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/Tile.h
+Object.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/Object.h
+
+/home/evan/Documents/Projet_L3/jeu/game/code/local/Tile.h
 
 /home/evan/Documents/Projet_L3/jeu/game/code/main.cc
 cassert

@@ -24,5 +24,9 @@
  * See: https://en.wikipedia.org/wiki/Single_Compilation_Unit
  */
 
-#include "local/Level.cc"
-#include "local/Object.cc"
+#include "local/Level.cpp"
+#include "local/Object.cpp"
+#include "local/Tile.cpp"
+#include "local/Protagonist.cpp"
+#include "local/Camera.cpp"
+#include "local/LevelExit.cpp"

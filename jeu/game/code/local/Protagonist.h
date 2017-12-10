@@ -22,7 +22,7 @@ class Protagonist {
   private:
     bool grounded;
 
-    Camera ;
+    //Camera ;
 
 };
 #endif

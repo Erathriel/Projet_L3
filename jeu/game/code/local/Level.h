@@ -8,7 +8,7 @@ class Level {
   private:
     int number;
 
-    Object ;
+    //Object* list;
 
 };
 #endif

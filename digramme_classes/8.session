@@ -2,10 +2,10 @@ window_sizes 1169 529 303 860 373 104
 cleanlooks_style
 diagrams
   active  classdiagram_ref 128008 // diag
-    857 294 100 A4 98 0
+    857 346 100 A4 50 0
 end
 show_stereotypes
-selected class_ref 128008 // Object
+selected artifact_ref 128136 // Object
 open
   classview_ref 128008 // diag
   deploymentview_ref 128008 // depl
