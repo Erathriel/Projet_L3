@@ -1,8 +1,8 @@
 format 215
 "digramme_classes"
-  revision 6
-  modified_by 8 "Evan"
-  cpp_root_dir "test_generation\\"
+  revision 7
+  modified_by 8 "evan"
+  cpp_root_dir "test_generation/"
 
 
   
@@ -64,7 +64,10 @@ format 215
 
     class 128008 "Object"
       visibility package 
-      cpp_decl ""
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
       java_decl ""
       php_decl ""
       python_2_2 python_decl ""
@@ -126,7 +129,10 @@ format 215
 
     class 128136 "Tile"
       visibility package 
-      cpp_decl ""
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
       java_decl ""
       php_decl ""
       python_2_2 python_decl ""
@@ -158,7 +164,10 @@ format 215
 
     class 128264 "Protagonist"
       visibility package 
-      cpp_decl ""
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
       java_decl ""
       php_decl ""
       python_2_2 python_decl ""
@@ -234,7 +243,10 @@ format 215
 
     class 128392 "Level"
       visibility package 
-      cpp_decl ""
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
       java_decl ""
       php_decl ""
       python_2_2 python_decl ""
@@ -366,6 +378,22 @@ ${inlines}
      end
     artifact 128136 "Object"
       stereotype "source"
+      cpp_h "#ifndef ${NAMESPACE}_${NAME}_H
+#define ${NAMESPACE}_${NAME}_H
+
+${comment}
+${includes}
+${declarations}
+${namespace_start}
+${definition}
+${namespace_end}
+#endif
+"
+      cpp_src "${comment}
+${includes}
+${namespace_start}
+${members}
+${namespace_end}"
       associated_elems
 	class_ref 128008 // Object
       end
@@ -373,6 +401,22 @@ ${inlines}
 
     artifact 128264 "Tile"
       stereotype "source"
+      cpp_h "#ifndef ${NAMESPACE}_${NAME}_H
+#define ${NAMESPACE}_${NAME}_H
+
+${comment}
+${includes}
+${declarations}
+${namespace_start}
+${definition}
+${namespace_end}
+#endif
+"
+      cpp_src "${comment}
+${includes}
+${namespace_start}
+${members}
+${namespace_end}"
       associated_elems
 	class_ref 128136 // Tile
       end
@@ -380,6 +424,22 @@ ${inlines}
 
     artifact 128392 "Protagonist"
       stereotype "source"
+      cpp_h "#ifndef ${NAMESPACE}_${NAME}_H
+#define ${NAMESPACE}_${NAME}_H
+
+${comment}
+${includes}
+${declarations}
+${namespace_start}
+${definition}
+${namespace_end}
+#endif
+"
+      cpp_src "${comment}
+${includes}
+${namespace_start}
+${members}
+${namespace_end}"
       associated_elems
 	class_ref 128264 // Protagonist
       end
@@ -387,6 +447,22 @@ ${inlines}
 
     artifact 128008 "Level"
       stereotype "source"
+      cpp_h "#ifndef ${NAMESPACE}_${NAME}_H
+#define ${NAMESPACE}_${NAME}_H
+
+${comment}
+${includes}
+${declarations}
+${namespace_start}
+${definition}
+${namespace_end}
+#endif
+"
+      cpp_src "${comment}
+${includes}
+${namespace_start}
+${members}
+${namespace_end}"
       associated_elems
 	class_ref 128392 // Level
       end

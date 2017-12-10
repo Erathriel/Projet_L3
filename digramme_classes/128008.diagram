@@ -10,7 +10,7 @@ classcanvas 128136 class_ref 128136 // Tile
 end
 classcanvas 128264 class_ref 128264 // Protagonist
   classdiagramsettings member_max_width 0 end
-  xyzwh 474 218 2000 127 91
+  xyzwh 474 218 2000 127 95
 end
 classcanvas 128392 class_ref 128392 // Level
   classdiagramsettings member_max_width 0 end
