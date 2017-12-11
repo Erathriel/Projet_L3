@@ -1,0 +1,5 @@
+Questions :
+
+- Programmation suivant le pattern MVC
+- Utilisation de Google Test
+- 
