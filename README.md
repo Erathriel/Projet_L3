@@ -27,7 +27,6 @@ L'exécutable "game" sera dans /jeu/game.
 
 pattern input draw render (un peu comme MVC)
 
-
 loop{
 
 input C
@@ -38,19 +37,18 @@ render V
 
 }
 
-
-site game programming patterns
+http://gameprogrammingpatterns.com/
 
 groupe de tuiles = une seule longue collision pour ne pas avoir de problèmes de collision
 
-lire manuel box2D (traverser plateforme)
- et site box2D iforce 2D
+lire manuel box2D (traverser plateforme) http://box2d.org/manual.pdf
+ et http://www.iforce2d.net/b2dtut/
  
 camera -> view (enlever caméra)
 
 HUD -> screenview
 
-enlever tuile -> voir tuto sfml "concevoir ses entités avec des tableaux de vertex" exemple tilemap (remplacer sf par gf en général suffit)
+enlever tuile -> voir tuto sfml https://www.sfml-dev.org/tutorials/2.1/graphics-vertex-array-fr.php exemple tilemap (remplacer sf par gf en général suffit)
 
 -> remplacer tuile par map
 
