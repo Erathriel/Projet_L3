@@ -23,6 +23,46 @@ L'exécutable "game" sera dans /jeu/game.
 - git commit : permet de voir les changements qui seront apportés avec les commits en cours et de les editer ( message obligatoire )
 - git push : pousse les modifs local sur le serveur git
 
+# Réunion de projet 2
+
+pattern input draw render (un peu comme MVC)
+
+
+loop{
+
+input C
+
+update M
+
+render V
+
+}
+
+
+site game programming patterns
+
+groupe de tuiles = une seule longue collision pour ne pas avoir de problèmes de collision
+
+lire manuel box2D (traverser plateforme)
+ et site box2D iforce 2D
+ 
+camera -> view (enlever caméra)
+
+HUD -> screenview
+
+enlever tuile -> voir tuto sfml "concevoir ses entités avec des tableaux de vertex" exemple tilemap (remplacer sf par gf en général suffit)
+
+-> remplacer tuile par map
+
+dans gf, la classe tile layer le fait
+
+levelExit -> plutôt une fonction de level (sensor)
+
+static, kinematic, dynamic = ne bouge pas, bouge sans lois physiques, bouge avec lois physiques
+
+faire des prototypes, noter ce qu'on fait
+
+
 # Réunion de projet 1
 
 article génération procédurale: http://fbksoft.com/procedural-level-generation-for-a-2d-platformer/
