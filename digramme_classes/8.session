@@ -5,9 +5,9 @@ diagrams
     881 546 100 A4 50 0
 end
 show_stereotypes
-selected class_ref 128136 // gf::TileLayer
+selected class_ref 135560 // PlatformGraphicsComponent
 open
-  classview_ref 128008 // diag
+  classdiagram_ref 128008 // diag
   deploymentview_ref 128008 // depl
 end
 end
