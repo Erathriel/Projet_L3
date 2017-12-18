@@ -12,10 +12,7 @@ else()
     code/main.cc
     code/local/Level.cpp     #ajouter tout les .cpp ici
     code/local/Object.cpp
-    code/local/Tile.cpp
     code/local/Protagonist.cpp
-    code/local/Camera.cpp
-    code/local/LevelExit.cpp
   )
 endif()
 

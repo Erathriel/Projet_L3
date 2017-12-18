@@ -32,6 +32,7 @@ find_package(Boost REQUIRED COMPONENTS filesystem system)
 find_package(Freetype REQUIRED)
 find_package(ZLIB REQUIRED)
 
+
 if(MSVC)
   message(STATUS "Using MSVC compiler")
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /DNOMINMAX /W4 /utf-8")
@@ -52,8 +53,6 @@ install(
   DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/include/gf"
   DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
 )
-
-
 
 if(GF_BUILD)
   add_subdirectory(game)

@@ -26,7 +26,4 @@
 
 #include "local/Level.cpp"
 #include "local/Object.cpp"
-#include "local/Tile.cpp"
 #include "local/Protagonist.cpp"
-#include "local/Camera.cpp"
-#include "local/LevelExit.cpp"

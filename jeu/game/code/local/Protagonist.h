@@ -2,7 +2,6 @@
 #define _PROTAGONIST_H
 
 
-#include "Camera.h"
 
 class Object;
 

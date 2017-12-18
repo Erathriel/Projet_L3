@@ -1,11 +1,11 @@
-window_sizes 1920 1017 303 1611 861 104
+window_sizes 1855 951 303 1546 795 104
 cleanlooks_style
 diagrams
   active  classdiagram_ref 128008 // diag
     881 546 100 A4 50 0
 end
 show_stereotypes
-selected artifact_ref 128136 // Object
+selected class_ref 128136 // gf::TileLayer
 open
   classview_ref 128008 // diag
   deploymentview_ref 128008 // depl
