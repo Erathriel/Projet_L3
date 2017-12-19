@@ -19,10 +19,14 @@
 #include "local/Level.h"
 #include "local/GameObject.h"
 
+#include "local/CarrePhysicsComponent.h"
+#include "local/CarreGraphicsComponent.h"
+#include "local/CarreInputComponent.h"
+
 #include "config.h"
 
 //#include <Box2D/Box2D.h>
-#include <cstdio>
+//#include <cstdio>
 
 int main(/*int argc, char** argv*/) {
     
@@ -36,76 +40,36 @@ int main(/*int argc, char** argv*/) {
     
     gf::Clock clock;
     renderer.clear(gf::Color::White);
-
     
-    GameObject carre(ScreenSize / 2, 50.0f, "data/bomb.png");
-    static constexpr float Speed = 100.0f;
-    gf::Vector2f velocity(0, 0);
+    Level level;
+    Graphics graphicsG;
+    gf::Event event;
+    
+    CarreInputComponent* input;
+    CarrePhysicsComponent* physics;
+    CarreGraphicsComponent* graphicsComp;
+    
+    
+    gf::Vector2f position(0,0);
+    
+    GameObject carre(input, physics, graphicsComp, position, ScreenSize / 2, 50.0f, gf::Color::Red);
     
     // game loop
     while (window.isOpen()) {
         // 1. input
         
-        gf::Event event;
-        while (window.pollEvent(event)) {
-            switch (event.type) {
-                case gf::EventType::Closed:
-                window.close();
-                break;
-                case gf::EventType::KeyPressed:
-                    switch (event.key.keycode) {
-                    case gf::Keycode::Up:
-                        velocity.y -= Speed;
-                        break;
-                    case gf::Keycode::Down:
-                        velocity.y += Speed;
-                        break;
-                    case gf::Keycode::Left:
-                        velocity.x -= Speed;
-                        break;
-                    case gf::Keycode::Right:
-                        velocity.x += Speed;
-                        break;
-                    default:
-                        break;
-                    }
-                    break;
-                case gf::EventType::KeyReleased:
-                    switch (event.key.keycode) {
-                    case gf::Keycode::Up:
-                        velocity.y += Speed;
-                        break;
-                    case gf::Keycode::Down:
-                        velocity.y -= Speed;
-                        break;
-                    case gf::Keycode::Left:
-                        velocity.x += Speed;
-                        break;
-                    case gf::Keycode::Right:
-                        velocity.x -= Speed;
-                        break;
-                    default:
-                        break;
-                    }
-                    break;
-            default:
-                break;
-            }
-        }
         
         
         // 2. update
         
-        carre.setVelocity(velocity);
         float dt = clock.restart().asSeconds();
-        carre.update(dt);
-        
+        carre.update(level, graphicsG);
         
         // 3. draw
         
-        renderer.clear();
+        //renderer.clear();
         
-        carre.render(renderer);
+        //carre.render(renderer);
         
         renderer.display();
         

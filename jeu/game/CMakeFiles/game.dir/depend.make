@@ -8,7 +8,14 @@ game/CMakeFiles/game.dir/code/local/GameObject.cpp.o: game/code/local/GraphicsCo
 game/CMakeFiles/game.dir/code/local/GameObject.cpp.o: game/code/local/InputComponent.h
 game/CMakeFiles/game.dir/code/local/GameObject.cpp.o: game/code/local/Level.h
 game/CMakeFiles/game.dir/code/local/GameObject.cpp.o: game/code/local/PhysicsComponent.h
+game/CMakeFiles/game.dir/code/local/GameObject.cpp.o: include/gf/Event.h
+game/CMakeFiles/game.dir/code/local/GameObject.cpp.o: include/gf/Flags.h
+game/CMakeFiles/game.dir/code/local/GameObject.cpp.o: include/gf/Gamepad.h
+game/CMakeFiles/game.dir/code/local/GameObject.cpp.o: include/gf/Keyboard.h
+game/CMakeFiles/game.dir/code/local/GameObject.cpp.o: include/gf/Mouse.h
 game/CMakeFiles/game.dir/code/local/GameObject.cpp.o: include/gf/Portability.h
+game/CMakeFiles/game.dir/code/local/GameObject.cpp.o: include/gf/Rune.h
+game/CMakeFiles/game.dir/code/local/GameObject.cpp.o: include/gf/Types.h
 game/CMakeFiles/game.dir/code/local/GameObject.cpp.o: include/gf/Vector.h
 
 game/CMakeFiles/game.dir/code/local/Level.cpp.o: game/code/local/GameObject.h
@@ -18,9 +25,19 @@ game/CMakeFiles/game.dir/code/local/Level.cpp.o: game/code/local/InputComponent.
 game/CMakeFiles/game.dir/code/local/Level.cpp.o: game/code/local/Level.cpp
 game/CMakeFiles/game.dir/code/local/Level.cpp.o: game/code/local/Level.h
 game/CMakeFiles/game.dir/code/local/Level.cpp.o: game/code/local/PhysicsComponent.h
+game/CMakeFiles/game.dir/code/local/Level.cpp.o: include/gf/Event.h
+game/CMakeFiles/game.dir/code/local/Level.cpp.o: include/gf/Flags.h
+game/CMakeFiles/game.dir/code/local/Level.cpp.o: include/gf/Gamepad.h
+game/CMakeFiles/game.dir/code/local/Level.cpp.o: include/gf/Keyboard.h
+game/CMakeFiles/game.dir/code/local/Level.cpp.o: include/gf/Mouse.h
 game/CMakeFiles/game.dir/code/local/Level.cpp.o: include/gf/Portability.h
+game/CMakeFiles/game.dir/code/local/Level.cpp.o: include/gf/Rune.h
+game/CMakeFiles/game.dir/code/local/Level.cpp.o: include/gf/Types.h
 game/CMakeFiles/game.dir/code/local/Level.cpp.o: include/gf/Vector.h
 
+game/CMakeFiles/game.dir/code/main.cc.o: game/code/local/CarreGraphicsComponent.h
+game/CMakeFiles/game.dir/code/main.cc.o: game/code/local/CarreInputComponent.h
+game/CMakeFiles/game.dir/code/main.cc.o: game/code/local/CarrePhysicsComponent.h
 game/CMakeFiles/game.dir/code/main.cc.o: game/code/local/GameObject.h
 game/CMakeFiles/game.dir/code/main.cc.o: game/code/local/Graphics.h
 game/CMakeFiles/game.dir/code/main.cc.o: game/code/local/GraphicsComponent.h

@@ -6,6 +6,30 @@
 
 #IncludeRegexTransform: 
 
+/home/evan/Documents/Projet_L3/jeu/game/code/local/CarreGraphicsComponent.h
+GameObject.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.h
+Graphics.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/Graphics.h
+gf/Shapes.h
+-
+gf/Event.h
+-
+gf/Shapes.h
+-
+gf/Vector.h
+-
+
+/home/evan/Documents/Projet_L3/jeu/game/code/local/CarreInputComponent.h
+InputComponent.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/InputComponent.h
+
+/home/evan/Documents/Projet_L3/jeu/game/code/local/CarrePhysicsComponent.h
+GameObject.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.h
+Level.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/Level.h
+
 /home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.cpp
 GameObject.h
 /home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.h
@@ -37,6 +61,8 @@ Graphics.h
 /home/evan/Documents/Projet_L3/jeu/game/code/local/InputComponent.h
 GameObject.h
 /home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.h
+gf/Event.h
+-
 
 /home/evan/Documents/Projet_L3/jeu/game/code/local/Level.cpp
 Level.h
@@ -87,10 +113,14 @@ local/Level.h
 /home/evan/Documents/Projet_L3/jeu/game/code/local/Level.h
 local/GameObject.h
 /home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.h
+local/CarrePhysicsComponent.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/CarrePhysicsComponent.h
+local/CarreGraphicsComponent.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/CarreGraphicsComponent.h
+local/CarreInputComponent.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/CarreInputComponent.h
 config.h
 /home/evan/Documents/Projet_L3/jeu/game/code/config.h
-cstdio
--
 
 game/config.h
 

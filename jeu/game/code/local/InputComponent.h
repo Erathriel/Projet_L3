@@ -16,7 +16,7 @@ class InputComponent
 {
 public:
     gf::Event event;
-    virtual ~InputComponent(gf::Event event) {}
+    virtual ~InputComponent() {}
     virtual void update(GameObject& obj) = 0;
 };
 

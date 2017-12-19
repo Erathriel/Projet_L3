@@ -23,12 +23,7 @@ public:
     gf::Color4f m_color;
 
 
-    GameObject(InputComponent* input,
-               PhysicsComponent* physics,
-               GraphicsComponent* graphics,
-               gf::Vector2f position,
-               float size,
-               gf::Color4f color);
+    GameObject(InputComponent* input, PhysicsComponent* physics, GraphicsComponent* graphics, gf::Vector2f position, float size, gf::Color4f color);
 
     void update(Level& level, Graphics& graphics);
 
