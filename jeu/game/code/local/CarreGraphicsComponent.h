@@ -10,12 +10,12 @@
 #include <gf/Shapes.h>
 #include <gf/Vector.h>
 
-class CarreGraphicsComponent : public PhysicsComponent
+class CarreGraphicsComponent : public GraphicsComponent
 {
 public:
-	void update(GameObject& obj, Graphics& graphics){
-		gf::Shape shape;
-		shape.draw(*shape, obj.m_position.x, obj.m_position.y);
+	void update(GameObject& obj, Graphics *graphics){
+		gf::Shape *shape;
+		graphics->draw(shape);
 	}
 };
 

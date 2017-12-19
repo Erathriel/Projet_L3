@@ -3,12 +3,21 @@
 
 
 #include "GameObject.h"
+#include <gf/RenderWindow.h>
+#include <gf/RenderWindow.h>
+#include <gf/ResourceManager.h>
+#include <gf/ViewContainer.h>
+#include <gf/Views.h>
+#include <gf/Window.h>
 
 class GameObject;
 
 class Graphics {
-  private:
-    void update(GameObject& obj){};
-
+public:
+    Graphics();
+    void display();
+    void draw(void* obj);
+private:
+    gf::RenderWindow *m_renderer;
 };
 #endif

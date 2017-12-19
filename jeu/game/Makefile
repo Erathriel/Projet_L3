@@ -196,6 +196,33 @@ code/local/GameObject.cpp.s:
 	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/GameObject.cpp.s
 .PHONY : code/local/GameObject.cpp.s
 
+code/local/Graphics.o: code/local/Graphics.cpp.o
+
+.PHONY : code/local/Graphics.o
+
+# target to build an object file
+code/local/Graphics.cpp.o:
+	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/Graphics.cpp.o
+.PHONY : code/local/Graphics.cpp.o
+
+code/local/Graphics.i: code/local/Graphics.cpp.i
+
+.PHONY : code/local/Graphics.i
+
+# target to preprocess a source file
+code/local/Graphics.cpp.i:
+	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/Graphics.cpp.i
+.PHONY : code/local/Graphics.cpp.i
+
+code/local/Graphics.s: code/local/Graphics.cpp.s
+
+.PHONY : code/local/Graphics.s
+
+# target to generate assembly for a file
+code/local/Graphics.cpp.s:
+	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/Graphics.cpp.s
+.PHONY : code/local/Graphics.cpp.s
+
 code/local/Level.o: code/local/Level.cpp.o
 
 .PHONY : code/local/Level.o
@@ -266,6 +293,9 @@ help:
 	@echo "... code/local/GameObject.o"
 	@echo "... code/local/GameObject.i"
 	@echo "... code/local/GameObject.s"
+	@echo "... code/local/Graphics.o"
+	@echo "... code/local/Graphics.i"
+	@echo "... code/local/Graphics.s"
 	@echo "... code/local/Level.o"
 	@echo "... code/local/Level.i"
 	@echo "... code/local/Level.s"

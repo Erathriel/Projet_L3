@@ -11,10 +11,10 @@
 
 class Level;
 
-class CarrePhysicsComponent
+class CarrePhysicsComponent  : public PhysicsComponent
 {
 public:
-    ~PhysicsComponent() {}
+    //~PhysicsComponent() {}
     void update(GameObject& obj, Level& level) = 0;
 };
 

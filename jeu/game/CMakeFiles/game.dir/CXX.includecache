@@ -48,9 +48,25 @@ Graphics.h
 Level.h
 /home/evan/Documents/Projet_L3/jeu/game/code/local/Level.h
 
+/home/evan/Documents/Projet_L3/jeu/game/code/local/Graphics.cpp
+Graphics.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/Graphics.h
+
 /home/evan/Documents/Projet_L3/jeu/game/code/local/Graphics.h
 GameObject.h
 /home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.h
+gf/RenderWindow.h
+-
+gf/RenderWindow.h
+-
+gf/ResourceManager.h
+-
+gf/ViewContainer.h
+-
+gf/Views.h
+-
+gf/Window.h
+-
 
 /home/evan/Documents/Projet_L3/jeu/game/code/local/GraphicsComponent.h
 GameObject.h

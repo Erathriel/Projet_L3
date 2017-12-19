@@ -26,3 +26,4 @@
 
 #include "local/Level.cpp"
 #include "local/GameObject.cpp"
+#include "local/Graphics.cpp"

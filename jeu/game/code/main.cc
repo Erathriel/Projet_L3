@@ -30,16 +30,11 @@
 
 int main(/*int argc, char** argv*/) {
     
-    
-    static constexpr gf::Vector2u ScreenSize(500, 500);
-    gf::Window window("le super exemple", ScreenSize);
-    gf::RenderWindow renderer(window);
-    
     gf::Font font;
     font.loadFromFile("data/ClearSans-Bold.ttf");
     
     gf::Clock clock;
-    renderer.clear(gf::Color::White);
+    
     
     Level level;
     Graphics graphicsG;
@@ -52,10 +47,10 @@ int main(/*int argc, char** argv*/) {
     
     gf::Vector2f position(0,0);
     
-    GameObject carre(input, physics, graphicsComp, position, ScreenSize / 2, 50.0f, gf::Color::Red);
+    GameObject carre(input, physics, graphicsComp, position, 100.0f, gf::Color::Red);
     
     // game loop
-    while (window.isOpen()) {
+    while (true) {
         // 1. input
         
         
@@ -71,7 +66,7 @@ int main(/*int argc, char** argv*/) {
         
         //carre.render(renderer);
         
-        renderer.display();
+        graphicsG.display();
         
         
     }
