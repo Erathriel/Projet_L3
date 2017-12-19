@@ -9,9 +9,12 @@ game/CMakeFiles/game.dir/code/local/GameObject.cpp.o
  /home/evan/Documents/Projet_L3/jeu/game/code/local/InputComponent.h
  /home/evan/Documents/Projet_L3/jeu/game/code/local/Level.h
  /home/evan/Documents/Projet_L3/jeu/game/code/local/PhysicsComponent.h
+ include/gf/Anchor.h
  include/gf/AssetManager.h
  include/gf/Blend.h
  include/gf/Clock.h
+ include/gf/Color.h
+ include/gf/Drawable.h
  include/gf/Event.h
  include/gf/Flags.h
  include/gf/Font.h
@@ -33,12 +36,17 @@ game/CMakeFiles/game.dir/code/local/GameObject.cpp.o
  include/gf/ResourceManager.h
  include/gf/Rune.h
  include/gf/Shader.h
+ include/gf/Shape.h
  include/gf/StringRef.h
  include/gf/Texture.h
  include/gf/Time.h
  include/gf/Transform.h
+ include/gf/Transformable.h
  include/gf/Types.h
  include/gf/Vector.h
+ include/gf/Vertex.h
+ include/gf/VertexArray.h
+ include/gf/VertexBuffer.h
  include/gf/View.h
  include/gf/ViewContainer.h
  include/gf/Views.h
@@ -51,9 +59,12 @@ game/CMakeFiles/game.dir/code/local/Graphics.cpp.o
  /home/evan/Documents/Projet_L3/jeu/game/code/local/InputComponent.h
  /home/evan/Documents/Projet_L3/jeu/game/code/local/Level.h
  /home/evan/Documents/Projet_L3/jeu/game/code/local/PhysicsComponent.h
+ include/gf/Anchor.h
  include/gf/AssetManager.h
  include/gf/Blend.h
  include/gf/Clock.h
+ include/gf/Color.h
+ include/gf/Drawable.h
  include/gf/Event.h
  include/gf/Flags.h
  include/gf/Font.h
@@ -75,12 +86,17 @@ game/CMakeFiles/game.dir/code/local/Graphics.cpp.o
  include/gf/ResourceManager.h
  include/gf/Rune.h
  include/gf/Shader.h
+ include/gf/Shape.h
  include/gf/StringRef.h
  include/gf/Texture.h
  include/gf/Time.h
  include/gf/Transform.h
+ include/gf/Transformable.h
  include/gf/Types.h
  include/gf/Vector.h
+ include/gf/Vertex.h
+ include/gf/VertexArray.h
+ include/gf/VertexBuffer.h
  include/gf/View.h
  include/gf/ViewContainer.h
  include/gf/Views.h
@@ -93,9 +109,12 @@ game/CMakeFiles/game.dir/code/local/Level.cpp.o
  /home/evan/Documents/Projet_L3/jeu/game/code/local/Level.cpp
  /home/evan/Documents/Projet_L3/jeu/game/code/local/Level.h
  /home/evan/Documents/Projet_L3/jeu/game/code/local/PhysicsComponent.h
+ include/gf/Anchor.h
  include/gf/AssetManager.h
  include/gf/Blend.h
  include/gf/Clock.h
+ include/gf/Color.h
+ include/gf/Drawable.h
  include/gf/Event.h
  include/gf/Flags.h
  include/gf/Font.h
@@ -117,12 +136,17 @@ game/CMakeFiles/game.dir/code/local/Level.cpp.o
  include/gf/ResourceManager.h
  include/gf/Rune.h
  include/gf/Shader.h
+ include/gf/Shape.h
  include/gf/StringRef.h
  include/gf/Texture.h
  include/gf/Time.h
  include/gf/Transform.h
+ include/gf/Transformable.h
  include/gf/Types.h
  include/gf/Vector.h
+ include/gf/Vertex.h
+ include/gf/VertexArray.h
+ include/gf/VertexBuffer.h
  include/gf/View.h
  include/gf/ViewContainer.h
  include/gf/Views.h

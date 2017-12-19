@@ -15,8 +15,6 @@ gf/Shapes.h
 -
 gf/Event.h
 -
-gf/Shapes.h
--
 gf/Vector.h
 -
 
@@ -66,6 +64,12 @@ gf/ViewContainer.h
 gf/Views.h
 -
 gf/Window.h
+-
+gf/Color.h
+-
+gf/Shape.h
+-
+gf/Vector.h
 -
 
 /home/evan/Documents/Projet_L3/jeu/game/code/local/GraphicsComponent.h

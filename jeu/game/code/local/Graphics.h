@@ -9,6 +9,9 @@
 #include <gf/ViewContainer.h>
 #include <gf/Views.h>
 #include <gf/Window.h>
+#include <gf/Color.h>
+#include <gf/Shape.h>
+#include <gf/Vector.h>
 
 class GameObject;
 
@@ -16,7 +19,9 @@ class Graphics {
 public:
     Graphics();
     void display();
-    void draw(void* obj);
+    void update(GameObject obj, Graphics graphics);
+    void draw(gf::RectangleShape* shape);
+    
 private:
     gf::RenderWindow *m_renderer;
 };

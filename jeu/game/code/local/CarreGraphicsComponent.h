@@ -7,14 +7,15 @@
 
 #include <gf/Shapes.h>
 #include <gf/Event.h>
-#include <gf/Shapes.h>
 #include <gf/Vector.h>
+
+class Graphics;
 
 class CarreGraphicsComponent : public GraphicsComponent
 {
 public:
 	void update(GameObject& obj, Graphics *graphics){
-		gf::Shape *shape;
+		gf::RectangleShape *shape;
 		graphics->draw(shape);
 	}
 };
