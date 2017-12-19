@@ -7,12 +7,15 @@
 
 
 #include "GameObject.h"
+#include "Level.h"
+
+class Level;
 
 class PhysicsComponent
 {
 public:
     virtual ~PhysicsComponent() {}
-    virtual void update(GameObject& obj, World& world) = 0;
+    virtual void update(GameObject& obj, Level& level) = 0;
 };
 
 #endif //GF_PHYSICSCOMPONENT_H

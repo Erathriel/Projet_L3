@@ -2,9 +2,8 @@
 // Created by antoine on 18/12/17.
 //
 
-#include "InputComponent.h"
-#include "PhysicsComponent.h"
-#include "GraphicsComponent.h"
+
+
 #include "GameObject.h"
 
 
@@ -20,10 +19,10 @@ GameObject::GameObject(InputComponent* input, PhysicsComponent* physics, Graphic
 
 }
 
-void GameObject::update(World& world, Graphics& graphics)
+void GameObject::update(Level& level, Graphics& graphics)
     {
         input_->update(*this);
-        physics_->update(*this, world);
+        physics_->update(*this, level);
         graphics_->update(*this, graphics);
     }
 

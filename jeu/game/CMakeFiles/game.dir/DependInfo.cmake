@@ -4,9 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.cpp" "/home/evan/Documents/Projet_L3/jeu/game/CMakeFiles/game.dir/code/local/GameObject.cpp.o"
   "/home/evan/Documents/Projet_L3/jeu/game/code/local/Level.cpp" "/home/evan/Documents/Projet_L3/jeu/game/CMakeFiles/game.dir/code/local/Level.cpp.o"
-  "/home/evan/Documents/Projet_L3/jeu/game/code/local/Object.cpp" "/home/evan/Documents/Projet_L3/jeu/game/CMakeFiles/game.dir/code/local/Object.cpp.o"
-  "/home/evan/Documents/Projet_L3/jeu/game/code/local/Protagonist.cpp" "/home/evan/Documents/Projet_L3/jeu/game/CMakeFiles/game.dir/code/local/Protagonist.cpp.o"
   "/home/evan/Documents/Projet_L3/jeu/game/code/main.cc" "/home/evan/Documents/Projet_L3/jeu/game/CMakeFiles/game.dir/code/main.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

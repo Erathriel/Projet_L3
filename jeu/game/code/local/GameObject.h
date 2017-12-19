@@ -9,6 +9,10 @@
 #include "InputComponent.h"
 #include "PhysicsComponent.h"
 #include "GraphicsComponent.h"
+#include "Graphics.h"
+#include "Level.h"
+
+class Level;
 
 class GameObject
 {
@@ -26,7 +30,7 @@ public:
                float size,
                gf::Color4f color);
 
-    void update(World& world, Graphics& graphics);
+    void update(Level& level, Graphics& graphics);
 
 
     void setVelocity(gf::Vector2f velocity);

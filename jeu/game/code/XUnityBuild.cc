@@ -25,5 +25,5 @@
  */
 
 #include "local/Level.cpp"
-#include "local/Object.cpp"
+#include "local/GameObject.cpp"
 #include "local/Protagonist.cpp"

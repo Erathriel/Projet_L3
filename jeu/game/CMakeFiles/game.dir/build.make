@@ -105,68 +105,42 @@ game/CMakeFiles/game.dir/code/local/Level.cpp.o.provides: game/CMakeFiles/game.d
 game/CMakeFiles/game.dir/code/local/Level.cpp.o.provides.build: game/CMakeFiles/game.dir/code/local/Level.cpp.o
 
 
-game/CMakeFiles/game.dir/code/local/Object.cpp.o: game/CMakeFiles/game.dir/flags.make
-game/CMakeFiles/game.dir/code/local/Object.cpp.o: game/code/local/Object.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/evan/Documents/Projet_L3/jeu/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object game/CMakeFiles/game.dir/code/local/Object.cpp.o"
-	cd /home/evan/Documents/Projet_L3/jeu/game && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/code/local/Object.cpp.o -c /home/evan/Documents/Projet_L3/jeu/game/code/local/Object.cpp
+game/CMakeFiles/game.dir/code/local/GameObject.cpp.o: game/CMakeFiles/game.dir/flags.make
+game/CMakeFiles/game.dir/code/local/GameObject.cpp.o: game/code/local/GameObject.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/evan/Documents/Projet_L3/jeu/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object game/CMakeFiles/game.dir/code/local/GameObject.cpp.o"
+	cd /home/evan/Documents/Projet_L3/jeu/game && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/code/local/GameObject.cpp.o -c /home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.cpp
 
-game/CMakeFiles/game.dir/code/local/Object.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/code/local/Object.cpp.i"
-	cd /home/evan/Documents/Projet_L3/jeu/game && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/evan/Documents/Projet_L3/jeu/game/code/local/Object.cpp > CMakeFiles/game.dir/code/local/Object.cpp.i
+game/CMakeFiles/game.dir/code/local/GameObject.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/code/local/GameObject.cpp.i"
+	cd /home/evan/Documents/Projet_L3/jeu/game && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.cpp > CMakeFiles/game.dir/code/local/GameObject.cpp.i
 
-game/CMakeFiles/game.dir/code/local/Object.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/code/local/Object.cpp.s"
-	cd /home/evan/Documents/Projet_L3/jeu/game && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/evan/Documents/Projet_L3/jeu/game/code/local/Object.cpp -o CMakeFiles/game.dir/code/local/Object.cpp.s
+game/CMakeFiles/game.dir/code/local/GameObject.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/code/local/GameObject.cpp.s"
+	cd /home/evan/Documents/Projet_L3/jeu/game && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.cpp -o CMakeFiles/game.dir/code/local/GameObject.cpp.s
 
-game/CMakeFiles/game.dir/code/local/Object.cpp.o.requires:
+game/CMakeFiles/game.dir/code/local/GameObject.cpp.o.requires:
 
-.PHONY : game/CMakeFiles/game.dir/code/local/Object.cpp.o.requires
+.PHONY : game/CMakeFiles/game.dir/code/local/GameObject.cpp.o.requires
 
-game/CMakeFiles/game.dir/code/local/Object.cpp.o.provides: game/CMakeFiles/game.dir/code/local/Object.cpp.o.requires
-	$(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/Object.cpp.o.provides.build
-.PHONY : game/CMakeFiles/game.dir/code/local/Object.cpp.o.provides
+game/CMakeFiles/game.dir/code/local/GameObject.cpp.o.provides: game/CMakeFiles/game.dir/code/local/GameObject.cpp.o.requires
+	$(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/GameObject.cpp.o.provides.build
+.PHONY : game/CMakeFiles/game.dir/code/local/GameObject.cpp.o.provides
 
-game/CMakeFiles/game.dir/code/local/Object.cpp.o.provides.build: game/CMakeFiles/game.dir/code/local/Object.cpp.o
-
-
-game/CMakeFiles/game.dir/code/local/Protagonist.cpp.o: game/CMakeFiles/game.dir/flags.make
-game/CMakeFiles/game.dir/code/local/Protagonist.cpp.o: game/code/local/Protagonist.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/evan/Documents/Projet_L3/jeu/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object game/CMakeFiles/game.dir/code/local/Protagonist.cpp.o"
-	cd /home/evan/Documents/Projet_L3/jeu/game && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/code/local/Protagonist.cpp.o -c /home/evan/Documents/Projet_L3/jeu/game/code/local/Protagonist.cpp
-
-game/CMakeFiles/game.dir/code/local/Protagonist.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/code/local/Protagonist.cpp.i"
-	cd /home/evan/Documents/Projet_L3/jeu/game && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/evan/Documents/Projet_L3/jeu/game/code/local/Protagonist.cpp > CMakeFiles/game.dir/code/local/Protagonist.cpp.i
-
-game/CMakeFiles/game.dir/code/local/Protagonist.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/code/local/Protagonist.cpp.s"
-	cd /home/evan/Documents/Projet_L3/jeu/game && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/evan/Documents/Projet_L3/jeu/game/code/local/Protagonist.cpp -o CMakeFiles/game.dir/code/local/Protagonist.cpp.s
-
-game/CMakeFiles/game.dir/code/local/Protagonist.cpp.o.requires:
-
-.PHONY : game/CMakeFiles/game.dir/code/local/Protagonist.cpp.o.requires
-
-game/CMakeFiles/game.dir/code/local/Protagonist.cpp.o.provides: game/CMakeFiles/game.dir/code/local/Protagonist.cpp.o.requires
-	$(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/Protagonist.cpp.o.provides.build
-.PHONY : game/CMakeFiles/game.dir/code/local/Protagonist.cpp.o.provides
-
-game/CMakeFiles/game.dir/code/local/Protagonist.cpp.o.provides.build: game/CMakeFiles/game.dir/code/local/Protagonist.cpp.o
+game/CMakeFiles/game.dir/code/local/GameObject.cpp.o.provides.build: game/CMakeFiles/game.dir/code/local/GameObject.cpp.o
 
 
 # Object files for target game
 game_OBJECTS = \
 "CMakeFiles/game.dir/code/main.cc.o" \
 "CMakeFiles/game.dir/code/local/Level.cpp.o" \
-"CMakeFiles/game.dir/code/local/Object.cpp.o" \
-"CMakeFiles/game.dir/code/local/Protagonist.cpp.o"
+"CMakeFiles/game.dir/code/local/GameObject.cpp.o"
 
 # External object files for target game
 game_EXTERNAL_OBJECTS =
 
 game/game: game/CMakeFiles/game.dir/code/main.cc.o
 game/game: game/CMakeFiles/game.dir/code/local/Level.cpp.o
-game/game: game/CMakeFiles/game.dir/code/local/Object.cpp.o
-game/game: game/CMakeFiles/game.dir/code/local/Protagonist.cpp.o
+game/game: game/CMakeFiles/game.dir/code/local/GameObject.cpp.o
 game/game: game/CMakeFiles/game.dir/build.make
 game/game: library/libgf0.so.0.6.0
 game/game: /usr/lib/x86_64-linux-gnu/libSDL2.so
@@ -175,7 +149,7 @@ game/game: /usr/lib/x86_64-linux-gnu/libboost_system.so
 game/game: /usr/lib/x86_64-linux-gnu/libfreetype.so
 game/game: /usr/lib/x86_64-linux-gnu/libz.so
 game/game: game/CMakeFiles/game.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/evan/Documents/Projet_L3/jeu/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable game"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/evan/Documents/Projet_L3/jeu/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable game"
 	cd /home/evan/Documents/Projet_L3/jeu/game && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/game.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -185,8 +159,7 @@ game/CMakeFiles/game.dir/build: game/game
 
 game/CMakeFiles/game.dir/requires: game/CMakeFiles/game.dir/code/main.cc.o.requires
 game/CMakeFiles/game.dir/requires: game/CMakeFiles/game.dir/code/local/Level.cpp.o.requires
-game/CMakeFiles/game.dir/requires: game/CMakeFiles/game.dir/code/local/Object.cpp.o.requires
-game/CMakeFiles/game.dir/requires: game/CMakeFiles/game.dir/code/local/Protagonist.cpp.o.requires
+game/CMakeFiles/game.dir/requires: game/CMakeFiles/game.dir/code/local/GameObject.cpp.o.requires
 
 .PHONY : game/CMakeFiles/game.dir/requires
 

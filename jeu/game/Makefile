@@ -169,6 +169,33 @@ game/fast:
 	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/build
 .PHONY : game/fast
 
+code/local/GameObject.o: code/local/GameObject.cpp.o
+
+.PHONY : code/local/GameObject.o
+
+# target to build an object file
+code/local/GameObject.cpp.o:
+	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/GameObject.cpp.o
+.PHONY : code/local/GameObject.cpp.o
+
+code/local/GameObject.i: code/local/GameObject.cpp.i
+
+.PHONY : code/local/GameObject.i
+
+# target to preprocess a source file
+code/local/GameObject.cpp.i:
+	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/GameObject.cpp.i
+.PHONY : code/local/GameObject.cpp.i
+
+code/local/GameObject.s: code/local/GameObject.cpp.s
+
+.PHONY : code/local/GameObject.s
+
+# target to generate assembly for a file
+code/local/GameObject.cpp.s:
+	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/GameObject.cpp.s
+.PHONY : code/local/GameObject.cpp.s
+
 code/local/Level.o: code/local/Level.cpp.o
 
 .PHONY : code/local/Level.o
@@ -195,60 +222,6 @@ code/local/Level.s: code/local/Level.cpp.s
 code/local/Level.cpp.s:
 	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/Level.cpp.s
 .PHONY : code/local/Level.cpp.s
-
-code/local/Object.o: code/local/Object.cpp.o
-
-.PHONY : code/local/Object.o
-
-# target to build an object file
-code/local/Object.cpp.o:
-	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/Object.cpp.o
-.PHONY : code/local/Object.cpp.o
-
-code/local/Object.i: code/local/Object.cpp.i
-
-.PHONY : code/local/Object.i
-
-# target to preprocess a source file
-code/local/Object.cpp.i:
-	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/Object.cpp.i
-.PHONY : code/local/Object.cpp.i
-
-code/local/Object.s: code/local/Object.cpp.s
-
-.PHONY : code/local/Object.s
-
-# target to generate assembly for a file
-code/local/Object.cpp.s:
-	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/Object.cpp.s
-.PHONY : code/local/Object.cpp.s
-
-code/local/Protagonist.o: code/local/Protagonist.cpp.o
-
-.PHONY : code/local/Protagonist.o
-
-# target to build an object file
-code/local/Protagonist.cpp.o:
-	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/Protagonist.cpp.o
-.PHONY : code/local/Protagonist.cpp.o
-
-code/local/Protagonist.i: code/local/Protagonist.cpp.i
-
-.PHONY : code/local/Protagonist.i
-
-# target to preprocess a source file
-code/local/Protagonist.cpp.i:
-	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/Protagonist.cpp.i
-.PHONY : code/local/Protagonist.cpp.i
-
-code/local/Protagonist.s: code/local/Protagonist.cpp.s
-
-.PHONY : code/local/Protagonist.s
-
-# target to generate assembly for a file
-code/local/Protagonist.cpp.s:
-	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/Protagonist.cpp.s
-.PHONY : code/local/Protagonist.cpp.s
 
 code/main.o: code/main.cc.o
 
@@ -290,15 +263,12 @@ help:
 	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... edit_cache"
+	@echo "... code/local/GameObject.o"
+	@echo "... code/local/GameObject.i"
+	@echo "... code/local/GameObject.s"
 	@echo "... code/local/Level.o"
 	@echo "... code/local/Level.i"
 	@echo "... code/local/Level.s"
-	@echo "... code/local/Object.o"
-	@echo "... code/local/Object.i"
-	@echo "... code/local/Object.s"
-	@echo "... code/local/Protagonist.o"
-	@echo "... code/local/Protagonist.i"
-	@echo "... code/local/Protagonist.s"
 	@echo "... code/main.o"
 	@echo "... code/main.i"
 	@echo "... code/main.s"

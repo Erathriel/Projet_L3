@@ -2,12 +2,12 @@
 #define _LEVEL_H
 
 
-#include "Object.h"
+#include "GameObject.h"
 
 class Level {
   private:
     int number;
-
+    void update(GameObject& obj){};
     //Object* list;
 
 };

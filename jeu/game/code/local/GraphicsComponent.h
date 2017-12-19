@@ -7,6 +7,7 @@
 
 
 #include "GameObject.h"
+#include "Graphics.h"
 
 class GraphicsComponent
 {
