@@ -26,6 +26,6 @@ public:
     
 private:
     gf::RenderWindow *m_renderer;
-    gf::Window *m_window;
+    
 };
 #endif

@@ -28,6 +28,8 @@
 //#include <Box2D/Box2D.h>
 //#include <cstdio>
 
+gf::Window *m_window;
+
 int main(/*int argc, char** argv*/) {
     
     gf::Font font;
@@ -39,31 +41,24 @@ int main(/*int argc, char** argv*/) {
     Level level;
     Graphics graphicsG;
     
-    printf("0\n");
-    
     CarreInputComponent* input = new CarreInputComponent();
     CarrePhysicsComponent* physics = new CarrePhysicsComponent();
     CarreGraphicsComponent* graphicsComp = new CarreGraphicsComponent();
     
-    printf("1\n");
     
     gf::Vector2f position(0,0);
     
     GameObject carre(input, physics, graphicsComp, position, 100.0f, gf::Color::Red);
     
-    printf("2\n");
     // game loop
     while (true) {
         // 1. input
-        
-        printf("3\n");
         
         // 2. update
         
         float dt = clock.restart().asSeconds();
         carre.update(level, graphicsG);
         
-        printf("4\n");
         // 3. draw
         
         //renderer.clear();
@@ -72,7 +67,6 @@ int main(/*int argc, char** argv*/) {
         
         graphicsG.display();
         
-        printf("5\n");
         
     }
     

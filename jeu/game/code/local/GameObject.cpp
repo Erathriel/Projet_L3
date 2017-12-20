@@ -11,8 +11,8 @@ GameObject::GameObject(InputComponent* input, PhysicsComponent* physics, Graphic
     input_ = input;
     physics_= physics;
     graphics_ = graphics;
-    m_velocity.x = 0;
-    m_velocity.y = 0;
+    m_velocity.x = 0.0f;
+    m_velocity.y = 0.0f;
     m_size = size;
     m_color = color;
     m_position = position;
@@ -21,13 +21,9 @@ GameObject::GameObject(InputComponent* input, PhysicsComponent* physics, Graphic
 
 void GameObject::update(Level& level, Graphics& graphics)
     {
-        printf("a\n");
         input_->update(*this);
-        printf("b\n");
         physics_->update(*this, level);
-        printf("c\n");
         graphics_->update(*this, &graphics);
-        printf("d\n");
     }
 
 

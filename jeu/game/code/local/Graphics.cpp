@@ -2,6 +2,8 @@
 
 class GameObject;
 
+extern gf::Window *m_window;
+
 Graphics::Graphics(){
     static constexpr gf::Vector2u ScreenSize(500, 500);
     m_window = new gf::Window("le super exemple", ScreenSize);
@@ -11,14 +13,11 @@ Graphics::Graphics(){
 
 void Graphics::display(){
     m_renderer->display();
+    m_renderer->clear();
 }
 
-void Graphics::draw(gf::RectangleShape* shape2){
-    gf::RectangleShape *shape = new gf::RectangleShape({100.0f,10.0f});
-    shape->setPosition({0.0f,0.0f});
-    printf("lol\n");
+void Graphics::draw(gf::RectangleShape* shape){
     m_renderer->draw(*shape);
-    printf("mdr\n");
 }
 
 void Graphics::draw(GameObject obj){

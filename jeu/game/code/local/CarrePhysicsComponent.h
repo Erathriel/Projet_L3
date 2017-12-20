@@ -15,7 +15,11 @@ class CarrePhysicsComponent  : public PhysicsComponent
 {
 public:
     ~CarrePhysicsComponent() {}
-    void update(GameObject& obj, Level& level){};
+    void update(GameObject& obj, Level& level){
+        //printf("%f %f\n", obj.m_position.x, obj.m_velocity.x);
+        obj.m_position += obj.m_velocity;
+        //printf("%f %f\n", obj.m_position.x, obj.m_velocity.x);
+    };
 };
 
 #endif //GF_PHYSICSCOMPONENT_H
