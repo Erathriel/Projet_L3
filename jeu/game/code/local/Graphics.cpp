@@ -14,9 +14,13 @@ void Graphics::display(){
 }
 
 void Graphics::draw(gf::RectangleShape* shape){
-    m_renderer->draw(shape);
+    m_renderer->draw(*shape);
 }
 
-void update(GameObject obj, Graphics graphics){
-    m_renderer->draw(obj);
+void Graphics::draw(GameObject obj){
+    obj.graphics_->update(obj, *this);
+}
+
+void Graphics::update(GameObject obj, Graphics graphics){
+    obj.graphics_->update(obj, *this);
 }

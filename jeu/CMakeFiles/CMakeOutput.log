@@ -2618,3 +2618,31 @@ Linking C executable cmTC_276ed
 make[1]: Leaving directory '/home/erathriel/Desktop/fac/Projet_L3/jeu/CMakeFiles/CMakeTmp'
 
 
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/evan/Documents/Projet_L3/jeu/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4060c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4060c.dir/build.make CMakeFiles/cmTC_4060c.dir/build
+make[1] : on entre dans le répertoire « /home/evan/Documents/Projet_L3/jeu/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_4060c.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_4060c.dir/CheckIncludeFile.c.o   -c /home/evan/Documents/Projet_L3/jeu/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_4060c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4060c.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_4060c.dir/CheckIncludeFile.c.o  -o cmTC_4060c -rdynamic 
+make[1] : on quitte le répertoire « /home/evan/Documents/Projet_L3/jeu/CMakeFiles/CMakeTmp »
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/evan/Documents/Projet_L3/jeu/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_02575/fast"
+/usr/bin/make -f CMakeFiles/cmTC_02575.dir/build.make CMakeFiles/cmTC_02575.dir/build
+make[1] : on entre dans le répertoire « /home/evan/Documents/Projet_L3/jeu/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_02575.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_02575.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_02575
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_02575.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_02575.dir/CheckFunctionExists.c.o  -o cmTC_02575 -rdynamic -lpthread 
+make[1] : on quitte le répertoire « /home/evan/Documents/Projet_L3/jeu/CMakeFiles/CMakeTmp »
+
+

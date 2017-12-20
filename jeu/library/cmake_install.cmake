@@ -1,4 +1,4 @@
-# Install script for directory: /home/erathriel/Desktop/fac/Projet_L3/jeu/library
+# Install script for directory: /home/evan/Documents/Projet_L3/jeu/library
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -32,43 +32,19 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
-if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  foreach(file
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libgf0.so.0.6.0"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libgf0.so.0"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libgf0.so"
-      )
-    if(EXISTS "${file}" AND
-       NOT IS_SYMLINK "${file}")
-      file(RPATH_CHECK
-           FILE "${file}"
-           RPATH "")
-    endif()
-  endforeach()
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/home/erathriel/Desktop/fac/Projet_L3/jeu/library/libgf0.so.0.6.0"
-    "/home/erathriel/Desktop/fac/Projet_L3/jeu/library/libgf0.so.0"
-    "/home/erathriel/Desktop/fac/Projet_L3/jeu/library/libgf0.so"
+    "/home/evan/Documents/Projet_L3/jeu/library/CMakeFiles/CMakeRelink.dir/libgf0.so.0.6.0"
+    "/home/evan/Documents/Projet_L3/jeu/library/CMakeFiles/CMakeRelink.dir/libgf0.so.0"
+    "/home/evan/Documents/Projet_L3/jeu/library/CMakeFiles/CMakeRelink.dir/libgf0.so"
     )
-  foreach(file
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libgf0.so.0.6.0"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libgf0.so.0"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libgf0.so"
-      )
-    if(EXISTS "${file}" AND
-       NOT IS_SYMLINK "${file}")
-      if(CMAKE_INSTALL_DO_STRIP)
-        execute_process(COMMAND "/usr/bin/strip" "${file}")
-      endif()
-    endif()
-  endforeach()
 endif()
 
-if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/gf/gfConfig.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/gf/gfConfig.cmake"
-         "/home/erathriel/Desktop/fac/Projet_L3/jeu/library/CMakeFiles/Export/lib/cmake/gf/gfConfig.cmake")
+         "/home/evan/Documents/Projet_L3/jeu/library/CMakeFiles/Export/lib/cmake/gf/gfConfig.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/gf/gfConfig-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -77,9 +53,9 @@ if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMP
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/gf" TYPE FILE FILES "/home/erathriel/Desktop/fac/Projet_L3/jeu/library/CMakeFiles/Export/lib/cmake/gf/gfConfig.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/gf" TYPE FILE FILES "/home/evan/Documents/Projet_L3/jeu/library/CMakeFiles/Export/lib/cmake/gf/gfConfig.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/gf" TYPE FILE FILES "/home/erathriel/Desktop/fac/Projet_L3/jeu/library/CMakeFiles/Export/lib/cmake/gf/gfConfig-relwithdebinfo.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/gf" TYPE FILE FILES "/home/evan/Documents/Projet_L3/jeu/library/CMakeFiles/Export/lib/cmake/gf/gfConfig-relwithdebinfo.cmake")
   endif()
 endif()
 

@@ -11,6 +11,7 @@
 #include <gf/Window.h>
 #include <gf/Color.h>
 #include <gf/Shapes.h>
+#include <gf/Shape.h>
 #include <gf/Vector.h>
 
 class GameObject;
@@ -21,6 +22,7 @@ public:
     void display();
     void update(GameObject obj, Graphics graphics);
     void draw(gf::RectangleShape* shape);
+    void draw(GameObject obj);
     
 private:
     gf::RenderWindow *m_renderer;

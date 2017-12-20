@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/erathriel/Desktop/fac/Projet_L3/jeu/game/code/local/CarreGraphicsComponent.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/CarreGraphicsComponent.h
 GameObject.h
-/home/erathriel/Desktop/fac/Projet_L3/jeu/game/code/local/GameObject.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.h
 Graphics.h
-/home/erathriel/Desktop/fac/Projet_L3/jeu/game/code/local/Graphics.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/Graphics.h
 gf/Shapes.h
 -
 gf/Event.h
@@ -18,41 +18,41 @@ gf/Event.h
 gf/Vector.h
 -
 
-/home/erathriel/Desktop/fac/Projet_L3/jeu/game/code/local/CarreInputComponent.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/CarreInputComponent.h
 InputComponent.h
-/home/erathriel/Desktop/fac/Projet_L3/jeu/game/code/local/InputComponent.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/InputComponent.h
 
-/home/erathriel/Desktop/fac/Projet_L3/jeu/game/code/local/CarrePhysicsComponent.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/CarrePhysicsComponent.h
 GameObject.h
-/home/erathriel/Desktop/fac/Projet_L3/jeu/game/code/local/GameObject.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.h
 Level.h
-/home/erathriel/Desktop/fac/Projet_L3/jeu/game/code/local/Level.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/Level.h
 
-/home/erathriel/Desktop/fac/Projet_L3/jeu/game/code/local/GameObject.cpp
+/home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.cpp
 GameObject.h
-/home/erathriel/Desktop/fac/Projet_L3/jeu/game/code/local/GameObject.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.h
 
-/home/erathriel/Desktop/fac/Projet_L3/jeu/game/code/local/GameObject.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.h
 gf/Vector.h
 -
 InputComponent.h
-/home/erathriel/Desktop/fac/Projet_L3/jeu/game/code/local/InputComponent.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/InputComponent.h
 PhysicsComponent.h
-/home/erathriel/Desktop/fac/Projet_L3/jeu/game/code/local/PhysicsComponent.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/PhysicsComponent.h
 GraphicsComponent.h
-/home/erathriel/Desktop/fac/Projet_L3/jeu/game/code/local/GraphicsComponent.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/GraphicsComponent.h
 Graphics.h
-/home/erathriel/Desktop/fac/Projet_L3/jeu/game/code/local/Graphics.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/Graphics.h
 Level.h
-/home/erathriel/Desktop/fac/Projet_L3/jeu/game/code/local/Level.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/Level.h
 
-/home/erathriel/Desktop/fac/Projet_L3/jeu/game/code/local/Graphics.cpp
+/home/evan/Documents/Projet_L3/jeu/game/code/local/Graphics.cpp
 Graphics.h
-/home/erathriel/Desktop/fac/Projet_L3/jeu/game/code/local/Graphics.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/Graphics.h
 
-/home/erathriel/Desktop/fac/Projet_L3/jeu/game/code/local/Graphics.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/Graphics.h
 GameObject.h
-/home/erathriel/Desktop/fac/Projet_L3/jeu/game/code/local/GameObject.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.h
 gf/RenderWindow.h
 -
 gf/RenderWindow.h
@@ -69,36 +69,38 @@ gf/Color.h
 -
 gf/Shapes.h
 -
+gf/Shape.h
+-
 gf/Vector.h
 -
 
-/home/erathriel/Desktop/fac/Projet_L3/jeu/game/code/local/GraphicsComponent.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/GraphicsComponent.h
 GameObject.h
-/home/erathriel/Desktop/fac/Projet_L3/jeu/game/code/local/GameObject.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.h
 Graphics.h
-/home/erathriel/Desktop/fac/Projet_L3/jeu/game/code/local/Graphics.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/Graphics.h
 
-/home/erathriel/Desktop/fac/Projet_L3/jeu/game/code/local/InputComponent.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/InputComponent.h
 GameObject.h
-/home/erathriel/Desktop/fac/Projet_L3/jeu/game/code/local/GameObject.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.h
 gf/Event.h
 -
 
-/home/erathriel/Desktop/fac/Projet_L3/jeu/game/code/local/Level.cpp
+/home/evan/Documents/Projet_L3/jeu/game/code/local/Level.cpp
 Level.h
-/home/erathriel/Desktop/fac/Projet_L3/jeu/game/code/local/Level.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/Level.h
 
-/home/erathriel/Desktop/fac/Projet_L3/jeu/game/code/local/Level.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/Level.h
 GameObject.h
-/home/erathriel/Desktop/fac/Projet_L3/jeu/game/code/local/GameObject.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.h
 
-/home/erathriel/Desktop/fac/Projet_L3/jeu/game/code/local/PhysicsComponent.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/PhysicsComponent.h
 GameObject.h
-/home/erathriel/Desktop/fac/Projet_L3/jeu/game/code/local/GameObject.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.h
 Level.h
-/home/erathriel/Desktop/fac/Projet_L3/jeu/game/code/local/Level.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/Level.h
 
-/home/erathriel/Desktop/fac/Projet_L3/jeu/game/code/main.cc
+/home/evan/Documents/Projet_L3/jeu/game/code/main.cc
 cassert
 -
 cstdio
@@ -130,17 +132,17 @@ gf/Shapes.h
 gf/Vector.h
 -
 local/Level.h
-/home/erathriel/Desktop/fac/Projet_L3/jeu/game/code/local/Level.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/Level.h
 local/GameObject.h
-/home/erathriel/Desktop/fac/Projet_L3/jeu/game/code/local/GameObject.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.h
 local/CarrePhysicsComponent.h
-/home/erathriel/Desktop/fac/Projet_L3/jeu/game/code/local/CarrePhysicsComponent.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/CarrePhysicsComponent.h
 local/CarreGraphicsComponent.h
-/home/erathriel/Desktop/fac/Projet_L3/jeu/game/code/local/CarreGraphicsComponent.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/CarreGraphicsComponent.h
 local/CarreInputComponent.h
-/home/erathriel/Desktop/fac/Projet_L3/jeu/game/code/local/CarreInputComponent.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/CarreInputComponent.h
 config.h
-/home/erathriel/Desktop/fac/Projet_L3/jeu/game/code/config.h
+/home/evan/Documents/Projet_L3/jeu/game/code/config.h
 
 game/config.h
 

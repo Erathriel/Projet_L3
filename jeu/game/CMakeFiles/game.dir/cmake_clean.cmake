@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/game.dir/code/local/Graphics.cpp.o"
   "game.pdb"
   "game"
+  "game.pdb"
+  "CMakeFiles/CMakeRelink.dir/game"
 )
 
 # Per-language clean rules from dependency scanning.

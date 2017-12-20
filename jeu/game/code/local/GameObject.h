@@ -30,11 +30,12 @@ public:
 
     void setVelocity(gf::Vector2f velocity);
 
-
-private:
     InputComponent* input_;
     PhysicsComponent* physics_;
     GraphicsComponent* graphics_;
+
+private:
+
 };
 
 
