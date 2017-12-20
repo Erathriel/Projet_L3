@@ -5,9 +5,16 @@ diagrams
     881 546 100 A4 50 0
 end
 show_stereotypes
-selected class_ref 135560 // PlatformGraphicsComponent
 open
   classdiagram_ref 128008 // diag
+  class_ref 128392 // Level
+  class_ref 128136 // gf::TileLayer
+  class_ref 134920 // PlayerInputComponent
+  class_ref 135176 // ProtagPhysicsComponent
+  class_ref 135048 // ProtagGraphicsComponent
+  class_ref 135304 // PlatformInputComponent
+  class_ref 135432 // KineticPhysicsComponent
+  class_ref 135560 // PlatformGraphicsComponent
   deploymentview_ref 128008 // depl
 end
 end

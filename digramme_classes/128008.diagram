@@ -14,66 +14,65 @@ classcanvas 128392 class_ref 128392 // Level
 end
 classcanvas 129928 class_ref 134920 // PlayerInputComponent
   classdiagramsettings member_max_width 0 end
-  xyz 484 259 2000
+  xyz 428 251 2000
 end
 classcanvas 130056 class_ref 135048 // ProtagGraphicsComponent
   classdiagramsettings member_max_width 0 end
-  xyz 470 420 2000
+  xyz 423 410 2000
 end
 classcanvas 130184 class_ref 135176 // ProtagPhysicsComponent
   classdiagramsettings member_max_width 0 end
-  xyz 478 335 2000
+  xyz 434 324 2000
 end
 classcanvas 131848 class_ref 135304 // PlatformInputComponent
   classdiagramsettings member_max_width 0 end
-  xyz 287 462 2000
+  xyz 668 261 2000
 end
 classcanvas 131976 class_ref 135432 // KineticPhysicsComponent
   classdiagramsettings member_max_width 0 end
-  xyz 126 445 2005
+  xyz 652 338 2005
 end
 classcanvas 132104 class_ref 135560 // PlatformGraphicsComponent
   classdiagramsettings member_max_width 0 end
-  xyz 31 390 2010
+  xyz 647 401 2010
 end
-relationcanvas 129544 relation_ref 128392 // <composition>
-  from ref 128008 z 2001 stereotype "<<list>>" xyz 236.5 208.5 3000 to ref 128392
-  no_role_a no_role_b
-  no_multiplicity_a no_multiplicity_b
-end
-relationcanvas 129672 relation_ref 135176 // <dependency>
-  decenter_end 701
-  from ref 128136 z 2001 to ref 128392
-  no_role_a no_role_b
-  no_multiplicity_a no_multiplicity_b
-end
-relationcanvas 131464 relation_ref 142088 // <dependency>
+relationcanvas 132744 relation_ref 149256 // <composition>
   from ref 129928 z 2001 to ref 128008
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
-relationcanvas 131592 relation_ref 142216 // <dependency>
+relationcanvas 132872 relation_ref 149384 // <composition>
   from ref 130184 z 2001 to ref 128008
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
-relationcanvas 131720 relation_ref 142344 // <dependency>
+relationcanvas 133000 relation_ref 149512 // <composition>
   from ref 130056 z 2001 to ref 128008
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
-relationcanvas 132232 relation_ref 142472 // <dependency>
-  from ref 131848 z 2001 to ref 128008
+relationcanvas 133128 relation_ref 128392 // <composition>
+  from ref 128008 z 2001 stereotype "<<list>>" xyz 236 209 3000 to ref 128392
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
-relationcanvas 132360 relation_ref 142600 // <dependency>
-  from ref 131976 z 2006 to ref 128008
+relationcanvas 133256 relation_ref 149640 // <composition>
+  from ref 128136 z 2001 to ref 128392
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
-relationcanvas 132488 relation_ref 142728 // <dependency>
-  from ref 132104 z 2011 to ref 128008
+relationcanvas 133384 relation_ref 149768 // <dependency>
+  from ref 131848 z 2001 to ref 129928
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 133512 relation_ref 149896 // <dependency>
+  from ref 131976 z 2006 to ref 130184
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 133640 relation_ref 150024 // <dependency>
+  from ref 132104 z 2011 to ref 130056
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end

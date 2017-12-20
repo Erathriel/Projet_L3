@@ -1,6 +1,6 @@
 format 215
 "digramme_classes"
-  revision 9
+  revision 10
   modified_by 8 "evan"
   cpp_root_dir "test_generation/"
 
@@ -58,7 +58,7 @@ format 215
     activitydiagramsettings
      end
     classdiagram 128008 "diag"
-      classdiagramsettings member_max_width 0 end
+      classdiagramsettings draw_all_relations no member_max_width 0 end
       size A4
     end
 
@@ -100,6 +100,10 @@ ${inlines}
       classrelation 128520 // <composition>
 	relation_ref 128392 // <composition>
       end
+
+      classrelation 150664 // <composition>
+	relation_ref 149640 // <composition>
+      end
     end
 
     class 128136 "gf::TileLayer"
@@ -115,12 +119,16 @@ ${inlines}
       explicit_switch_type ""
       mysql_decl ""
       
-      classrelation 135560 // <dependency>
-	relation 135176 -_->
-	  a public
-	    cpp default "#include in source"
-	    classrelation_ref 135560 // <dependency>
-	  b parent class_ref 128392 // Level
+      classrelation 150536 // <composition>
+	relation 149640 *---
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 150536 // <composition>
+	  b role_name "" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 150664 // <composition>
       end
     end
 
@@ -185,6 +193,18 @@ ${inlines}
 	mysql_decl ""
 	MysqlColumn
       end
+
+      classrelation 149896 // <composition>
+	relation_ref 149256 // <composition>
+      end
+
+      classrelation 150152 // <composition>
+	relation_ref 149384 // <composition>
+      end
+
+      classrelation 150408 // <composition>
+	relation_ref 149512 // <composition>
+      end
     end
 
     class 134920 "PlayerInputComponent"
@@ -200,12 +220,16 @@ ${inlines}
       explicit_switch_type ""
       mysql_decl ""
       
-      classrelation 142600 // <dependency>
-	relation 142088 -_->
-	  a public
-	    cpp default "#include in source"
-	    classrelation_ref 142600 // <dependency>
-	  b parent class_ref 128008 // Object
+      classrelation 149768 // <composition>
+	relation 149256 *---
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 149768 // <composition>
+	  b role_name "" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 149896 // <composition>
       end
     end
 
@@ -222,12 +246,16 @@ ${inlines}
       explicit_switch_type ""
       mysql_decl ""
       
-      classrelation 142728 // <dependency>
-	relation 142216 -_->
-	  a public
-	    cpp default "#include in source"
-	    classrelation_ref 142728 // <dependency>
-	  b parent class_ref 128008 // Object
+      classrelation 150024 // <composition>
+	relation 149384 *---
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 150024 // <composition>
+	  b role_name "" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 150152 // <composition>
       end
     end
 
@@ -244,12 +272,16 @@ ${inlines}
       explicit_switch_type ""
       mysql_decl ""
       
-      classrelation 142856 // <dependency>
-	relation 142344 -_->
-	  a public
-	    cpp default "#include in source"
-	    classrelation_ref 142856 // <dependency>
-	  b parent class_ref 128008 // Object
+      classrelation 150280 // <composition>
+	relation 149512 *---
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 150280 // <composition>
+	  b role_name "" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 150408 // <composition>
       end
     end
 
@@ -266,12 +298,12 @@ ${inlines}
       explicit_switch_type ""
       mysql_decl ""
       
-      classrelation 142984 // <dependency>
-	relation 142472 -_->
+      classrelation 150792 // <dependency>
+	relation 149768 -_->
 	  a public
 	    cpp default "#include in source"
-	    classrelation_ref 142984 // <dependency>
-	  b parent class_ref 128008 // Object
+	    classrelation_ref 150792 // <dependency>
+	  b parent class_ref 134920 // PlayerInputComponent
       end
     end
 
@@ -288,12 +320,12 @@ ${inlines}
       explicit_switch_type ""
       mysql_decl ""
       
-      classrelation 143112 // <dependency>
-	relation 142600 -_->
+      classrelation 150920 // <dependency>
+	relation 149896 -_->
 	  a public
 	    cpp default "#include in source"
-	    classrelation_ref 143112 // <dependency>
-	  b parent class_ref 128008 // Object
+	    classrelation_ref 150920 // <dependency>
+	  b parent class_ref 135176 // ProtagPhysicsComponent
       end
     end
 
@@ -310,12 +342,12 @@ ${inlines}
       explicit_switch_type ""
       mysql_decl ""
       
-      classrelation 143240 // <dependency>
-	relation 142728 -_->
+      classrelation 151048 // <dependency>
+	relation 150024 -_->
 	  a public
 	    cpp default "#include in source"
-	    classrelation_ref 143240 // <dependency>
-	  b parent class_ref 128008 // Object
+	    classrelation_ref 151048 // <dependency>
+	  b parent class_ref 135048 // ProtagGraphicsComponent
       end
     end
   end
@@ -392,7 +424,6 @@ ${namespace_end}"
 	class_ref 128392 // Level
       end
     end
-
   end
 preserve_bodies
 
