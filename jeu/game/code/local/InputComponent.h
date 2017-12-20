@@ -8,18 +8,20 @@
 
 #include "GameObject.h"
 #include "Level.h"
+#include "Graphics.h"
 #include <gf/Event.h>
 
 
 class GameObject;
 class Level;
+class Graphics;
 
 class InputComponent
 {
 public:
     gf::Event event;
     virtual ~InputComponent() {}
-    virtual void update(GameObject& obj, Level *level) = 0;
+    virtual void update(GameObject& obj, Level *level, Graphics *graphics) = 0;
 };
 
 

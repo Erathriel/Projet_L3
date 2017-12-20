@@ -24,6 +24,7 @@ public:
     void draw(gf::RectangleShape* shape);
     void draw(GameObject obj);
     
+    gf::Window *m_window;
 private:
     gf::RenderWindow *m_renderer;
     

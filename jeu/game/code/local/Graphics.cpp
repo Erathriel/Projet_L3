@@ -2,7 +2,6 @@
 
 class GameObject;
 
-extern gf::Window *m_window;
 
 Graphics::Graphics(){
     static constexpr gf::Vector2u ScreenSize(500, 500);

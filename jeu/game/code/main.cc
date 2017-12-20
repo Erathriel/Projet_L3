@@ -28,7 +28,6 @@
 //#include <Box2D/Box2D.h>
 //#include <cstdio>
 
-gf::Window *m_window;
 
 int main(/*int argc, char** argv*/) {
     

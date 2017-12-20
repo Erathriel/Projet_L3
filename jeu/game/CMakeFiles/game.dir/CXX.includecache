@@ -87,6 +87,8 @@ GameObject.h
 /home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.h
 Level.h
 /home/evan/Documents/Projet_L3/jeu/game/code/local/Level.h
+Graphics.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/Graphics.h
 gf/Event.h
 -
 

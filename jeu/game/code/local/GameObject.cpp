@@ -21,7 +21,7 @@ GameObject::GameObject(InputComponent* input, PhysicsComponent* physics, Graphic
 
 void GameObject::update(Level& level, Graphics& graphics)
     {
-        input_->update(*this, &level);
+        input_->update(*this, &level, &graphics);
         physics_->update(*this, level);
         graphics_->update(*this, &graphics);
     }

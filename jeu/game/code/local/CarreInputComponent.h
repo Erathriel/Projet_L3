@@ -4,17 +4,16 @@
 
 #include "InputComponent.h"
 
-extern gf::Window *m_window;
 
 class CarreInputComponent : public InputComponent
 {
 public:
 
     ~CarreInputComponent(){}
-    void update(GameObject& gb, Level *level)
+    void update(GameObject& gb, Level *level, Graphics *graphics)
     {
         
-        while (m_window->pollEvent(event)) {
+        while (graphics->m_window->pollEvent(event)) {
             switch (event.type) {
                 case gf::EventType::Closed:
                     exit(0);
