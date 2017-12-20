@@ -14,8 +14,8 @@ class Level;
 class CarrePhysicsComponent  : public PhysicsComponent
 {
 public:
-    //~PhysicsComponent() {}
-    void update(GameObject& obj, Level& level) = 0;
+    ~CarrePhysicsComponent() {}
+    void update(GameObject& obj, Level& level){};
 };
 
 #endif //GF_PHYSICSCOMPONENT_H

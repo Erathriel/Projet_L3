@@ -27,3 +27,8 @@ void GameObject::update(Level& level, Graphics& graphics)
     }
 
 
+void GameObject::update(Graphics& graphics)
+    {
+        graphics_->update(*this, graphics);
+    }
+

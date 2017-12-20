@@ -17,6 +17,8 @@ gf/Event.h
 -
 gf/Vector.h
 -
+gf/Color.h
+-
 
 /home/evan/Documents/Projet_L3/jeu/game/code/local/CarreInputComponent.h
 InputComponent.h

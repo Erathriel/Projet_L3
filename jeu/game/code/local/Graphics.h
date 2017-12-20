@@ -20,7 +20,7 @@ class Graphics {
 public:
     Graphics();
     void display();
-    void update(GameObject obj, Graphics graphics);
+    void update(GameObject obj);
     void draw(gf::RectangleShape* shape);
     void draw(GameObject obj);
     

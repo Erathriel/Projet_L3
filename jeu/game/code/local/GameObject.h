@@ -27,15 +27,16 @@ public:
 
     void update(Level& level, Graphics& graphics);
 
+    void update(Graphics& graphics);
 
     void setVelocity(gf::Vector2f velocity);
 
+
+private:
+    
     InputComponent* input_;
     PhysicsComponent* physics_;
     GraphicsComponent* graphics_;
-
-private:
-
 };
 
 

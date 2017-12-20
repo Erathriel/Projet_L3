@@ -40,9 +40,9 @@ int main(/*int argc, char** argv*/) {
     Graphics graphicsG;
     gf::Event event;
     
-    CarreInputComponent* input;
-    CarrePhysicsComponent* physics;
-    CarreGraphicsComponent* graphicsComp;
+    CarreInputComponent* input = new CarreInputComponent(event);
+    CarrePhysicsComponent* physics = new CarrePhysicsComponent();
+    CarreGraphicsComponent* graphicsComp = new CarreGraphicsComponent();
     
     
     gf::Vector2f position(0,0);

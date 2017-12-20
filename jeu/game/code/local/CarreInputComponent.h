@@ -12,7 +12,7 @@ public:
     CarreInputComponent(gf::Event e) {
         event = e;
     }
-
+    ~CarreInputComponent(){}
     void update(GameObject& gb)
     {
         switch (event.type) {
