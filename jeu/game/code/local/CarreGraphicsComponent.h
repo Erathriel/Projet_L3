@@ -16,15 +16,17 @@ class CarreGraphicsComponent : public GraphicsComponent
 {
 public:
 
-	void update(GameObject& obj, Graphics graphics){
+	void update(GameObject& obj, Graphics *graphics){
+            printf("A\n");
             if(!initialised){
-		gf::RectangleShape *shape = new gf::RectangleShape({obj.m_size,obj.m_size});
+		shape = new gf::RectangleShape({obj.m_size,obj.m_size});
                 shape->setPosition(obj.m_position);
                 shape->setColor(obj.m_color);
                 initialised = true;
             }
-                
-            graphics.draw(shape);
+            printf("B\n");
+            graphics->draw(shape);
+            printf("C\n");
 	}
 	~CarreGraphicsComponent(){}
 	

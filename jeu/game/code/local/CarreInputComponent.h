@@ -9,9 +9,6 @@ class CarreInputComponent : public InputComponent
 {
 public:
 
-    CarreInputComponent(gf::Event e) {
-        event = e;
-    }
     ~CarreInputComponent(){}
     void update(GameObject& gb)
     {
@@ -57,5 +54,7 @@ public:
         }
 
     }
+private:
+    gf::Event event;
 
 };

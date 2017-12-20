@@ -21,14 +21,18 @@ GameObject::GameObject(InputComponent* input, PhysicsComponent* physics, Graphic
 
 void GameObject::update(Level& level, Graphics& graphics)
     {
+        printf("a\n");
         input_->update(*this);
+        printf("b\n");
         physics_->update(*this, level);
-        graphics_->update(*this, graphics);
+        printf("c\n");
+        graphics_->update(*this, &graphics);
+        printf("d\n");
     }
 
 
 void GameObject::update(Graphics& graphics)
     {
-        graphics_->update(*this, graphics);
+        graphics_->update(*this, &graphics);
     }
 
