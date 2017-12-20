@@ -13,7 +13,6 @@ public:
     ~CarreInputComponent(){}
     void update(GameObject& gb, Level *level)
     {
-        //printf("1\n");
         
         while (m_window->pollEvent(event)) {
             switch (event.type) {
@@ -21,20 +20,20 @@ public:
                     exit(0);
                     break;
                 case gf::EventType::KeyPressed:
-                    printf("2\n");
                     switch (event.key.keycode) {
                         case gf::Keycode::Up:
-                            printf("3\n");
-                            gb.m_velocity.y -= 100.0f * level->getdt();
+                            up_pressed = true;
                             break;
                         case gf::Keycode::Down:
-                            gb.m_velocity.y += 100.0f * level->getdt();
+                            down_pressed = true;
                             break;
                         case gf::Keycode::Left:
-                            gb.m_velocity.x -= 100.0f * level->getdt();
+                            
+                            left_pressed = true;
                             break;
                         case gf::Keycode::Right:
-                            gb.m_velocity.x += 100.0f * level->getdt();
+                            
+                            right_pressed = true;
                             break;
                         default:
                             break;
@@ -43,16 +42,17 @@ public:
                 case gf::EventType::KeyReleased:
                     switch (event.key.keycode) {
                         case gf::Keycode::Up:
-                            gb.m_velocity.y = 0.0f;
+                            up_pressed = false;
                             break;
                         case gf::Keycode::Down:
-                            gb.m_velocity.y = 0.0f;
+                            down_pressed = false;
                             break;
                         case gf::Keycode::Left:
-                            gb.m_velocity.x = 0.0f;
+                            left_pressed = false;
+                            break;
                             break;
                         case gf::Keycode::Right:
-                            gb.m_velocity.x = 0.0f;
+                            right_pressed = false;
                             break;
                         default:
                             break;
@@ -62,9 +62,23 @@ public:
                     break;
             }
         }
+        
+        if(up_pressed)
+            gb.m_position.y -= 100.0f * level->getdt();
+        if(down_pressed)
+            gb.m_position.y += 100.0f * level->getdt();
+        if(left_pressed)
+            gb.m_position.x -= 100.0f * level->getdt();
+        if(right_pressed)
+            gb.m_position.x += 100.0f * level->getdt();
 
     }
 private:
     gf::Event event;
+    
+    bool up_pressed;
+    bool down_pressed;
+    bool right_pressed;
+    bool left_pressed;
 
 };
