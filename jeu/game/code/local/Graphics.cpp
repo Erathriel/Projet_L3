@@ -1,5 +1,3 @@
-
-
 #include "Graphics.h"
 
 class GameObject;

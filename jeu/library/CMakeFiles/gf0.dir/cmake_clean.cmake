@@ -99,8 +99,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/gf0.dir/vendor/tinyxml2/tinyxml2.cpp.o"
   "CMakeFiles/gf0.dir/vendor/glad/src/glad.cc.o"
   "libgf0.pdb"
-  "libgf0.so"
   "libgf0.so.0.6.0"
+  "libgf0.so"
   "libgf0.so.0"
 )
 

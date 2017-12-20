@@ -10,7 +10,7 @@
 #include <gf/Views.h>
 #include <gf/Window.h>
 #include <gf/Color.h>
-#include <gf/Shape.h>
+#include <gf/Shapes.h>
 #include <gf/Vector.h>
 
 class GameObject;

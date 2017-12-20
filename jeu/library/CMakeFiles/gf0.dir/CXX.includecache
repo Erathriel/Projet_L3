@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/evan/Documents/Projet_L3/jeu/library/Action.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Action.cc
 gf/Action.h
 -
 algorithm
@@ -16,7 +16,7 @@ stdexcept
 gf/Controls.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Activities.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Activities.cc
 gf/Activities.h
 -
 cassert
@@ -26,33 +26,33 @@ gf/Unused.h
 gf/VectorOps.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Activity.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Activity.cc
 gf/Activity.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/AnimatedSprite.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/AnimatedSprite.cc
 gf/AnimatedSprite.h
 -
 gf/Animation.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Animation.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Animation.cc
 gf/Animation.h
 -
 stdexcept
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/AssetManager.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/AssetManager.cc
 gf/AssetManager.h
 -
 gf/Log.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Blend.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Blend.cc
 gf/Blend.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/BufferedGeometry.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/BufferedGeometry.cc
 gf/BufferedGeometry.h
 -
 gf/Matrix.h
@@ -62,11 +62,11 @@ gf/RenderTarget.h
 gf/Transformable.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Circ.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Circ.cc
 gf/Circ.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Clipboard.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Clipboard.cc
 gf/Clipboard.h
 -
 SDL.h
@@ -74,11 +74,11 @@ SDL.h
 gf/Log.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Clock.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Clock.cc
 gf/Clock.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Collision.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Collision.cc
 gf/Collision.h
 -
 cassert
@@ -90,7 +90,7 @@ gf/Log.h
 gf/Transform.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Color.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Color.cc
 gf/Color.h
 -
 cassert
@@ -104,7 +104,7 @@ tuple
 gf/Math.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/ColorRamp.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/ColorRamp.cc
 gf/ColorRamp.h
 -
 utility
@@ -114,7 +114,7 @@ gf/Color.h
 gf/VectorOps.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Console.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Console.cc
 gf/Console.h
 -
 cassert
@@ -142,7 +142,7 @@ gf/VertexArray.h
 gf/Unused.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/ConsoleFont.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/ConsoleFont.cc
 gf/ConsoleFont.h
 -
 cassert
@@ -158,17 +158,17 @@ gf/StringUtils.h
 gf/VectorOps.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Control.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Control.cc
 gf/Control.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Controls.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Controls.cc
 gf/Controls.h
 -
 gf/Event.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Coordinates.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Coordinates.cc
 gf/Coordinates.h
 -
 cassert
@@ -178,7 +178,7 @@ gf/RenderTarget.h
 gf/VectorOps.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Cursor.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Cursor.cc
 gf/Cursor.h
 -
 cassert
@@ -190,7 +190,7 @@ gf/Image.h
 gf/Log.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Curve.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Curve.cc
 gf/Curve.h
 -
 gf/Color.h
@@ -200,7 +200,7 @@ gf/RenderTarget.h
 gf/VectorOps.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Curves.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Curves.cc
 gf/Curves.h
 -
 cassert
@@ -208,7 +208,7 @@ cassert
 gf/VectorOps.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Direction.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Direction.cc
 gf/Direction.h
 -
 cassert
@@ -216,37 +216,37 @@ cassert
 gf/Math.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Drawable.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Drawable.cc
 gf/Drawable.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Easings.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Easings.cc
 gf/Easings.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Effects.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Effects.cc
 gf/Effects.h
 -
 generated/default.frag.h
-/home/evan/Documents/Projet_L3/jeu/library/generated/default.frag.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/generated/default.frag.h
 generated/default.vert.h
-/home/evan/Documents/Projet_L3/jeu/library/generated/default.vert.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/generated/default.vert.h
 generated/color_matrix.frag.h
-/home/evan/Documents/Projet_L3/jeu/library/generated/color_matrix.frag.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/generated/color_matrix.frag.h
 generated/edge.frag.h
-/home/evan/Documents/Projet_L3/jeu/library/generated/edge.frag.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/generated/edge.frag.h
 generated/fxaa.frag.h
-/home/evan/Documents/Projet_L3/jeu/library/generated/fxaa.frag.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/generated/fxaa.frag.h
 config.h
-/home/evan/Documents/Projet_L3/jeu/library/config.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/config.h
 
-/home/evan/Documents/Projet_L3/jeu/library/Entity.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Entity.cc
 gf/Entity.h
 -
 gf/Unused.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/EntityContainer.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/EntityContainer.cc
 gf/EntityContainer.h
 -
 algorithm
@@ -254,11 +254,11 @@ algorithm
 gf/Entity.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Flags.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Flags.cc
 gf/Flags.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Font.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Font.cc
 gf/Font.h
 -
 cstring
@@ -274,9 +274,9 @@ gf/Log.h
 gf/VectorOps.h
 -
 priv/Debug.h
-/home/evan/Documents/Projet_L3/jeu/library/priv/Debug.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/priv/Debug.h
 
-/home/evan/Documents/Projet_L3/jeu/library/Gamepad.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Gamepad.cc
 gf/Gamepad.h
 -
 cstring
@@ -286,9 +286,9 @@ SDL.h
 gf/Log.h
 -
 generated/gamecontrollerdb.txt.h
-/home/evan/Documents/Projet_L3/jeu/library/generated/gamecontrollerdb.txt.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/generated/gamecontrollerdb.txt.h
 
-/home/evan/Documents/Projet_L3/jeu/library/Geometry.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Geometry.cc
 gf/Geometry.h
 -
 cassert
@@ -298,7 +298,7 @@ gf/Log.h
 gf/VectorOps.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/GraphicsInfo.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/GraphicsInfo.cc
 gf/GraphicsInfo.h
 -
 cassert
@@ -312,9 +312,9 @@ glad/glad.h
 gf/Log.h
 -
 priv/Debug.h
-/home/evan/Documents/Projet_L3/jeu/library/priv/Debug.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/priv/Debug.h
 
-/home/evan/Documents/Projet_L3/jeu/library/Grid.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Grid.cc
 gf/Grid.h
 -
 gf/RenderTarget.h
@@ -322,7 +322,7 @@ gf/RenderTarget.h
 gf/VectorOps.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Heightmap.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Heightmap.cc
 gf/Heightmap.h
 -
 algorithm
@@ -334,7 +334,7 @@ gf/VectorOps.h
 gf/Unused.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Image.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Image.cc
 gf/Image.h
 -
 cassert
@@ -350,15 +350,15 @@ gf/Log.h
 gf/InputStream.h
 -
 vendor/stb/stb_image.h
-/home/evan/Documents/Projet_L3/jeu/library/vendor/stb/stb_image.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/vendor/stb/stb_image.h
 vendor/stb/stb_image_write.h
-/home/evan/Documents/Projet_L3/jeu/library/vendor/stb/stb_image_write.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/vendor/stb/stb_image_write.h
 
-/home/evan/Documents/Projet_L3/jeu/library/InputStream.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/InputStream.cc
 gf/InputStream.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/InputStreams.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/InputStreams.cc
 gf/InputStreams.h
 -
 cstring
@@ -368,13 +368,13 @@ string
 gf/Log.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Keyboard.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Keyboard.cc
 gf/Keyboard.h
 -
 SDL.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Library.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Library.cc
 gf/Library.h
 -
 cassert
@@ -394,9 +394,9 @@ gf/Log.h
 gf/Unused.h
 -
 config.h
-/home/evan/Documents/Projet_L3/jeu/library/config.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/config.h
 
-/home/evan/Documents/Projet_L3/jeu/library/Log.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Log.cc
 gf/Log.h
 -
 cassert
@@ -410,9 +410,9 @@ chrono
 utility
 -
 config.h
-/home/evan/Documents/Projet_L3/jeu/library/config.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/config.h
 
-/home/evan/Documents/Projet_L3/jeu/library/Logo.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Logo.cc
 gf/Logo.h
 -
 cassert
@@ -428,7 +428,7 @@ gf/VectorOps.h
 gf/Vertex.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Map.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Map.cc
 gf/Map.h
 -
 iostream
@@ -442,15 +442,15 @@ gf/VectorOps.h
 boost/heap/binomial_heap.hpp
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Math.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Math.cc
 gf/Math.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Matrix.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Matrix.cc
 gf/Matrix.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/MessageManager.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/MessageManager.cc
 gf/MessageManager.h
 -
 cassert
@@ -458,13 +458,13 @@ cassert
 algorithm
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Model.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Model.cc
 gf/Model.h
 -
 gf/Unused.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/ModelContainer.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/ModelContainer.cc
 gf/ModelContainer.h
 -
 algorithm
@@ -472,11 +472,11 @@ algorithm
 gf/Model.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Models.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Models.cc
 gf/Models.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Monitor.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Monitor.cc
 gf/Monitor.h
 -
 cassert
@@ -486,7 +486,7 @@ SDL.h
 gf/Log.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/NinePatch.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/NinePatch.cc
 gf/NinePatch.h
 -
 gf/RenderTarget.h
@@ -494,7 +494,7 @@ gf/RenderTarget.h
 gf/Texture.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Noise.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Noise.cc
 gf/Noise.h
 -
 cassert
@@ -510,7 +510,7 @@ gf/Math.h
 gf/Random.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Noises.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Noises.cc
 gf/Noises.h
 -
 cassert
@@ -530,7 +530,7 @@ gf/Random.h
 gf/VectorOps.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Orientation.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Orientation.cc
 gf/Orientation.h
 -
 cassert
@@ -538,7 +538,7 @@ cassert
 gf/Math.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Particles.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Particles.cc
 gf/Particles.h
 -
 gf/RenderTarget.h
@@ -548,13 +548,13 @@ gf/Texture.h
 gf/VectorOps.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Paths.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Paths.cc
 gf/Paths.h
 -
 SDL.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/PhysicsBody.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/PhysicsBody.cc
 gf/PhysicsBody.h
 -
 gf/Collision.h
@@ -572,7 +572,7 @@ gf/VectorOps.h
 gf/Log.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/PhysicsGeometry.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/PhysicsGeometry.cc
 gf/PhysicsGeometry.h
 -
 gf/Color.h
@@ -584,7 +584,7 @@ gf/Shapes.h
 gf/Unused.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/PhysicsModel.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/PhysicsModel.cc
 gf/PhysicsModel.h
 -
 gf/PhysicsBody.h
@@ -598,7 +598,7 @@ gf/VectorOps.h
 gf/Log.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Polygon.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Polygon.cc
 gf/Polygon.h
 -
 cassert
@@ -614,13 +614,13 @@ gf/VectorOps.h
 gf/Log.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Polyline.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Polyline.cc
 gf/Polyline.h
 -
 cassert
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/PostProcessing.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/PostProcessing.cc
 gf/PostProcessing.h
 -
 gf/Effect.h
@@ -630,7 +630,7 @@ gf/RenderTarget.h
 gf/Texture.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Random.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Random.cc
 gf/Random.h
 -
 algorithm
@@ -640,15 +640,15 @@ functional
 iterator
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Range.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Range.cc
 gf/Range.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Rect.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Rect.cc
 gf/Rect.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/RenderPipeline.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/RenderPipeline.cc
 gf/RenderPipeline.h
 -
 cassert
@@ -662,9 +662,9 @@ gf/Unused.h
 gf/Window.h
 -
 priv/Debug.h
-/home/evan/Documents/Projet_L3/jeu/library/priv/Debug.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/priv/Debug.h
 
-/home/evan/Documents/Projet_L3/jeu/library/RenderTarget.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/RenderTarget.cc
 gf/RenderTarget.h
 -
 cassert
@@ -686,15 +686,15 @@ gf/Vertex.h
 gf/VertexBuffer.h
 -
 priv/Debug.h
-/home/evan/Documents/Projet_L3/jeu/library/priv/Debug.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/priv/Debug.h
 generated/default_alpha.frag.h
-/home/evan/Documents/Projet_L3/jeu/library/generated/default_alpha.frag.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/generated/default_alpha.frag.h
 generated/default.frag.h
-/home/evan/Documents/Projet_L3/jeu/library/generated/default.frag.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/generated/default.frag.h
 generated/default.vert.h
-/home/evan/Documents/Projet_L3/jeu/library/generated/default.vert.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/generated/default.vert.h
 
-/home/evan/Documents/Projet_L3/jeu/library/RenderTexture.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/RenderTexture.cc
 gf/RenderTexture.h
 -
 cassert
@@ -702,9 +702,9 @@ cassert
 glad/glad.h
 -
 priv/Debug.h
-/home/evan/Documents/Projet_L3/jeu/library/priv/Debug.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/priv/Debug.h
 
-/home/evan/Documents/Projet_L3/jeu/library/RenderWindow.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/RenderWindow.cc
 gf/RenderWindow.h
 -
 glad/glad.h
@@ -712,13 +712,13 @@ glad/glad.h
 gf/Window.h
 -
 priv/Debug.h
-/home/evan/Documents/Projet_L3/jeu/library/priv/Debug.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/priv/Debug.h
 
-/home/evan/Documents/Projet_L3/jeu/library/ResourceManager.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/ResourceManager.cc
 gf/ResourceManager.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Shader.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Shader.cc
 gf/Shader.h
 -
 cassert
@@ -734,9 +734,9 @@ gf/InputStream.h
 gf/Log.h
 -
 priv/Debug.h
-/home/evan/Documents/Projet_L3/jeu/library/priv/Debug.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/priv/Debug.h
 
-/home/evan/Documents/Projet_L3/jeu/library/Shape.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Shape.cc
 gf/Shape.h
 -
 cassert
@@ -750,7 +750,7 @@ gf/Texture.h
 gf/VectorOps.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Shapes.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Shapes.cc
 gf/Shapes.h
 -
 cassert
@@ -758,13 +758,13 @@ cassert
 gf/Math.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Sleep.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Sleep.cc
 gf/Sleep.h
 -
 thread
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/SpaceTree.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/SpaceTree.cc
 gf/SpaceTree.h
 -
 cassert
@@ -774,7 +774,7 @@ queue
 stack
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Sprite.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Sprite.cc
 gf/Sprite.h
 -
 gf/RenderTarget.h
@@ -784,7 +784,7 @@ gf/Texture.h
 gf/VectorOps.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/SpriteBatch.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/SpriteBatch.cc
 gf/SpriteBatch.h
 -
 gf/RenderTarget.h
@@ -798,7 +798,7 @@ gf/Texture.h
 gf/VectorOps.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/StringUtils.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/StringUtils.cc
 gf/StringUtils.h
 -
 cassert
@@ -814,13 +814,13 @@ boost/algorithm/string/split.hpp
 boost/algorithm/string/classification.hpp
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/SystemInfo.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/SystemInfo.cc
 gf/SystemInfo.h
 -
 SDL.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Text.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Text.cc
 gf/Text.h
 -
 algorithm
@@ -838,7 +838,7 @@ gf/RenderTarget.h
 gf/VectorOps.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Texture.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Texture.cc
 gf/Texture.h
 -
 cassert
@@ -848,9 +848,9 @@ glad/glad.h
 gf/Image.h
 -
 priv/Debug.h
-/home/evan/Documents/Projet_L3/jeu/library/priv/Debug.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/priv/Debug.h
 
-/home/evan/Documents/Projet_L3/jeu/library/TextureAtlas.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/TextureAtlas.cc
 gf/TextureAtlas.h
 -
 cassert
@@ -864,9 +864,9 @@ gf/ResourceManager.h
 gf/Texture.h
 -
 vendor/tinyxml2/tinyxml2.h
-/home/evan/Documents/Projet_L3/jeu/library/vendor/tinyxml2/tinyxml2.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/vendor/tinyxml2/tinyxml2.h
 
-/home/evan/Documents/Projet_L3/jeu/library/TileLayer.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/TileLayer.cc
 gf/TileLayer.h
 -
 cassert
@@ -880,13 +880,13 @@ gf/Transform.h
 gf/VectorOps.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Time.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Time.cc
 gf/Time.h
 -
 type_traits
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Tmx.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Tmx.cc
 gf/Tmx.h
 -
 cstring
@@ -908,9 +908,9 @@ gf/Log.h
 gf/Unused.h
 -
 vendor/tinyxml2/tinyxml2.h
-/home/evan/Documents/Projet_L3/jeu/library/vendor/tinyxml2/tinyxml2.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/vendor/tinyxml2/tinyxml2.h
 
-/home/evan/Documents/Projet_L3/jeu/library/Transform.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Transform.cc
 gf/Transform.h
 -
 algorithm
@@ -924,13 +924,13 @@ gf/Rect.h
 gf/VectorOps.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Transformable.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Transformable.cc
 gf/Transformable.h
 -
 gf/VectorOps.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/UI.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/UI.cc
 gf/UI.h
 -
 cassert
@@ -970,13 +970,13 @@ gf/VectorOps.h
 gf/Vertex.h
 -
 vendor/nuklear/nuklear.h
-/home/evan/Documents/Projet_L3/jeu/library/vendor/nuklear/nuklear.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/vendor/nuklear/nuklear.h
 
-/home/evan/Documents/Projet_L3/jeu/library/Vector.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Vector.cc
 gf/Vector.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/VertexArray.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/VertexArray.cc
 gf/VertexArray.h
 -
 gf/RenderTarget.h
@@ -984,7 +984,7 @@ gf/RenderTarget.h
 gf/VectorOps.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/VertexBuffer.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/VertexBuffer.cc
 gf/VertexBuffer.h
 -
 algorithm
@@ -996,9 +996,9 @@ gf/Log.h
 gf/Vertex.h
 -
 priv/Debug.h
-/home/evan/Documents/Projet_L3/jeu/library/priv/Debug.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/priv/Debug.h
 
-/home/evan/Documents/Projet_L3/jeu/library/View.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/View.cc
 gf/View.h
 -
 gf/Event.h
@@ -1012,7 +1012,7 @@ gf/Unused.h
 gf/VectorOps.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/ViewContainer.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/ViewContainer.cc
 gf/ViewContainer.h
 -
 gf/Event.h
@@ -1020,7 +1020,7 @@ gf/Event.h
 gf/View.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Views.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Views.cc
 gf/Views.h
 -
 gf/Unused.h
@@ -1028,7 +1028,7 @@ gf/Unused.h
 gf/VectorOps.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/Window.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/Window.cc
 gf/Window.h
 -
 cassert
@@ -1056,49 +1056,49 @@ gf/Sleep.h
 gf/Vector.h
 -
 priv/Debug.h
-/home/evan/Documents/Projet_L3/jeu/library/priv/Debug.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/priv/Debug.h
 
-/home/evan/Documents/Projet_L3/jeu/library/config.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/config.h
 
-/home/evan/Documents/Projet_L3/jeu/library/data/generated.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/data/generated.cc
 generated/color_matrix.frag.h
-/home/evan/Documents/Projet_L3/jeu/library/data/generated/color_matrix.frag.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/data/generated/color_matrix.frag.h
 generated/default_alpha.frag.h
-/home/evan/Documents/Projet_L3/jeu/library/data/generated/default_alpha.frag.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/data/generated/default_alpha.frag.h
 generated/default.frag.h
-/home/evan/Documents/Projet_L3/jeu/library/data/generated/default.frag.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/data/generated/default.frag.h
 generated/default.vert.h
-/home/evan/Documents/Projet_L3/jeu/library/data/generated/default.vert.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/data/generated/default.vert.h
 generated/edge.frag.h
-/home/evan/Documents/Projet_L3/jeu/library/data/generated/edge.frag.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/data/generated/edge.frag.h
 generated/fxaa.frag.h
-/home/evan/Documents/Projet_L3/jeu/library/data/generated/fxaa.frag.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/data/generated/fxaa.frag.h
 generated/gamecontrollerdb.txt.h
-/home/evan/Documents/Projet_L3/jeu/library/data/generated/gamecontrollerdb.txt.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/data/generated/gamecontrollerdb.txt.h
 
-/home/evan/Documents/Projet_L3/jeu/library/generated/color_matrix.frag.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/generated/color_matrix.frag.h
 
-/home/evan/Documents/Projet_L3/jeu/library/generated/default.frag.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/generated/default.frag.h
 
-/home/evan/Documents/Projet_L3/jeu/library/generated/default.vert.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/generated/default.vert.h
 
-/home/evan/Documents/Projet_L3/jeu/library/generated/default_alpha.frag.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/generated/default_alpha.frag.h
 
-/home/evan/Documents/Projet_L3/jeu/library/generated/edge.frag.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/generated/edge.frag.h
 
-/home/evan/Documents/Projet_L3/jeu/library/generated/fxaa.frag.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/generated/fxaa.frag.h
 
-/home/evan/Documents/Projet_L3/jeu/library/generated/gamecontrollerdb.txt.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/generated/gamecontrollerdb.txt.h
 
-/home/evan/Documents/Projet_L3/jeu/library/priv/Debug.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/priv/Debug.cc
 Debug.h
-/home/evan/Documents/Projet_L3/jeu/library/priv/Debug.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/priv/Debug.h
 glad/glad.h
 -
 gf/Log.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/priv/Debug.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/priv/Debug.h
 iostream
 -
 gf/Matrix.h
@@ -1108,7 +1108,7 @@ gf/Rect.h
 gf/Vector.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/vendor/glad/src/glad.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/vendor/glad/src/glad.cc
 stdio.h
 -
 stdlib.h
@@ -1118,9 +1118,9 @@ string.h
 glad/glad.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/vendor/nuklear/nuklear.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/vendor/nuklear/nuklear.h
 nuklear.h
-/home/evan/Documents/Projet_L3/jeu/library/vendor/nuklear/nuklear.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/vendor/nuklear/nuklear.h
 stdint.h
 -
 stdlib.h
@@ -1132,9 +1132,9 @@ stdarg.h
 assert.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/vendor/stb/stb_image.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/vendor/stb/stb_image.h
 stb_image.h
-/home/evan/Documents/Projet_L3/jeu/library/vendor/stb/stb_image.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/vendor/stb/stb_image.h
 stdio.h
 -
 stdarg.h
@@ -1162,7 +1162,7 @@ intrin.h
 arm_neon.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/vendor/stb/stb_image_write.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/vendor/stb/stb_image_write.h
 stdio.h
 -
 stdarg.h
@@ -1176,9 +1176,9 @@ math.h
 assert.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/vendor/tinyxml2/tinyxml2.cpp
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/vendor/tinyxml2/tinyxml2.cpp
 tinyxml2.h
-/home/evan/Documents/Projet_L3/jeu/library/vendor/tinyxml2/tinyxml2.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/vendor/tinyxml2/tinyxml2.h
 new
 -
 stddef.h
@@ -1190,7 +1190,7 @@ cstddef
 cstdarg
 -
 
-/home/evan/Documents/Projet_L3/jeu/library/vendor/tinyxml2/tinyxml2.h
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/vendor/tinyxml2/tinyxml2.h
 ctype.h
 -
 limits.h
@@ -1243,14 +1243,14 @@ SDL_events.h
 /usr/include/SDL2/SDL_events.h
 SDL_filesystem.h
 /usr/include/SDL2/SDL_filesystem.h
-SDL_joystick.h
-/usr/include/SDL2/SDL_joystick.h
 SDL_gamecontroller.h
 /usr/include/SDL2/SDL_gamecontroller.h
 SDL_haptic.h
 /usr/include/SDL2/SDL_haptic.h
 SDL_hints.h
 /usr/include/SDL2/SDL_hints.h
+SDL_joystick.h
+/usr/include/SDL2/SDL_joystick.h
 SDL_loadso.h
 /usr/include/SDL2/SDL_loadso.h
 SDL_log.h
@@ -1265,6 +1265,8 @@ SDL_render.h
 /usr/include/SDL2/SDL_render.h
 SDL_rwops.h
 /usr/include/SDL2/SDL_rwops.h
+SDL_shape.h
+/usr/include/SDL2/SDL_shape.h
 SDL_system.h
 /usr/include/SDL2/SDL_system.h
 SDL_thread.h
@@ -1354,6 +1356,8 @@ mm3dnow.h
 xmmintrin.h
 -
 emmintrin.h
+-
+pmmintrin.h
 -
 begin_code.h
 /usr/include/SDL2/begin_code.h
@@ -1551,6 +1555,8 @@ close_code.h
 /usr/include/SDL2/SDL_pixels.h
 SDL_stdinc.h
 /usr/include/SDL2/SDL_stdinc.h
+SDL_endian.h
+/usr/include/SDL2/SDL_endian.h
 begin_code.h
 /usr/include/SDL2/begin_code.h
 close_code.h
@@ -1622,6 +1628,22 @@ close_code.h
 SDL_stdinc.h
 /usr/include/SDL2/SDL_stdinc.h
 
+/usr/include/SDL2/SDL_shape.h
+SDL_stdinc.h
+/usr/include/SDL2/SDL_stdinc.h
+SDL_pixels.h
+/usr/include/SDL2/SDL_pixels.h
+SDL_rect.h
+/usr/include/SDL2/SDL_rect.h
+SDL_surface.h
+/usr/include/SDL2/SDL_surface.h
+SDL_video.h
+/usr/include/SDL2/SDL_video.h
+begin_code.h
+/usr/include/SDL2/begin_code.h
+close_code.h
+/usr/include/SDL2/close_code.h
+
 /usr/include/SDL2/SDL_stdinc.h
 SDL_config.h
 /usr/include/SDL2/SDL_config.h
@@ -1649,6 +1671,8 @@ string.h
 -
 strings.h
 -
+wchar.h
+-
 inttypes.h
 -
 stdint.h
@@ -1658,8 +1682,6 @@ ctype.h
 math.h
 -
 float.h
--
-iconv.h
 -
 sal.h
 -
@@ -1721,6 +1743,10 @@ begin_code.h
 /usr/include/SDL2/begin_code.h
 process.h
 -
+process.h
+-
+stdlib.h
+-
 close_code.h
 /usr/include/SDL2/close_code.h
 
@@ -1773,64 +1799,6 @@ close_code.h
 /usr/include/SDL2/close_code.h
 
 /usr/include/freetype2/freetype/config/ftheader.h
-x86_64-linux-gnu/freetype2/freetype/config/ftheader.h
--
-x86_64-linux-gnux32/freetype2/freetype/config/ftheader.h
--
-i386-linux-gnu/freetype2/freetype/config/ftheader.h
--
-aarch64-linux-gnu/freetype2/freetype/config/ftheader.h
--
-alpha-linux-gnu/freetype2/freetype/config/ftheader.h
--
-arm-linux-gnueabihf/freetype2/freetype/config/ftheader.h
--
-arm-linux-gnueabi/freetype2/freetype/config/ftheader.h
--
-hppa-linux-gnu/freetype2/freetype/config/ftheader.h
--
-ia64-linux-gnu/freetype2/freetype/config/ftheader.h
--
-m68k-linux-gnu/freetype2/freetype/config/ftheader.h
--
-mipsel-linux-gnu/freetype2/freetype/config/ftheader.h
--
-mips64el-linux-gnuabin32/freetype2/freetype/config/ftheader.h
--
-mips64el-linux-gnuabi64/freetype2/freetype/config/ftheader.h
--
-mips-linux-gnu/freetype2/freetype/config/ftheader.h
--
-mips64-linux-gnuabin32/freetype2/freetype/config/ftheader.h
--
-mips64-linux-gnuabi64/freetype2/freetype/config/ftheader.h
--
-or1k-linux-gnu/freetype2/freetype/config/ftheader.h
--
-powerpc-linux-gnuspe/freetype2/freetype/config/ftheader.h
--
-powerpc64le-linux-gnu/freetype2/freetype/config/ftheader.h
--
-powerpc64-linux-gnu/freetype2/freetype/config/ftheader.h
--
-powerpc-linux-gnu/freetype2/freetype/config/ftheader.h
--
-s390x-linux-gnu/freetype2/freetype/config/ftheader.h
--
-s390-linux-gnu/freetype2/freetype/config/ftheader.h
--
-sh4-linux-gnu/freetype2/freetype/config/ftheader.h
--
-sparc64-linux-gnu/freetype2/freetype/config/ftheader.h
--
-sparc-linux-gnu/freetype2/freetype/config/ftheader.h
--
-x86_64-kfreebsd-gnu/freetype2/freetype/config/ftheader.h
--
-i386-kfreebsd-gnu/freetype2/freetype/config/ftheader.h
--
-i386-gnu/freetype2/freetype/config/ftheader.h
--
 
 /usr/include/freetype2/ft2build.h
 freetype/config/ftheader.h

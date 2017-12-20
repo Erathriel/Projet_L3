@@ -1,1 +1,1 @@
-/usr/bin/c++   -Wall -Wextra -std=c++11 -O2 -g   CMakeFiles/gfdev_source_file.dir/tools/gfdev_source_file.cc.o  -o gfdev_source_file -rdynamic 
+/usr/bin/c++  -Wall -Wextra -std=c++11 -O2 -g  -rdynamic CMakeFiles/gfdev_source_file.dir/tools/gfdev_source_file.cc.o  -o gfdev_source_file 

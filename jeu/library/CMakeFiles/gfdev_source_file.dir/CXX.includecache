@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/evan/Documents/Projet_L3/jeu/library/tools/gfdev_source_file.cc
+/home/erathriel/Desktop/fac/Projet_L3/jeu/library/tools/gfdev_source_file.cc
 cstdarg
 -
 cstdlib
