@@ -56,7 +56,7 @@ int main(/*int argc, char** argv*/) {
         
         // 2. update
         
-        float dt = clock.restart().asSeconds();
+        level.setdt( clock.restart().asSeconds() );
         carre.update(level, graphicsG);
         
         // 3. draw

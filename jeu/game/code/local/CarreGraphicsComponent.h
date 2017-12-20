@@ -19,10 +19,10 @@ public:
 	void update(GameObject& obj, Graphics *graphics){
             if(!initialised){
 		shape = new gf::RectangleShape({obj.m_size,obj.m_size});
-                shape->setPosition(obj.m_position);
                 shape->setColor(obj.m_color);
                 initialised = true;
             }
+            shape->setPosition(obj.m_position);
             graphics->draw(shape);
 	}
 	~CarreGraphicsComponent(){}

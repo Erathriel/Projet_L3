@@ -11,7 +11,7 @@ class CarreInputComponent : public InputComponent
 public:
 
     ~CarreInputComponent(){}
-    void update(GameObject& gb)
+    void update(GameObject& gb, Level *level)
     {
         //printf("1\n");
         
@@ -25,16 +25,16 @@ public:
                     switch (event.key.keycode) {
                         case gf::Keycode::Up:
                             printf("3\n");
-                            gb.m_velocity.y -= 100.0f;
+                            gb.m_velocity.y -= 100.0f * level->getdt();
                             break;
                         case gf::Keycode::Down:
-                            gb.m_velocity.y += 100.0f;
+                            gb.m_velocity.y += 100.0f * level->getdt();
                             break;
                         case gf::Keycode::Left:
-                            gb.m_velocity.x -= 100.0f;
+                            gb.m_velocity.x -= 100.0f * level->getdt();
                             break;
                         case gf::Keycode::Right:
-                            gb.m_velocity.x += 100.0f;
+                            gb.m_velocity.x += 100.0f * level->getdt();
                             break;
                         default:
                             break;
@@ -43,16 +43,16 @@ public:
                 case gf::EventType::KeyReleased:
                     switch (event.key.keycode) {
                         case gf::Keycode::Up:
-                            gb.m_velocity.y += 100.0f;
+                            gb.m_velocity.y = 0.0f;
                             break;
                         case gf::Keycode::Down:
-                            gb.m_velocity.y -= 100.0f;
+                            gb.m_velocity.y = 0.0f;
                             break;
                         case gf::Keycode::Left:
-                            gb.m_velocity.x += 100.0f;
+                            gb.m_velocity.x = 0.0f;
                             break;
                         case gf::Keycode::Right:
-                            gb.m_velocity.x -= 100.0f;
+                            gb.m_velocity.x = 0.0f;
                             break;
                         default:
                             break;

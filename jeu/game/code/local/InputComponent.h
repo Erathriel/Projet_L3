@@ -7,17 +7,19 @@
 
 
 #include "GameObject.h"
+#include "Level.h"
 #include <gf/Event.h>
 
 
 class GameObject;
+class Level;
 
 class InputComponent
 {
 public:
     gf::Event event;
     virtual ~InputComponent() {}
-    virtual void update(GameObject& obj) = 0;
+    virtual void update(GameObject& obj, Level *level) = 0;
 };
 
 
