@@ -5,8 +5,14 @@
 #include "GameObject.h"
 #include "Graphics.h"
 #include <gf/Window.h>
+#include <gf/TileLayer.h>
 
 #define MAX_GAMEOBJECTS 1024
+
+#define NUMBER_OF_TILES_ROWS 30
+#define SIZE_OF_A_TILE 21
+#define TILESET_SPACING 2
+#define TILESET_MARGIN 2
 
 class GameObject;
 class Graphics;
@@ -18,6 +24,8 @@ class Level {
     GameObject *listGameObjects[MAX_GAMEOBJECTS];
     unsigned int nb_objects;
     Graphics* graphicsG;
+    
+    gf::TileLayer *tileLayer;
 public:
     Level(Graphics* ngraphicsG);
     gf::Window* getWindow();

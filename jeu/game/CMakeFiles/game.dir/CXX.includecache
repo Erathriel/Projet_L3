@@ -75,6 +75,8 @@ gf/Shape.h
 -
 gf/Vector.h
 -
+gf/TileLayer.h
+-
 
 /home/evan/Documents/Projet_L3/jeu/game/code/local/GraphicsComponent.h
 GameObject.h
@@ -102,6 +104,8 @@ GameObject.h
 Graphics.h
 /home/evan/Documents/Projet_L3/jeu/game/code/local/Graphics.h
 gf/Window.h
+-
+gf/TileLayer.h
 -
 
 /home/evan/Documents/Projet_L3/jeu/game/code/local/PhysicsComponent.h
@@ -175,6 +179,26 @@ Portability.h
 include/gf/Portability.h
 
 include/gf/Anchor.h
+
+include/gf/Array2D.h
+cassert
+-
+type_traits
+-
+utility
+-
+vector
+-
+Log.h
+include/gf/Log.h
+Math.h
+include/gf/Math.h
+Portability.h
+include/gf/Portability.h
+Range.h
+include/gf/Range.h
+Vector.h
+include/gf/Vector.h
 
 include/gf/ArrayRef.h
 array
@@ -501,6 +525,18 @@ Rect.h
 include/gf/Rect.h
 Vector.h
 include/gf/Vector.h
+
+include/gf/TileLayer.h
+Array2D.h
+include/gf/Array2D.h
+Portability.h
+include/gf/Portability.h
+Transformable.h
+include/gf/Transformable.h
+VertexArray.h
+include/gf/VertexArray.h
+VertexBuffer.h
+include/gf/VertexBuffer.h
 
 include/gf/Time.h
 cstdint
