@@ -2,6 +2,10 @@
 
 http://gamedevframework.github.io/v0.6.0/build_and_install.html
 
+# Installer la librairie Box2D
+
+Mettre libBox2D.a dans /usr/lib/x86_64-linux-gnu (ou quelque chose comme ça, le dernier dossier doit dépendre du système d'exploitation).
+
 # Modifier/ajouter du code au projet
 
 Tout ce qui est à modifier est dans /jeu/game normalement.
@@ -11,9 +15,11 @@ Lorsque vous ajoutez un .cc, il faut:
 - modifier code/XUnityBuild.cc et y ajouter les .cc également
 
 Pour compiler, mettez-vous dans /jeu, faire
+
 cmake .
-puis
+
 make
+
 L'exécutable "game" sera dans /jeu/game.
 
 # Petit rappel pour les commandes linux git
