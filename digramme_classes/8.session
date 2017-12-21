@@ -5,6 +5,8 @@ diagrams
     881 546 100 A4 50 0
 end
 show_stereotypes
+selected 
+package_ref 129 // digramme_classes
 open
   classdiagram_ref 128008 // diag
   class_ref 128392 // Level

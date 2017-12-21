@@ -10,10 +10,10 @@ class CarreInputComponent : public InputComponent
 public:
 
     ~CarreInputComponent(){}
-    void update(GameObject& gb, Level *level, Graphics *graphics)
+    void update(GameObject& gb, Level *level)
     {
         
-        while (graphics->m_window->pollEvent(event)) {
+        while (level->getWindow()->pollEvent(event)) {
             switch (event.type) {
                 case gf::EventType::Closed:
                     exit(0);

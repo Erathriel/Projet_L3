@@ -99,6 +99,10 @@ Level.h
 /home/evan/Documents/Projet_L3/jeu/game/code/local/Level.h
 GameObject.h
 /home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.h
+Graphics.h
+/home/evan/Documents/Projet_L3/jeu/game/code/local/Graphics.h
+gf/Window.h
+-
 
 /home/evan/Documents/Projet_L3/jeu/game/code/local/PhysicsComponent.h
 GameObject.h

@@ -37,32 +37,33 @@ int main(/*int argc, char** argv*/) {
     gf::Clock clock;
     
     
-    Level level;
     Graphics graphicsG;
+    Level level(&graphicsG);
     
     CarreInputComponent* input = new CarreInputComponent();
     CarrePhysicsComponent* physics = new CarrePhysicsComponent();
     CarreGraphicsComponent* graphicsComp = new CarreGraphicsComponent();
+    CarreInputComponent* input2 = new CarreInputComponent();
+    CarrePhysicsComponent* physics2 = new CarrePhysicsComponent();
+    CarreGraphicsComponent* graphicsComp2 = new CarreGraphicsComponent();
     
     
-    gf::Vector2f position(0,0);
+    gf::Vector2f position(1,1);
     
     GameObject carre(input, physics, graphicsComp, position, 100.0f, gf::Color::Red);
+    level.addGameObject(&carre);
+    GameObject carre2(input2, physics2, graphicsComp2, position*100, 50.0f, gf::Color::Blue);
+    level.addGameObject(&carre2);
     
     // game loop
     while (true) {
+        
         // 1. input
-        
         // 2. update
-        
-        level.setdt( clock.restart().asSeconds() );
-        carre.update(level, graphicsG);
+
+        level.updateGameObjects( clock.restart().asSeconds() );
         
         // 3. draw
-        
-        //renderer.clear();
-        
-        //carre.render(renderer);
         
         graphicsG.display();
         
