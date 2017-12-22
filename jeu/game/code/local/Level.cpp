@@ -16,7 +16,7 @@ Level::Level(Graphics* ngraphicsG){
 
     sprite = new gf::Sprite();
     sprite->setTexture(*graphicsG->getTileTexture());
-    gf::Vector2f position(200,200);
+    gf::Vector2f position(0,0);
     sprite->setPosition(position);
     sprite->setTextureRect({ 0.635f, 0.0f, 0.035f, 0.035f });
    // sprite->setAnchor(gf::Anchor::TopLeft);

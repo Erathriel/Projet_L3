@@ -1,242 +1,22 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/erathriel/Desktop/fac/Projet_L3/jeu/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_df777/fast"
-/usr/bin/make -f CMakeFiles/cmTC_df777.dir/build.make CMakeFiles/cmTC_df777.dir/build
-make[1]: Entering directory '/home/erathriel/Desktop/fac/Projet_L3/jeu/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_df777.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_df777.dir/CheckSymbolExists.c.o   -c /home/erathriel/Desktop/fac/Projet_L3/jeu/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_df777
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_df777.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_df777.dir/CheckSymbolExists.c.o  -o cmTC_df777 
-CMakeFiles/cmTC_df777.dir/CheckSymbolExists.c.o: In function `main':
-CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
-collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_df777.dir/build.make:97: recipe for target 'cmTC_df777' failed
-make[1]: *** [cmTC_df777] Error 1
-make[1]: Leaving directory '/home/erathriel/Desktop/fac/Projet_L3/jeu/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_df777/fast' failed
-make: *** [cmTC_df777/fast] Error 2
-
-File /home/erathriel/Desktop/fac/Projet_L3/jeu/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
-/* */
-#include <pthread.h>
-
-int main(int argc, char** argv)
-{
-  (void)argv;
-#ifndef pthread_create
-  return ((int*)(&pthread_create))[argc];
-#else
-  (void)argc;
-  return 0;
-#endif
-}
-
-Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/erathriel/Desktop/fac/Projet_L3/jeu/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_da15d/fast"
-/usr/bin/make -f CMakeFiles/cmTC_da15d.dir/build.make CMakeFiles/cmTC_da15d.dir/build
-make[1]: Entering directory '/home/erathriel/Desktop/fac/Projet_L3/jeu/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_da15d.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_da15d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.9/Modules/CheckFunctionExists.c
-Linking C executable cmTC_da15d
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_da15d.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_da15d.dir/CheckFunctionExists.c.o  -o cmTC_da15d -lpthreads 
-/usr/bin/ld: cannot find -lpthreads
-collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_da15d.dir/build.make:97: recipe for target 'cmTC_da15d' failed
-make[1]: *** [cmTC_da15d] Error 1
-make[1]: Leaving directory '/home/erathriel/Desktop/fac/Projet_L3/jeu/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_da15d/fast' failed
-make: *** [cmTC_da15d/fast] Error 2
-
-
-Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/erathriel/Desktop/fac/Projet_L3/jeu/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_a2fd9/fast"
-/usr/bin/make -f CMakeFiles/cmTC_a2fd9.dir/build.make CMakeFiles/cmTC_a2fd9.dir/build
-make[1]: Entering directory '/home/erathriel/Desktop/fac/Projet_L3/jeu/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_a2fd9.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_a2fd9.dir/CheckSymbolExists.c.o   -c /home/erathriel/Desktop/fac/Projet_L3/jeu/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_a2fd9
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a2fd9.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_a2fd9.dir/CheckSymbolExists.c.o  -o cmTC_a2fd9 
-CMakeFiles/cmTC_a2fd9.dir/CheckSymbolExists.c.o: In function `main':
-CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
-collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_a2fd9.dir/build.make:97: recipe for target 'cmTC_a2fd9' failed
-make[1]: *** [cmTC_a2fd9] Error 1
-make[1]: Leaving directory '/home/erathriel/Desktop/fac/Projet_L3/jeu/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_a2fd9/fast' failed
-make: *** [cmTC_a2fd9/fast] Error 2
-
-File /home/erathriel/Desktop/fac/Projet_L3/jeu/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
-/* */
-#include <pthread.h>
-
-int main(int argc, char** argv)
-{
-  (void)argv;
-#ifndef pthread_create
-  return ((int*)(&pthread_create))[argc];
-#else
-  (void)argc;
-  return 0;
-#endif
-}
-
-Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/erathriel/Desktop/fac/Projet_L3/jeu/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_2eb94/fast"
-/usr/bin/make -f CMakeFiles/cmTC_2eb94.dir/build.make CMakeFiles/cmTC_2eb94.dir/build
-make[1]: Entering directory '/home/erathriel/Desktop/fac/Projet_L3/jeu/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_2eb94.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_2eb94.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.9/Modules/CheckFunctionExists.c
-Linking C executable cmTC_2eb94
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2eb94.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_2eb94.dir/CheckFunctionExists.c.o  -o cmTC_2eb94 -lpthreads 
-/usr/bin/ld: cannot find -lpthreads
-collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_2eb94.dir/build.make:97: recipe for target 'cmTC_2eb94' failed
-make[1]: *** [cmTC_2eb94] Error 1
-make[1]: Leaving directory '/home/erathriel/Desktop/fac/Projet_L3/jeu/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_2eb94/fast' failed
-make: *** [cmTC_2eb94/fast] Error 2
-
-
-Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/erathriel/Desktop/fac/Projet_L3/jeu/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_27ce1/fast"
-/usr/bin/make -f CMakeFiles/cmTC_27ce1.dir/build.make CMakeFiles/cmTC_27ce1.dir/build
-make[1]: Entering directory '/home/erathriel/Desktop/fac/Projet_L3/jeu/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_27ce1.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_27ce1.dir/CheckSymbolExists.c.o   -c /home/erathriel/Desktop/fac/Projet_L3/jeu/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_27ce1
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_27ce1.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_27ce1.dir/CheckSymbolExists.c.o  -o cmTC_27ce1 
-CMakeFiles/cmTC_27ce1.dir/CheckSymbolExists.c.o: In function `main':
-CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
-collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_27ce1.dir/build.make:97: recipe for target 'cmTC_27ce1' failed
-make[1]: *** [cmTC_27ce1] Error 1
-make[1]: Leaving directory '/home/erathriel/Desktop/fac/Projet_L3/jeu/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_27ce1/fast' failed
-make: *** [cmTC_27ce1/fast] Error 2
-
-File /home/erathriel/Desktop/fac/Projet_L3/jeu/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
-/* */
-#include <pthread.h>
-
-int main(int argc, char** argv)
-{
-  (void)argv;
-#ifndef pthread_create
-  return ((int*)(&pthread_create))[argc];
-#else
-  (void)argc;
-  return 0;
-#endif
-}
-
-Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/erathriel/Desktop/fac/Projet_L3/jeu/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_fc989/fast"
-/usr/bin/make -f CMakeFiles/cmTC_fc989.dir/build.make CMakeFiles/cmTC_fc989.dir/build
-make[1]: Entering directory '/home/erathriel/Desktop/fac/Projet_L3/jeu/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_fc989.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_fc989.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.9/Modules/CheckFunctionExists.c
-Linking C executable cmTC_fc989
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fc989.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_fc989.dir/CheckFunctionExists.c.o  -o cmTC_fc989 -lpthreads 
-/usr/bin/ld: cannot find -lpthreads
-collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_fc989.dir/build.make:97: recipe for target 'cmTC_fc989' failed
-make[1]: *** [cmTC_fc989] Error 1
-make[1]: Leaving directory '/home/erathriel/Desktop/fac/Projet_L3/jeu/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_fc989/fast' failed
-make: *** [cmTC_fc989/fast] Error 2
-
-
-Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/erathriel/Desktop/fac/Projet_L3/jeu/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_acf59/fast"
-/usr/bin/make -f CMakeFiles/cmTC_acf59.dir/build.make CMakeFiles/cmTC_acf59.dir/build
-make[1]: Entering directory '/home/erathriel/Desktop/fac/Projet_L3/jeu/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_acf59.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_acf59.dir/CheckSymbolExists.c.o   -c /home/erathriel/Desktop/fac/Projet_L3/jeu/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_acf59
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_acf59.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_acf59.dir/CheckSymbolExists.c.o  -o cmTC_acf59 
-CMakeFiles/cmTC_acf59.dir/CheckSymbolExists.c.o: In function `main':
-CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
-collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_acf59.dir/build.make:97: recipe for target 'cmTC_acf59' failed
-make[1]: *** [cmTC_acf59] Error 1
-make[1]: Leaving directory '/home/erathriel/Desktop/fac/Projet_L3/jeu/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_acf59/fast' failed
-make: *** [cmTC_acf59/fast] Error 2
-
-File /home/erathriel/Desktop/fac/Projet_L3/jeu/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
-/* */
-#include <pthread.h>
-
-int main(int argc, char** argv)
-{
-  (void)argv;
-#ifndef pthread_create
-  return ((int*)(&pthread_create))[argc];
-#else
-  (void)argc;
-  return 0;
-#endif
-}
-
-Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/erathriel/Desktop/fac/Projet_L3/jeu/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_a6bf9/fast"
-/usr/bin/make -f CMakeFiles/cmTC_a6bf9.dir/build.make CMakeFiles/cmTC_a6bf9.dir/build
-make[1]: Entering directory '/home/erathriel/Desktop/fac/Projet_L3/jeu/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_a6bf9.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_a6bf9.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.9/Modules/CheckFunctionExists.c
-Linking C executable cmTC_a6bf9
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a6bf9.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_a6bf9.dir/CheckFunctionExists.c.o  -o cmTC_a6bf9 -lpthreads 
-/usr/bin/ld: cannot find -lpthreads
-collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_a6bf9.dir/build.make:97: recipe for target 'cmTC_a6bf9' failed
-make[1]: *** [cmTC_a6bf9] Error 1
-make[1]: Leaving directory '/home/erathriel/Desktop/fac/Projet_L3/jeu/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_a6bf9/fast' failed
-make: *** [cmTC_a6bf9/fast] Error 2
-
-
-Determining if the pthread_create exist failed with the following output:
 Change Dir: /home/evan/Documents/Projet_L3/jeu/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_b7f54/fast"
-/usr/bin/make -f CMakeFiles/cmTC_b7f54.dir/build.make CMakeFiles/cmTC_b7f54.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_71252/fast"
+/usr/bin/make -f CMakeFiles/cmTC_71252.dir/build.make CMakeFiles/cmTC_71252.dir/build
 make[1] : on entre dans le répertoire « /home/evan/Documents/Projet_L3/jeu/CMakeFiles/CMakeTmp »
-Building C object CMakeFiles/cmTC_b7f54.dir/CheckSymbolExists.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_b7f54.dir/CheckSymbolExists.c.o   -c /home/evan/Documents/Projet_L3/jeu/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_b7f54
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b7f54.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_b7f54.dir/CheckSymbolExists.c.o  -o cmTC_b7f54 -rdynamic 
-CMakeFiles/cmTC_b7f54.dir/CheckSymbolExists.c.o : Dans la fonction « main » :
+Building C object CMakeFiles/cmTC_71252.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_71252.dir/CheckSymbolExists.c.o   -c /home/evan/Documents/Projet_L3/jeu/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_71252
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_71252.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_71252.dir/CheckSymbolExists.c.o  -o cmTC_71252 -rdynamic 
+CMakeFiles/cmTC_71252.dir/CheckSymbolExists.c.o : Dans la fonction « main » :
 CheckSymbolExists.c:(.text+0x16) : référence indéfinie vers « pthread_create »
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_b7f54.dir/build.make:97 : la recette pour la cible « cmTC_b7f54 » a échouée
-make[1]: *** [cmTC_b7f54] Erreur 1
+CMakeFiles/cmTC_71252.dir/build.make:97 : la recette pour la cible « cmTC_71252 » a échouée
+make[1]: *** [cmTC_71252] Erreur 1
 make[1] : on quitte le répertoire « /home/evan/Documents/Projet_L3/jeu/CMakeFiles/CMakeTmp »
-Makefile:126 : la recette pour la cible « cmTC_b7f54/fast » a échouée
-make: *** [cmTC_b7f54/fast] Erreur 2
+Makefile:126 : la recette pour la cible « cmTC_71252/fast » a échouée
+make: *** [cmTC_71252/fast] Erreur 2
 
 File /home/evan/Documents/Projet_L3/jeu/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
@@ -256,20 +36,20 @@ int main(int argc, char** argv)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/evan/Documents/Projet_L3/jeu/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_0c88a/fast"
-/usr/bin/make -f CMakeFiles/cmTC_0c88a.dir/build.make CMakeFiles/cmTC_0c88a.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_9ce0a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9ce0a.dir/build.make CMakeFiles/cmTC_9ce0a.dir/build
 make[1] : on entre dans le répertoire « /home/evan/Documents/Projet_L3/jeu/CMakeFiles/CMakeTmp »
-Building C object CMakeFiles/cmTC_0c88a.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_0c88a.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_0c88a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0c88a.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_0c88a.dir/CheckFunctionExists.c.o  -o cmTC_0c88a -rdynamic -lpthreads 
+Building C object CMakeFiles/cmTC_9ce0a.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_9ce0a.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_9ce0a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9ce0a.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_9ce0a.dir/CheckFunctionExists.c.o  -o cmTC_9ce0a -rdynamic -lpthreads 
 /usr/bin/ld : ne peut trouver -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_0c88a.dir/build.make:97 : la recette pour la cible « cmTC_0c88a » a échouée
-make[1]: *** [cmTC_0c88a] Erreur 1
+CMakeFiles/cmTC_9ce0a.dir/build.make:97 : la recette pour la cible « cmTC_9ce0a » a échouée
+make[1]: *** [cmTC_9ce0a] Erreur 1
 make[1] : on quitte le répertoire « /home/evan/Documents/Projet_L3/jeu/CMakeFiles/CMakeTmp »
-Makefile:126 : la recette pour la cible « cmTC_0c88a/fast » a échouée
-make: *** [cmTC_0c88a/fast] Erreur 2
+Makefile:126 : la recette pour la cible « cmTC_9ce0a/fast » a échouée
+make: *** [cmTC_9ce0a/fast] Erreur 2
 
 

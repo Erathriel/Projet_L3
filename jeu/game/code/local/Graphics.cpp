@@ -18,6 +18,7 @@ Graphics::Graphics(){
 
 void Graphics::display(){
     m_renderer->display();
+    m_renderer->clear();
 }
 
 void Graphics::draw(gf::RectangleShape* shape){

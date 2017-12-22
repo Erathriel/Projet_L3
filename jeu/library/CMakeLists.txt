@@ -195,7 +195,7 @@ target_link_libraries(gf0
   ${Boost_LIBRARIES}
   ${FREETYPE_LIBRARIES}
   ${ZLIB_LIBRARIES}
-  ${CMAKE_CURRENT_SOURCE_DIR}/libBox2D.a
+  #${CMAKE_CURRENT_SOURCE_DIR}/libBox2D.a
 )
 
 # workaround for Travis-CI
