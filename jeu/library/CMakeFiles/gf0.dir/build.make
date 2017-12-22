@@ -2643,6 +2643,7 @@ library/libgf0.so.0.6.0: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 library/libgf0.so.0.6.0: /usr/lib/x86_64-linux-gnu/libboost_system.so
 library/libgf0.so.0.6.0: /usr/lib/x86_64-linux-gnu/libfreetype.so
 library/libgf0.so.0.6.0: /usr/lib/x86_64-linux-gnu/libz.so
+library/libgf0.so.0.6.0: library/libBox2D.a
 library/libgf0.so.0.6.0: library/CMakeFiles/gf0.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/evan/Documents/Projet_L3/jeu/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Linking CXX shared library libgf0.so"
 	cd /home/evan/Documents/Projet_L3/jeu/library && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gf0.dir/link.txt --verbose=$(VERBOSE)
@@ -2869,6 +2870,7 @@ library/CMakeFiles/CMakeRelink.dir/libgf0.so.0.6.0: /usr/lib/x86_64-linux-gnu/li
 library/CMakeFiles/CMakeRelink.dir/libgf0.so.0.6.0: /usr/lib/x86_64-linux-gnu/libboost_system.so
 library/CMakeFiles/CMakeRelink.dir/libgf0.so.0.6.0: /usr/lib/x86_64-linux-gnu/libfreetype.so
 library/CMakeFiles/CMakeRelink.dir/libgf0.so.0.6.0: /usr/lib/x86_64-linux-gnu/libz.so
+library/CMakeFiles/CMakeRelink.dir/libgf0.so.0.6.0: library/libBox2D.a
 library/CMakeFiles/CMakeRelink.dir/libgf0.so.0.6.0: library/CMakeFiles/gf0.dir/relink.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/evan/Documents/Projet_L3/jeu/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Linking CXX shared library CMakeFiles/CMakeRelink.dir/libgf0.so"
 	cd /home/evan/Documents/Projet_L3/jeu/library && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gf0.dir/relink.txt --verbose=$(VERBOSE)

@@ -2,10 +2,6 @@
 
 http://gamedevframework.github.io/v0.6.0/build_and_install.html
 
-# Installer la librairie Box2D
-
-Mettre libBox2D.a dans /usr/lib/x86_64-linux-gnu (ou quelque chose comme ça, le dernier dossier doit dépendre du système d'exploitation).
-
 # Modifier/ajouter du code au projet
 
 Tout ce qui est à modifier est dans /jeu/game normalement.
