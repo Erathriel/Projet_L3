@@ -12,6 +12,7 @@
 #include <gf/Color.h>
 #include <gf/Shapes.h>
 #include <gf/Shape.h>
+#include <gf/Sprite.h>
 #include <gf/Vector.h>
 #include <gf/TileLayer.h>
 
@@ -27,6 +28,7 @@ public:
     void draw(gf::RectangleShape* shape);
     void draw(GameObject obj);
     void draw(gf::TileLayer* tileLayer);
+    void draw(gf::Sprite* spr);
     gf::Texture* getTileTexture();
     
     gf::Window *m_window;

@@ -6,6 +6,8 @@
 #include "Graphics.h"
 #include <gf/Window.h>
 #include <gf/TileLayer.h>
+#include <gf/Sprite.h>
+
 
 #define MAX_GAMEOBJECTS 1024
 
@@ -26,6 +28,7 @@ class Level {
     Graphics* graphicsG;
     
     gf::TileLayer *tileLayer;
+    gf::Sprite *sprite;
 public:
     Level(Graphics* ngraphicsG);
     gf::Window* getWindow();

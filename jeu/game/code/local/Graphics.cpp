@@ -1,3 +1,4 @@
+#include <gf/Sprite.h>
 #include "Graphics.h"
 
 class GameObject;
@@ -17,7 +18,6 @@ Graphics::Graphics(){
 
 void Graphics::display(){
     m_renderer->display();
-    m_renderer->clear();
 }
 
 void Graphics::draw(gf::RectangleShape* shape){
@@ -34,6 +34,10 @@ void Graphics::draw(gf::TileLayer* tileLayer){
 
 void Graphics::update(GameObject obj){
     obj.update(*this);
+}
+
+void Graphics::draw(gf::Sprite* spr){
+    m_renderer->draw(*spr);
 }
 
 gf::Texture* Graphics::getTileTexture(){

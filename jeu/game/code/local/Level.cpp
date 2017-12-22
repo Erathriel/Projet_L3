@@ -1,5 +1,6 @@
 
 #include "Level.h"
+#include <gf/Rect.h>
 
 Level::Level(Graphics* ngraphicsG){
     nb_objects = 0;
@@ -12,6 +13,13 @@ Level::Level(Graphics* ngraphicsG){
     tileLayer->setSpacing(TILESET_SPACING);
     
     tileLayer->setTile({1,1},4);    //TODO
+
+    sprite = new gf::Sprite();
+    sprite->setTexture(*graphicsG->getTileTexture());
+    gf::Vector2f position(200,200);
+    sprite->setPosition(position);
+    sprite->setTextureRect({ 0.635f, 0.0f, 0.035f, 0.035f });
+   // sprite->setAnchor(gf::Anchor::TopLeft);
 }
 
 float Level::getdt(){
@@ -25,6 +33,7 @@ void Level::update(GameObject& obj){
 void Level::updateGameObjects(float ndt){
     dt = ndt;
     graphicsG->draw(tileLayer);
+    graphicsG->draw(sprite);
     unsigned int i;
     for(i = 0; i < nb_objects && i < MAX_GAMEOBJECTS; i++)
         update(*listGameObjects[i]);
