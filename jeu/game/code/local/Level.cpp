@@ -1,6 +1,5 @@
 
 #include "Level.h"
-#include <gf/Rect.h>
 
 Level::Level(Graphics* ngraphicsG){
     nb_objects = 0;
@@ -12,12 +11,24 @@ Level::Level(Graphics* ngraphicsG){
     tileLayer->setMargin(TILESET_MARGIN);
     tileLayer->setSpacing(TILESET_SPACING);
     
-    tileLayer->setTile({1,1},4);    //TODO
+    background = new gf::Sprite();
+    background->setTexture(*graphicsG->getBGTexture());
+    background->setTextureRect({ 0.0f, 0.0f, 1.0f, 0.333f });
+    gf::Vector2f position(0,0);
+    background->setPosition(position);
+   // sprite->setAnchor(gf::Anchor::TopLeft);
+    
+    bgRenderState = new gf::RenderStates();
+    gf::Matrix3f matrice = gf::identityTransform();
+    gf::scale(matrice, {8,8});                      //8 fois plus grand
+    bgRenderState->transform = matrice;
 
+    tileLayer->setTile({1,1},4);    //TODO
+    
     sprite = new gf::Sprite();
     sprite->setTexture(*graphicsG->getTileTexture());
-    gf::Vector2f position(0,0);
-    sprite->setPosition(position);
+    gf::Vector2f position2(0,0);
+    sprite->setPosition(position2);
     sprite->setTextureRect({ 0.635f, 0.0f, 0.035f, 0.035f });
    // sprite->setAnchor(gf::Anchor::TopLeft);
 }
@@ -32,6 +43,7 @@ void Level::update(GameObject& obj){
 
 void Level::updateGameObjects(float ndt){
     dt = ndt;
+    graphicsG->draw(background, bgRenderState);
     graphicsG->draw(tileLayer);
     graphicsG->draw(sprite);
     unsigned int i;

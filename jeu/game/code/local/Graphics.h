@@ -16,7 +16,8 @@
 #include <gf/Vector.h>
 #include <gf/TileLayer.h>
 
-#define TILESET_NAME_FILE "data/spritesheet.png"
+#define TILESET_FILE_NAME "data/spritesheet.png"
+#define BACKGROUND_FILE_NAME "data/backgrounds.png"
 
 class GameObject;
 
@@ -28,13 +29,15 @@ public:
     void draw(gf::RectangleShape* shape);
     void draw(GameObject obj);
     void draw(gf::TileLayer* tileLayer);
-    void draw(gf::Sprite* spr);
+    void draw(gf::Sprite* spr, gf::RenderStates *states = nullptr);
     gf::Texture* getTileTexture();
+    gf::Texture* getBGTexture();
     
     gf::Window *m_window;
 private:
     gf::RenderWindow *m_renderer;
     gf::Texture *tileTexture;
+    gf::Texture *bgTexture;
     
 };
 #endif

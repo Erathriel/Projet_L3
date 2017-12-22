@@ -101,8 +101,6 @@ gf/Event.h
 /home/evan/Documents/Projet_L3/jeu/game/code/local/Level.cpp
 Level.h
 /home/evan/Documents/Projet_L3/jeu/game/code/local/Level.h
-gf/Rect.h
--
 
 /home/evan/Documents/Projet_L3/jeu/game/code/local/Level.h
 GameObject.h
@@ -114,6 +112,10 @@ gf/Window.h
 gf/TileLayer.h
 -
 gf/Sprite.h
+-
+gf/Rect.h
+-
+gf/RenderStates.h
 -
 
 /home/evan/Documents/Projet_L3/jeu/game/code/local/PhysicsComponent.h

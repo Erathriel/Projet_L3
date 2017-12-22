@@ -7,6 +7,8 @@
 #include <gf/Window.h>
 #include <gf/TileLayer.h>
 #include <gf/Sprite.h>
+#include <gf/Rect.h>
+#include <gf/RenderStates.h>
 
 
 #define MAX_GAMEOBJECTS 1024
@@ -28,6 +30,8 @@ class Level {
     Graphics* graphicsG;
     
     gf::TileLayer *tileLayer;
+    gf::Sprite *background;
+    gf::RenderStates *bgRenderState;
     gf::Sprite *sprite;
 public:
     Level(Graphics* ngraphicsG);
@@ -36,4 +40,7 @@ public:
     void addGameObject(GameObject* obj);;
     float getdt();
 };
+
+
+
 #endif

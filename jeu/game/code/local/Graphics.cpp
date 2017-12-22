@@ -11,7 +11,11 @@ Graphics::Graphics(){
     m_renderer->clear(gf::Color::White);
     
     tileTexture = new gf::Texture;
-    if( !tileTexture->loadFromFile(TILESET_NAME_FILE) ){
+    if( !tileTexture->loadFromFile(TILESET_FILE_NAME) ){
+        exit(1);
+    }
+    bgTexture = new gf::Texture;
+    if( !bgTexture->loadFromFile(BACKGROUND_FILE_NAME) ){
         exit(1);
     }
 }
@@ -37,10 +41,17 @@ void Graphics::update(GameObject obj){
     obj.update(*this);
 }
 
-void Graphics::draw(gf::Sprite* spr){
-    m_renderer->draw(*spr);
+void Graphics::draw(gf::Sprite* spr, gf::RenderStates *states){
+    if(states != nullptr)
+        m_renderer->draw(*spr, *states);
+    else
+        m_renderer->draw(*spr);
 }
 
 gf::Texture* Graphics::getTileTexture(){
     return tileTexture;
+}
+
+gf::Texture* Graphics::getBGTexture(){
+    return bgTexture;
 }
