@@ -1,4 +1,14 @@
-Questions :
+Questions réunion 3:
+- Il faut se mettre dans le dossier game pour lancer game, faire ./game/game ne marche pas, il ne trouve pas /data, pourquoi?
+- Comment on installe Box2D?
+- 
+
+
+
+
+
+
+Questions réunion 2:
 
 - Programmation suivant le pattern MVC
 - Utilisation de Google Test
