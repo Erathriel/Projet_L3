@@ -22,6 +22,7 @@
 #include "local/CarrePhysicsComponent.h"
 #include "local/CarreGraphicsComponent.h"
 #include "local/CarreInputComponent.h"
+#include <local/SpriteGraphicsComponents.h>
 
 #include "config.h"
 
@@ -47,6 +48,9 @@ int main() {
     CarreInputComponent* input2 = new CarreInputComponent();
     CarrePhysicsComponent* physics2 = new CarrePhysicsComponent();
     CarreGraphicsComponent* graphicsComp2 = new CarreGraphicsComponent();
+    CarreInputComponent* input3 = new CarreInputComponent();
+    CarrePhysicsComponent* physics3 = new CarrePhysicsComponent();
+    SpriteGraphicsComponent* graphicsComp3 = new SpriteGraphicsComponent();
     
     
     gf::Vector2f position(1,1);
@@ -55,6 +59,9 @@ int main() {
     level.addGameObject(&carre);
     GameObject carre2(input2, physics2, graphicsComp2, position*100, 50.0f, gf::Color::Blue);
     level.addGameObject(&carre2);
+    GameObject sprite1(input3, physics3, graphicsComp3, position*50, 25.0f, gf::Color::Blue);
+    level.addGameObject(&sprite1);
+
     
     // game loop
     while (true) {
