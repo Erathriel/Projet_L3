@@ -1,13 +1,17 @@
 # ajoutez vos trucs svp
 
-squelette des classes
 ajouter la librairie Box2D
-tuiles de base: un seul type de bloc
 niveau de base: juste un truc simple prédéfini pour tester
-faire l'objet de base (s'affiche correctement en gros)
 faire le protag (se déplace, bouge la caméra avec lui)
 faire la physique, collisions
 faire la génération de niveaux
-faire des tuiles décoratives
 faire des objets supplémentaires
 faire différents types de niveaux
+
+
+#fait
+
+squelette des classes
+tuiles de base: un seul type de bloc
+faire l'objet de base (s'affiche correctement en gros)
+faire des tuiles décoratives
