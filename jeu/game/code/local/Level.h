@@ -32,7 +32,6 @@ class Level {
     gf::TileLayer *tileLayer;
     gf::Sprite *background;
     gf::RenderStates *bgRenderState;
-    gf::Sprite *sprite;
 public:
     Level(Graphics* ngraphicsG);
     gf::Window* getWindow();

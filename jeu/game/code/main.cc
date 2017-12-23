@@ -36,18 +36,20 @@ int main() {
     gf::Font font;
     font.loadFromFile("data/ClearSans-Bold.ttf");
     
-    gf::Clock clock;
-    
+    gf::Clock clock;        //pour calculer dt
     
     Graphics graphicsG;
     Level level(&graphicsG);
     
+    //un GameObject a besoin de 3 components, input, physics et graphics
     CarreInputComponent* input = new CarreInputComponent();
     CarrePhysicsComponent* physics = new CarrePhysicsComponent();
     CarreGraphicsComponent* graphicsComp = new CarreGraphicsComponent();
+    
     CarreInputComponent* input2 = new CarreInputComponent();
     CarrePhysicsComponent* physics2 = new CarrePhysicsComponent();
     CarreGraphicsComponent* graphicsComp2 = new CarreGraphicsComponent();
+    
     CarreInputComponent* input3 = new CarreInputComponent();
     CarrePhysicsComponent* physics3 = new CarrePhysicsComponent();
     SpriteGraphicsComponent* graphicsComp3 = new SpriteGraphicsComponent();
@@ -55,10 +57,14 @@ int main() {
     
     gf::Vector2f position(1,1);
     
+    //on créé un GameObject...
     GameObject carre(input, physics, graphicsComp, position, 100.0f, gf::Color::Red);
+    //puis on l'ajoute au niveau
     level.addGameObject(&carre);
+    
     GameObject carre2(input2, physics2, graphicsComp2, position*100, 50.0f, gf::Color::Blue);
     level.addGameObject(&carre2);
+    
     GameObject sprite1(input3, physics3, graphicsComp3, position*50, 25.0f, gf::Color::Blue);
     level.addGameObject(&sprite1);
 
@@ -66,13 +72,11 @@ int main() {
     // game loop
     while (true) {
         
-        // 1. input
-        // 2. update
-
+        //level demande à tout les objets à la suite de lancer update pour chacun de leur
+        //component, il prend dt en paramètre.
         level.updateGameObjects( clock.restart().asSeconds() );
         
-        // 3. draw
-        
+        //draw
         graphicsG.display();
         
         

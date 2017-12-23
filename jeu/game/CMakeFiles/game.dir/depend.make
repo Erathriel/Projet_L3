@@ -191,6 +191,7 @@ game/CMakeFiles/game.dir/code/main.cc.o: game/code/local/InputComponent.h
 game/CMakeFiles/game.dir/code/main.cc.o: game/code/local/Level.h
 game/CMakeFiles/game.dir/code/main.cc.o: game/code/local/PhysicsComponent.h
 game/CMakeFiles/game.dir/code/main.cc.o: game/code/main.cc
+game/CMakeFiles/game.dir/code/main.cc.o: game/code/local/SpriteGraphicsComponents.h
 game/CMakeFiles/game.dir/code/main.cc.o: game/config.h
 game/CMakeFiles/game.dir/code/main.cc.o: include/gf/Action.h
 game/CMakeFiles/game.dir/code/main.cc.o: include/gf/Anchor.h

@@ -165,8 +165,26 @@ local/CarreGraphicsComponent.h
 /home/evan/Documents/Projet_L3/jeu/game/code/local/CarreGraphicsComponent.h
 local/CarreInputComponent.h
 /home/evan/Documents/Projet_L3/jeu/game/code/local/CarreInputComponent.h
+local/SpriteGraphicsComponents.h
+-
 config.h
 /home/evan/Documents/Projet_L3/jeu/game/code/config.h
+
+game/code/local/SpriteGraphicsComponents.h
+GameObject.h
+game/code/local/GameObject.h
+Graphics.h
+game/code/local/Graphics.h
+GraphicsComponent.h
+game/code/local/GraphicsComponent.h
+gf/Shapes.h
+-
+gf/Event.h
+-
+gf/Vector.h
+-
+gf/Color.h
+-
 
 game/config.h
 

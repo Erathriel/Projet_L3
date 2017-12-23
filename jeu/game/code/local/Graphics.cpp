@@ -6,7 +6,7 @@ class GameObject;
 
 Graphics::Graphics(){
     static constexpr gf::Vector2u ScreenSize(500, 500);
-    m_window = new gf::Window("carré rouge vs carré bleu: le retour du tileset", ScreenSize);
+    m_window = new gf::Window("le jeu", ScreenSize);
     m_renderer = new gf::RenderWindow(*m_window);
     m_renderer->clear(gf::Color::White);
     
