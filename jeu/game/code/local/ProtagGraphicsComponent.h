@@ -2,8 +2,8 @@
 // Created by root on 22/12/17.
 //
 
-#ifndef _SPRITEGRAPHICSC_H
-#define _SPRITEGRAPHICSC_H
+#ifndef _PROTAGGRAPHICSC_H
+#define _PROTAGGRAPHICSC_H
 
 
 #include "GameObject.h"
@@ -16,7 +16,7 @@
 
 class Graphics;
 
-class SpriteGraphicsComponent : public GraphicsComponent
+class ProtagGraphicsComponent : public GraphicsComponent
 {
 public:
 
@@ -31,9 +31,12 @@ public:
             initialised = true;
         }
         sprite->setPosition(obj.m_position);
+        
+        graphics->setViewCenter(obj.m_position);
+        
         graphics->draw(sprite);
     }
-    ~SpriteGraphicsComponent(){}
+    ~ProtagGraphicsComponent(){}
 
 private:
     bool initialised = false;

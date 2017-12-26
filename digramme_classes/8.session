@@ -1,22 +1,20 @@
-window_sizes 1855 951 303 1546 795 104
+window_sizes 1855 961 303 1546 853 56
 cleanlooks_style
 diagrams
   active  classdiagram_ref 128008 // diag
-    881 546 100 A4 50 0
+    913 828 100 A4 0 0
 end
 show_stereotypes
-selected 
-package_ref 129 // digramme_classes
+selected classview_ref 128008 // diag
 open
-  classdiagram_ref 128008 // diag
   class_ref 128392 // Level
-  class_ref 128136 // gf::TileLayer
-  class_ref 134920 // PlayerInputComponent
-  class_ref 135176 // ProtagPhysicsComponent
-  class_ref 135048 // ProtagGraphicsComponent
-  class_ref 135304 // PlatformInputComponent
-  class_ref 135432 // KineticPhysicsComponent
-  class_ref 135560 // PlatformGraphicsComponent
+  class_ref 128008 // GameObject
+  class_ref 134920 // InputComponent
+  class_ref 135176 // PhysicsComponent
+  class_ref 135048 // GraphicsComponent
+  class_ref 135432 // YPhysicsComponent
+  class_ref 135560 // ZGraphicsComponent
+  class_ref 142088 // Graphics
   deploymentview_ref 128008 // depl
 end
 end

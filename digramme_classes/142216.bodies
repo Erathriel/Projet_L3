@@ -1,8 +1,4 @@
-
-#include "Object.h"
-
-void Object::display() {
+class Object
+!!!134536.cpp!!!	display() : void
   // Bouml preserved body begin 0001F508
   // Bouml preserved body end 0001F508
-}
-

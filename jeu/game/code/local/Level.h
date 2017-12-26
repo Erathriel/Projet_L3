@@ -22,7 +22,14 @@ class GameObject;
 class Graphics;
 
 class Level {
-  private:
+public:
+    Level(Graphics* ngraphicsG);
+    gf::Window* getWindow();
+    void updateGameObjects(float ndt);
+    void addGameObject(GameObject* obj);;
+    float getdt();
+
+private:
     float dt;
     void update(GameObject& obj);
     GameObject *listGameObjects[MAX_GAMEOBJECTS];
@@ -32,12 +39,6 @@ class Level {
     gf::TileLayer *tileLayer;
     gf::Sprite *background;
     gf::RenderStates *bgRenderState;
-public:
-    Level(Graphics* ngraphicsG);
-    gf::Window* getWindow();
-    void updateGameObjects(float ndt);
-    void addGameObject(GameObject* obj);;
-    float getdt();
 };
 
 

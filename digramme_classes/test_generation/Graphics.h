@@ -23,21 +23,19 @@ class GameObject;
 
 class Graphics {
 public:
-    Graphics(gf::Vector2u screenSize);
+    Graphics();
     void display();
     void update(GameObject obj);
     void draw(gf::RectangleShape* shape);
     void draw(GameObject obj);
     void draw(gf::TileLayer* tileLayer);
     void draw(gf::Sprite* spr, gf::RenderStates *states = nullptr);
-    void setViewCenter(gf::Vector2f center);
-    
     gf::Texture* getTileTexture();
     gf::Texture* getBGTexture();
+    
     gf::Window *m_window;
 private:
     gf::RenderWindow *m_renderer;
-    gf::View *m_view;
     gf::Texture *tileTexture;
     gf::Texture *bgTexture;
     

@@ -23,7 +23,6 @@ public:
                 initialised = true;
             }
             shape->setPosition(obj.m_position);
-            
             graphics->draw(shape);
 	}
 	~CarreGraphicsComponent(){}

@@ -23,7 +23,6 @@ public:
     void update(GameObject& obj, Graphics *graphics){
         if(!initialised){
             sprite = new gf::Sprite();
-            sprite->setAnchor(gf::Anchor::Center);
             sprite->setTexture(*graphics->getTileTexture());
             sprite->setTextureRect({ 0.635f, 0.0f, 0.035f, 0.035f });
             sprite->setPosition(obj.m_position);

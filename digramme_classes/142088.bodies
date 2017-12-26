@@ -1,0 +1,35 @@
+class Graphics
+!!!136456.cpp!!!	Graphics()
+    static constexpr gf::Vector2u ScreenSize(500, 500);
+    m_window = new gf::Window("le jeu", ScreenSize);
+    m_renderer = new gf::RenderWindow(*m_window);
+    m_renderer->clear(gf::Color::White);
+    
+    tileTexture = new gf::Texture;
+    if( !tileTexture->loadFromFile(TILESET_FILE_NAME) ){
+        exit(1);
+    }
+    bgTexture = new gf::Texture;
+    if( !bgTexture->loadFromFile(BACKGROUND_FILE_NAME) ){
+        exit(1);
+    }
+!!!136584.cpp!!!	display() : void
+    m_renderer->display();
+    m_renderer->clear();
+!!!136712.cpp!!!	update(in obj : GameObject) : void
+    obj.update(*this);
+!!!136840.cpp!!!	draw(inout shape : gf::RectangleShape) : void
+    m_renderer->draw(*shape);
+!!!136968.cpp!!!	draw(in obj : GameObject) : void
+    obj.update(*this);
+!!!137096.cpp!!!	draw(inout tileLayer : gf::TileLayer) : void
+    m_renderer->draw(*tileLayer);
+!!!137224.cpp!!!	draw(inout spr : gf::Sprite, inout states : gf::RenderStates = nullptr) : void
+    if(states != nullptr)
+        m_renderer->draw(*spr, *states);
+    else
+        m_renderer->draw(*spr);
+!!!137352.cpp!!!	getTileTexture() : gf::Texture
+    return tileTexture;
+!!!137480.cpp!!!	getBGTexture() : gf::Texture
+    return bgTexture;

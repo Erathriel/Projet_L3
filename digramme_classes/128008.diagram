@@ -1,67 +1,47 @@
 format 215
 
-classcanvas 128008 class_ref 128008 // Object
+classcanvas 128008 class_ref 128008 // GameObject
   classdiagramsettings member_max_width 0 end
-  xyzwh 182 255 2000 145 87
+  xyz 30 332 2000
 end
 classcanvas 128136 class_ref 128136 // gf::TileLayer
   classdiagramsettings member_max_width 0 end
-  xyzwh 478 111 2000 113 61
+  xyz 751 154 2000
 end
 classcanvas 128392 class_ref 128392 // Level
   classdiagramsettings member_max_width 0 end
-  xyzwh 189 78 2000 139 87
+  xyz 464 60 2000
 end
-classcanvas 129928 class_ref 134920 // PlayerInputComponent
+classcanvas 129928 class_ref 134920 // InputComponent
   classdiagramsettings member_max_width 0 end
-  xyz 428 251 2000
+  xyz 15 541 2000
 end
-classcanvas 130056 class_ref 135048 // ProtagGraphicsComponent
+classcanvas 130056 class_ref 135048 // GraphicsComponent
   classdiagramsettings member_max_width 0 end
-  xyz 423 410 2000
+  xyz 528 549 2000
 end
-classcanvas 130184 class_ref 135176 // ProtagPhysicsComponent
+classcanvas 130184 class_ref 135176 // PhysicsComponent
   classdiagramsettings member_max_width 0 end
-  xyz 434 324 2000
+  xyz 282 543 2000
 end
-classcanvas 131848 class_ref 135304 // PlatformInputComponent
+classcanvas 131848 class_ref 135304 // XInputComponent
   classdiagramsettings member_max_width 0 end
-  xyz 668 261 2000
+  xyz 75 657 2000
 end
-classcanvas 131976 class_ref 135432 // KineticPhysicsComponent
+classcanvas 131976 class_ref 135432 // YPhysicsComponent
   classdiagramsettings member_max_width 0 end
-  xyz 652 338 2005
+  xyz 342 660 2005
 end
-classcanvas 132104 class_ref 135560 // PlatformGraphicsComponent
+classcanvas 132104 class_ref 135560 // ZGraphicsComponent
   classdiagramsettings member_max_width 0 end
-  xyz 647 401 2010
+  xyz 609 664 2010
 end
-relationcanvas 132744 relation_ref 149256 // <composition>
-  from ref 129928 z 2001 to ref 128008
-  no_role_a no_role_b
-  no_multiplicity_a no_multiplicity_b
-end
-relationcanvas 132872 relation_ref 149384 // <composition>
-  from ref 130184 z 2001 to ref 128008
-  no_role_a no_role_b
-  no_multiplicity_a no_multiplicity_b
-end
-relationcanvas 133000 relation_ref 149512 // <composition>
-  from ref 130056 z 2001 to ref 128008
-  no_role_a no_role_b
-  no_multiplicity_a no_multiplicity_b
-end
-relationcanvas 133128 relation_ref 128392 // <composition>
-  from ref 128008 z 2001 stereotype "<<list>>" xyz 236 209 3000 to ref 128392
-  no_role_a no_role_b
-  no_multiplicity_a no_multiplicity_b
-end
-relationcanvas 133256 relation_ref 149640 // <composition>
-  from ref 128136 z 2001 to ref 128392
-  no_role_a no_role_b
-  no_multiplicity_a no_multiplicity_b
+classcanvas 133768 class_ref 142088 // Graphics
+  classdiagramsettings member_max_width 0 end
+  xyz 46 31 2000
 end
 relationcanvas 133384 relation_ref 149768 // <dependency>
+  decenter_begin 485
   from ref 131848 z 2001 to ref 129928
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
@@ -74,6 +54,36 @@ end
 relationcanvas 133640 relation_ref 150024 // <dependency>
   from ref 132104 z 2011 to ref 130056
   no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 134152 relation_ref 157192 // <unidirectional association>
+  from ref 128008 z 2001 to ref 129928
+  role_a_pos 202 514 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 134280 relation_ref 157320 // <unidirectional association>
+  from ref 128008 z 2001 to ref 130184
+  role_a_pos 410 522 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 134408 relation_ref 157448 // <unidirectional association>
+  from ref 128008 z 2001 to ref 130056
+  role_a_pos 556 534 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 134536 relation_ref 156808 // <unidirectional association>
+  from ref 128392 z 2001 to ref 128008
+  role_a_pos 469 311 3000 no_role_b
+  multiplicity_a_pos 334 311 3000 no_multiplicity_b
+end
+relationcanvas 134664 relation_ref 156936 // <unidirectional association>
+  from ref 128392 z 2001 to ref 133768
+  role_a_pos 328 138 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 134792 relation_ref 157064 // <unidirectional association>
+  from ref 128392 z 2001 to ref 128136
+  role_a_pos 700 151 3000 no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 end

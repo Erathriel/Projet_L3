@@ -22,7 +22,9 @@
 #include "local/CarrePhysicsComponent.h"
 #include "local/CarreGraphicsComponent.h"
 #include "local/CarreInputComponent.h"
-#include <local/SpriteGraphicsComponents.h>
+#include "local/EmptyInputComponent.h"
+#include "local/SpriteGraphicsComponents.h"
+#include "local/ProtagGraphicsComponent.h"
 
 #include "config.h"
 
@@ -38,21 +40,22 @@ int main() {
     
     gf::Clock clock;        //pour calculer dt
     
-    Graphics graphicsG;
+    static constexpr gf::Vector2u screenSize(500, 500);
+    Graphics graphicsG(screenSize);
     Level level(&graphicsG);
     
     //un GameObject a besoin de 3 components, input, physics et graphics
-    CarreInputComponent* input = new CarreInputComponent();
+    EmpyInputComponent* input = new EmpyInputComponent();
     CarrePhysicsComponent* physics = new CarrePhysicsComponent();
     CarreGraphicsComponent* graphicsComp = new CarreGraphicsComponent();
     
-    CarreInputComponent* input2 = new CarreInputComponent();
+    EmpyInputComponent* input2 = new EmpyInputComponent();
     CarrePhysicsComponent* physics2 = new CarrePhysicsComponent();
-    CarreGraphicsComponent* graphicsComp2 = new CarreGraphicsComponent();
+    SpriteGraphicsComponent* graphicsComp2 = new SpriteGraphicsComponent();
     
     CarreInputComponent* input3 = new CarreInputComponent();
     CarrePhysicsComponent* physics3 = new CarrePhysicsComponent();
-    SpriteGraphicsComponent* graphicsComp3 = new SpriteGraphicsComponent();
+    ProtagGraphicsComponent* graphicsComp3 = new ProtagGraphicsComponent();
     
     
     gf::Vector2f position(1,1);

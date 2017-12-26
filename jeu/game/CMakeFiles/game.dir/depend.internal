@@ -185,14 +185,16 @@ game/CMakeFiles/game.dir/code/main.cc.o
  /home/evan/Documents/Projet_L3/jeu/game/code/local/CarreGraphicsComponent.h
  /home/evan/Documents/Projet_L3/jeu/game/code/local/CarreInputComponent.h
  /home/evan/Documents/Projet_L3/jeu/game/code/local/CarrePhysicsComponent.h
+ /home/evan/Documents/Projet_L3/jeu/game/code/local/EmptyInputComponent.h
  /home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.h
  /home/evan/Documents/Projet_L3/jeu/game/code/local/Graphics.h
  /home/evan/Documents/Projet_L3/jeu/game/code/local/GraphicsComponent.h
  /home/evan/Documents/Projet_L3/jeu/game/code/local/InputComponent.h
  /home/evan/Documents/Projet_L3/jeu/game/code/local/Level.h
  /home/evan/Documents/Projet_L3/jeu/game/code/local/PhysicsComponent.h
+ /home/evan/Documents/Projet_L3/jeu/game/code/local/ProtagGraphicsComponent.h
+ /home/evan/Documents/Projet_L3/jeu/game/code/local/SpriteGraphicsComponents.h
  /home/evan/Documents/Projet_L3/jeu/game/code/main.cc
- game/code/local/SpriteGraphicsComponents.h
  game/config.h
  include/gf/Action.h
  include/gf/Anchor.h

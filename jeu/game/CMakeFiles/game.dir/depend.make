@@ -184,14 +184,16 @@ game/CMakeFiles/game.dir/code/local/Level.cpp.o: include/gf/Window.h
 game/CMakeFiles/game.dir/code/main.cc.o: game/code/local/CarreGraphicsComponent.h
 game/CMakeFiles/game.dir/code/main.cc.o: game/code/local/CarreInputComponent.h
 game/CMakeFiles/game.dir/code/main.cc.o: game/code/local/CarrePhysicsComponent.h
+game/CMakeFiles/game.dir/code/main.cc.o: game/code/local/EmptyInputComponent.h
 game/CMakeFiles/game.dir/code/main.cc.o: game/code/local/GameObject.h
 game/CMakeFiles/game.dir/code/main.cc.o: game/code/local/Graphics.h
 game/CMakeFiles/game.dir/code/main.cc.o: game/code/local/GraphicsComponent.h
 game/CMakeFiles/game.dir/code/main.cc.o: game/code/local/InputComponent.h
 game/CMakeFiles/game.dir/code/main.cc.o: game/code/local/Level.h
 game/CMakeFiles/game.dir/code/main.cc.o: game/code/local/PhysicsComponent.h
-game/CMakeFiles/game.dir/code/main.cc.o: game/code/main.cc
+game/CMakeFiles/game.dir/code/main.cc.o: game/code/local/ProtagGraphicsComponent.h
 game/CMakeFiles/game.dir/code/main.cc.o: game/code/local/SpriteGraphicsComponents.h
+game/CMakeFiles/game.dir/code/main.cc.o: game/code/main.cc
 game/CMakeFiles/game.dir/code/main.cc.o: game/config.h
 game/CMakeFiles/game.dir/code/main.cc.o: include/gf/Action.h
 game/CMakeFiles/game.dir/code/main.cc.o: include/gf/Anchor.h
