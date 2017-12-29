@@ -5,6 +5,11 @@ Level::Level(Graphics* ngraphicsG){
     nb_objects = 0;
     graphicsG = ngraphicsG;
     
+    // Define the gravity vector.
+    gravity = new b2Vec2(0.0f, GRAVITY);
+    // Construct a world object, which will hold and simulate the rigid bodies.
+    world = new b2World(*gravity);
+    
     //initialisation tileset
     tileLayer = new gf::TileLayer({NUMBER_OF_TILES_ROWS,NUMBER_OF_TILES_ROWS});
     tileLayer->setTexture( *graphicsG->getTileTexture() );
@@ -24,8 +29,32 @@ Level::Level(Graphics* ngraphicsG){
     gf::scale(matrice, {8,8});                      //8 fois plus grand
     bgRenderState->transform = matrice;
 
+    placeTiles();
+    
+}
+
+void Level::placeTiles(){
     //mise en place des tuiles
-    tileLayer->setTile({20,20},4);    //TODO
+    tileLayer->clear();
+    unsigned int i;
+    for(i = 0; i < 20; i++)
+        tileLayer->setTile({i,20},4);    //TODO
+    
+     
+    //physique pour les tuiles
+    // Define the ground body.
+    b2BodyDef groundBodyDef;
+    groundBodyDef.position.Set(0.0f, 20.0f*(SIZE_OF_A_TILE+1));
+    // Call the body factory which allocates memory for the ground body
+    // from a pool and creates the ground box shape (also from a pool).
+    // The body is also added to the world.
+    tilePhysicBody = world->CreateBody(&groundBodyDef);
+    // Define the ground box shape.
+    b2PolygonShape groundBox;
+    // The extents are the half-widths of the box.
+    groundBox.SetAsBox(1000.0f, SIZE_OF_A_TILE);
+    // Add the ground fixture to the ground body.
+    tilePhysicBody->CreateFixture(&groundBox, 0.0f);
     
 }
 
