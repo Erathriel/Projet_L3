@@ -41,13 +41,12 @@ public:
         
         obj.m_position.x = body->GetPosition().x;
         obj.m_position.y = body->GetPosition().y;
-        //m_angle = body->GetAngle();
+        obj.m_angle = body->GetAngle();
         //body->ApplyLinearImpulse( b2Vec2(obj.m_velocity.x,obj.m_velocity.y), body->GetWorldCenter(), false );
         //obj.m_position += obj.m_velocity;
         //obj.m_velocity = {0.0f,0.0f};
         
     };
-    
     bool initialised = false;
     b2BodyDef bodyDef;
     b2Body* body;

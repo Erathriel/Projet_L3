@@ -58,7 +58,7 @@ int main() {
     CarreGraphicsComponent* graphicsComp = new CarreGraphicsComponent();
     
     EmpyInputComponent* input2 = new EmpyInputComponent();
-    CarrePhysicsComponent* physics2 = new CarrePhysicsComponent();
+    DynamicPhysicsComponent* physics2 = new DynamicPhysicsComponent();
     SpriteGraphicsComponent* graphicsComp2 = new SpriteGraphicsComponent();
     
     ProtagInputComponent* input3 = new ProtagInputComponent();
@@ -73,10 +73,10 @@ int main() {
     //puis on l'ajoute au niveau
     level.addGameObject(&carre);
     
-    GameObject carre2(input2, physics2, graphicsComp2, position*100, 50.0f, gf::Color::Blue);
+    GameObject carre2(input2, physics2, graphicsComp2, position*100, 21.0f, gf::Color::Blue);
     level.addGameObject(&carre2);
     
-    GameObject sprite1(input3, physics3, graphicsComp3, position*50, 25.0f, gf::Color::Blue);
+    GameObject sprite1(input3, physics3, graphicsComp3, position*50, 21.0f, gf::Color::Blue);
     level.addGameObject(&sprite1);
 
     

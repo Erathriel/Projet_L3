@@ -21,8 +21,9 @@ public:
     gf::Vector2f m_position;
     float m_size;
     gf::Color4f m_color;
+    float m_angle;
 
-    GameObject(InputComponent* input, PhysicsComponent* physics, GraphicsComponent* graphics, gf::Vector2f position, float size, gf::Color4f color);
+    GameObject(InputComponent* input, PhysicsComponent* physics, GraphicsComponent* graphics, gf::Vector2f position, float size, gf::Color4f color, float angle = 0.0f);
 
     void update(Level& level, Graphics& graphics);
 
