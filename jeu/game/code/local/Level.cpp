@@ -9,6 +9,8 @@ Level::Level(Graphics* ngraphicsG){
     gravity = new b2Vec2(0.0f, GRAVITY);
     // Construct a world object, which will hold and simulate the rigid bodies.
     world = new b2World(*gravity);
+    contactListener = new ContactListener;
+    world->SetContactListener(contactListener);
     
     //initialisation tileset
     tileLayer = new gf::TileLayer({NUMBER_OF_TILES_ROWS,NUMBER_OF_TILES_ROWS});

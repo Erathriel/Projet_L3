@@ -11,7 +11,6 @@
 #include <gf/RenderStates.h>
 #include <Box2D/Box2D.h>
 
-
 #define MAX_GAMEOBJECTS 1024
 
 #define GRAVITY 10.0f
@@ -23,6 +22,7 @@
 
 class GameObject;
 class Graphics;
+class ContactListener;
 
 class Level {
 public:
@@ -42,12 +42,14 @@ private:
     unsigned int nb_objects;
     Graphics* graphicsG;
     
+    ContactListener *contactListener;
     gf::TileLayer *tileLayer;
     b2Body* tilePhysicBody;
     gf::Sprite *background;
     gf::RenderStates *bgRenderState;
     b2Vec2 *gravity;
 };
+
 
 
 

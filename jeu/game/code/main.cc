@@ -16,9 +16,6 @@
 #include <gf/Shapes.h>
 #include <gf/Vector.h>
 
-#include "local/Level.h"
-#include "local/GameObject.h"
-
 #include "local/CarrePhysicsComponent.h"
 #include "local/CarreGraphicsComponent.h"
 #include "local/ProtagInputComponent.h"
@@ -27,6 +24,10 @@
 #include "local/ProtagGraphicsComponent.h"
 #include "local/DynamicPhysicsComponent.h"
 #include "local/ProtagPhysicsComponent.h"
+
+
+#include "local/Level.h"
+#include "local/GameObject.h"
 
 #include "config.h"
 
