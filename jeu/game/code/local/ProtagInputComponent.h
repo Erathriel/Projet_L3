@@ -62,7 +62,7 @@ public:
             }
         }
         
-        float velocity = 10000.0f;
+        float velocity = 40000.0f;
         if(up_pressed)
             gb.m_velocity.y -= velocity * level->getdt();
         if(down_pressed)

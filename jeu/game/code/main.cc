@@ -84,11 +84,14 @@ int main() {
     // game loop
     while (true) {
         
-        level.world->Step(timeStep, velocityIterations, positionIterations);
+        float dt = clock.restart().asSeconds();
+        sleep(timeStep - dt);
+        
+        level.world->Step(dt, velocityIterations, positionIterations);
         
         //level demande à tout les objets à la suite de lancer update pour chacun de leur
         //component, il prend dt en paramètre.
-        level.updateGameObjects( clock.restart().asSeconds() );
+        level.updateGameObjects( dt );
         
         //draw
         graphicsG.display();

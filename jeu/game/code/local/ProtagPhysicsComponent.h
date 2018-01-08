@@ -58,7 +58,7 @@ public:
         body->ApplyLinearImpulse( b2Vec2(impulse,0), body->GetWorldCenter(), true );
         
         if(obj.m_velocity.y < -0.1f && onGround){
-            float impulse = body->GetMass() * -10;
+            float impulse = body->GetMass() * -100;
             body->ApplyLinearImpulse( b2Vec2(0,impulse), body->GetWorldCenter(), true );
         }
         //obj.m_angle = body->GetAngle();

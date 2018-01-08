@@ -1,7 +1,7 @@
 Questions réunion 3:
 - Il faut se mettre dans le dossier game pour lancer game, faire ./game/game ne marche pas, il ne trouve pas /data, pourquoi?
 - Comment on installe Box2D?
-- 
+- Comment éviter d'avoir à supprimer le cache de cmake et à refaire cmake à chaque commit de quelqu'un d'autre?
 
 
 
