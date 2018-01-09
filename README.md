@@ -10,13 +10,13 @@ Lorsque vous ajoutez un .cc, il faut:
 - modifier le CMakeLists.txt du dossier game et ajouter les .cc là où le commentaire l'indique
 - modifier code/XUnityBuild.cc et y ajouter les .cc également
 
-Pour compiler, mettez-vous dans /jeu, faire
+Pour compiler pour la première fois depuis votre dernier pull, supprimez le dossier CMakesFiles et le fichier CMakeLists.txt dans /jeu et dans /jeu/game puis mettez-vous dans /jeu, faire
 
 cmake .
 
 make
 
-L'exécutable "game" sera dans /jeu/game.
+L'exécutable "game" sera dans /jeu/game. Pour compiler les prochaines fois, make suffit.
 
 # Petit rappel pour les commandes linux git
 
