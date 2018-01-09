@@ -174,6 +174,7 @@ game/game: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 game/game: /usr/lib/x86_64-linux-gnu/libboost_system.so
 game/game: /usr/lib/x86_64-linux-gnu/libfreetype.so
 game/game: /usr/lib/x86_64-linux-gnu/libz.so
+game/game: library/libBox2D.a
 game/game: game/CMakeFiles/game.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/evan/Documents/Projet_L3/jeu/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable game"
 	cd /home/evan/Documents/Projet_L3/jeu/game && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/game.dir/link.txt --verbose=$(VERBOSE)
@@ -204,6 +205,7 @@ game/CMakeFiles/CMakeRelink.dir/game: /usr/lib/x86_64-linux-gnu/libboost_filesys
 game/CMakeFiles/CMakeRelink.dir/game: /usr/lib/x86_64-linux-gnu/libboost_system.so
 game/CMakeFiles/CMakeRelink.dir/game: /usr/lib/x86_64-linux-gnu/libfreetype.so
 game/CMakeFiles/CMakeRelink.dir/game: /usr/lib/x86_64-linux-gnu/libz.so
+game/CMakeFiles/CMakeRelink.dir/game: library/libBox2D.a
 game/CMakeFiles/CMakeRelink.dir/game: game/CMakeFiles/game.dir/relink.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/evan/Documents/Projet_L3/jeu/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable CMakeFiles/CMakeRelink.dir/game"
 	cd /home/evan/Documents/Projet_L3/jeu/game && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/game.dir/relink.txt --verbose=$(VERBOSE)

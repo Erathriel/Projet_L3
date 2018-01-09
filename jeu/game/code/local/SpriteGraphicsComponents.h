@@ -27,17 +27,22 @@ public:
             sprite->setTexture(*graphics->getTileTexture());
             sprite->setTextureRect({ 0.635f, 0.0f, 0.035f, 0.035f });
             sprite->setPosition(obj.m_position);
-
+            renderState = new gf::RenderStates();
+            
             initialised = true;
         }
         sprite->setPosition(obj.m_position);
-        graphics->draw(sprite);
+        gf::Matrix3f matrice = gf::identityTransform();
+        gf::rotate(matrice, obj.m_angle, obj.m_position);
+        renderState->transform = matrice;
+        graphics->draw(sprite, renderState);
     }
     ~SpriteGraphicsComponent(){}
 
 private:
     bool initialised = false;
     gf::Sprite *sprite;
+    gf::RenderStates *renderState;
 };
 
 #endif

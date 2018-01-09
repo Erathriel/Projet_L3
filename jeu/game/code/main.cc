@@ -16,27 +16,36 @@
 #include <gf/Shapes.h>
 #include <gf/Vector.h>
 
-#include "local/Level.h"
-#include "local/GameObject.h"
-
 #include "local/CarrePhysicsComponent.h"
 #include "local/CarreGraphicsComponent.h"
-#include "local/CarreInputComponent.h"
+#include "local/ProtagInputComponent.h"
 #include "local/EmptyInputComponent.h"
 #include "local/SpriteGraphicsComponents.h"
 #include "local/ProtagGraphicsComponent.h"
+#include "local/DynamicPhysicsComponent.h"
+#include "local/ProtagPhysicsComponent.h"
+
+
+#include "local/Level.h"
+#include "local/GameObject.h"
 
 #include "config.h"
 
-//#include <Box2D/Box2D.h>
-//#include <cstdio>
+#include <Box2D/Box2D.h>
+#include <cstdio>
 
 
 int main() {
     
-    
     gf::Font font;
     font.loadFromFile("data/ClearSans-Bold.ttf");
+    
+    // Prepare for simulation. Typically we use a time step of 1/60 of a
+    // second (60Hz) and 10 iterations. This provides a high quality simulation
+    // in most game scenarios.
+    float32 timeStep = 1.0f / 60.0f;
+    int32 velocityIterations = 6;
+    int32 positionIterations = 2;
     
     gf::Clock clock;        //pour calculer dt
     
@@ -46,15 +55,15 @@ int main() {
     
     //un GameObject a besoin de 3 components, input, physics et graphics
     EmpyInputComponent* input = new EmpyInputComponent();
-    CarrePhysicsComponent* physics = new CarrePhysicsComponent();
+    DynamicPhysicsComponent* physics = new DynamicPhysicsComponent();
     CarreGraphicsComponent* graphicsComp = new CarreGraphicsComponent();
     
     EmpyInputComponent* input2 = new EmpyInputComponent();
-    CarrePhysicsComponent* physics2 = new CarrePhysicsComponent();
+    DynamicPhysicsComponent* physics2 = new DynamicPhysicsComponent();
     SpriteGraphicsComponent* graphicsComp2 = new SpriteGraphicsComponent();
     
-    CarreInputComponent* input3 = new CarreInputComponent();
-    CarrePhysicsComponent* physics3 = new CarrePhysicsComponent();
+    ProtagInputComponent* input3 = new ProtagInputComponent();
+    ProtagPhysicsComponent* physics3 = new ProtagPhysicsComponent();
     ProtagGraphicsComponent* graphicsComp3 = new ProtagGraphicsComponent();
     
     
@@ -65,19 +74,24 @@ int main() {
     //puis on l'ajoute au niveau
     level.addGameObject(&carre);
     
-    GameObject carre2(input2, physics2, graphicsComp2, position*100, 50.0f, gf::Color::Blue);
+    GameObject carre2(input2, physics2, graphicsComp2, position*100, 21.0f, gf::Color::Blue);
     level.addGameObject(&carre2);
     
-    GameObject sprite1(input3, physics3, graphicsComp3, position*50, 25.0f, gf::Color::Blue);
+    GameObject sprite1(input3, physics3, graphicsComp3, position*50, 21.0f, gf::Color::Blue);
     level.addGameObject(&sprite1);
 
     
     // game loop
     while (true) {
         
+        float dt = clock.restart().asSeconds();
+        sleep(timeStep - dt);
+        
+        level.world->Step(dt, velocityIterations, positionIterations);
+        
         //level demande à tout les objets à la suite de lancer update pour chacun de leur
         //component, il prend dt en paramètre.
-        level.updateGameObjects( clock.restart().asSeconds() );
+        level.updateGameObjects( dt );
         
         //draw
         graphicsG.display();

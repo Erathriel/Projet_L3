@@ -11,7 +11,7 @@ Graphics::Graphics(gf::Vector2u screenSize){
     
     m_renderer->clear(gf::Color::White);
     
-    m_view->reset({ 0.0f, 0.0f, screenSize.x, screenSize.y });
+    m_view->reset({ 0.0f, 0.0f, (float)screenSize.x, (float)screenSize.y });
     m_renderer->setView(*m_view);
     
     

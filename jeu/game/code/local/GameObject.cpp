@@ -7,7 +7,7 @@
 #include "GameObject.h"
 
 
-GameObject::GameObject(InputComponent* input, PhysicsComponent* physics, GraphicsComponent* graphics, gf::Vector2f position, float size, gf::Color4f color) {
+GameObject::GameObject(InputComponent* input, PhysicsComponent* physics, GraphicsComponent* graphics, gf::Vector2f position, float size, gf::Color4f color, float angle) {
     input_ = input;
     physics_= physics;
     graphics_ = graphics;
@@ -15,12 +15,13 @@ GameObject::GameObject(InputComponent* input, PhysicsComponent* physics, Graphic
     m_size = size;
     m_color = color;
     m_position = position;
+    m_angle = angle;
 
 }
 
 void GameObject::update(Level& level, Graphics& graphics){
     input_->update(*this, &level);
-    physics_->update(*this, level);
+    physics_->update(*this, &level);
     graphics_->update(*this, &graphics);
 }
 
