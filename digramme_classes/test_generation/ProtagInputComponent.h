@@ -5,11 +5,11 @@
 #include "InputComponent.h"
 
 
-class CarreInputComponent : public InputComponent
+class ProtagInputComponent : public InputComponent
 {
 public:
 
-    ~CarreInputComponent(){}
+    ~ProtagInputComponent(){}
     void update(GameObject& gb, Level *level)
     {
         
@@ -62,14 +62,15 @@ public:
             }
         }
         
+        float velocity = 40000.0f;
         if(up_pressed)
-            gb.m_position.y -= 100.0f * level->getdt();
+            gb.m_velocity.y -= velocity * level->getdt();
         if(down_pressed)
-            gb.m_position.y += 100.0f * level->getdt();
+            gb.m_velocity.y += velocity * level->getdt();
         if(left_pressed)
-            gb.m_position.x -= 100.0f * level->getdt();
+            gb.m_velocity.x -= velocity * level->getdt();
         if(right_pressed)
-            gb.m_position.x += 100.0f * level->getdt();
+            gb.m_velocity.x += velocity * level->getdt();
 
     }
 private:

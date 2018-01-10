@@ -1,6 +1,6 @@
 format 215
 "digramme_classes"
-  revision 11
+  revision 12
   modified_by 8 "evan"
   cpp_root_dir "test_generation/"
 
@@ -75,96 +75,6 @@ ${inlines}
       explicit_switch_type ""
       mysql_decl ""
       
-      attribute 142856 "dt"
-	private explicit_type "float"
-	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
-"
-	java_decl ""
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-	mysql_decl ""
-	MysqlColumn
-      end
-
-      operation 134664 "update"
-	preserve_cpp_body_indent private explicit_return_type "void"
-	nparams 1
-	  param inout name "obj" type class_ref 128008 // GameObject
-	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} & ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
-"
-	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${t0} & ${p0}${)}${const}${volatile}${throw}${staticnl}{
-  ${body}}
-"
-	
-	
-	
-	
-      end
-
-      classrelation 157960 // listGameObjects (<unidirectional association>)
-	relation 156808 --->
-	  a role_name "listGameObjects" multiplicity "[MAX_GAMEOBJECTS]" private
-	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} * ${name}${multiplicity}${value};
-"
-	    classrelation_ref 157960 // listGameObjects (<unidirectional association>)
-	  b parent class_ref 128008 // GameObject
-      end
-
-      attribute 142984 "nb_objects"
-	private explicit_type "uint"
-	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
-"
-	java_decl ""
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-	mysql_decl ""
-	MysqlColumn
-      end
-
-      classrelation 158088 // graphicsG (<unidirectional association>)
-	relation 156936 --->
-	  a role_name "graphicsG" private
-	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} * ${name}${value};
-"
-	    classrelation_ref 158088 // graphicsG (<unidirectional association>)
-	  b parent class_ref 142088 // Graphics
-      end
-
-      classrelation 158216 // tileLayer (<unidirectional association>)
-	relation 157064 --->
-	  a role_name "tileLayer" private
-	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} * ${name}${value};
-"
-	    classrelation_ref 158216 // tileLayer (<unidirectional association>)
-	  b parent class_ref 128136 // gf::TileLayer
-      end
-
-      attribute 143112 "background"
-	private explicit_type "gf::Sprite"
-	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} * ${name}${value};
-"
-	java_decl ""
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-	mysql_decl ""
-	MysqlColumn
-      end
-
-      attribute 143240 "bgRenderState"
-	private explicit_type "gf::RenderStates"
-	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} * ${name}${value};
-"
-	java_decl ""
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-	mysql_decl ""
-	MysqlColumn
-      end
-
       operation 134792 "Level"
 	preserve_cpp_body_indent public explicit_return_type ""
 	nparams 1
@@ -238,6 +148,155 @@ ${inlines}
 	
       end
 
+      attribute 150664 "world"
+	public explicit_type "b2World"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 142856 "dt"
+	private explicit_type "float"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      operation 134664 "update"
+	preserve_cpp_body_indent private explicit_return_type "void"
+	nparams 1
+	  param inout name "obj" type class_ref 128008 // GameObject
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} & ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${t0} & ${p0}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 144264 "placeTiles"
+	preserve_cpp_body_indent private explicit_return_type "void"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      classrelation 157960 // listGameObjects (<unidirectional association>)
+	relation 156808 --->
+	  a role_name "listGameObjects" multiplicity "[MAX_GAMEOBJECTS]" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} * ${name}${multiplicity}${value};
+"
+	    classrelation_ref 157960 // listGameObjects (<unidirectional association>)
+	  b parent class_ref 128008 // GameObject
+      end
+
+      attribute 142984 "nb_objects"
+	private explicit_type "uint"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 158088 // graphicsG (<unidirectional association>)
+	relation 156936 --->
+	  a role_name "graphicsG" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 158088 // graphicsG (<unidirectional association>)
+	  b parent class_ref 142088 // Graphics
+      end
+
+      classrelation 165128 // contactListener (<unidirectional association>)
+	relation 163976 --->
+	  a role_name "contactListener" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 165128 // contactListener (<unidirectional association>)
+	  b parent class_ref 148616 // ContactListener
+      end
+
+      classrelation 158216 // tileLayer (<unidirectional association>)
+	relation 157064 --->
+	  a role_name "tileLayer" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 158216 // tileLayer (<unidirectional association>)
+	  b parent class_ref 128136 // gf::TileLayer
+      end
+
+      attribute 150792 "tilePhysicBody"
+	private explicit_type "b2Body"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 143112 "background"
+	private explicit_type "gf::Sprite"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 143240 "bgRenderState"
+	private explicit_type "gf::RenderStates"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 150920 "gravity"
+	private explicit_type "b2Vec2"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
       operation 128008 "generate"
 	preserve_cpp_body_indent public explicit_return_type "void"
 	nparams 0
@@ -247,7 +306,6 @@ ${inlines}
 	preserve_python_body_indent 
 	
       end
-
     end
 
     class 128136 "gf::TileLayer"
@@ -326,18 +384,32 @@ ${inlines}
 	MysqlColumn
       end
 
+      attribute 150536 "m_angle"
+	public explicit_type "float"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
       operation 135688 "GameObject"
 	preserve_cpp_body_indent public explicit_return_type ""
-	nparams 6
+	nparams 7
 	  param inout name "input" type class_ref 134920 // InputComponent
 	  param inout name "physics" type class_ref 135176 // PhysicsComponent
 	  param inout name "graphics" type class_ref 135048 // GraphicsComponent
 	  param in name "position" explicit_type "gf::Vector2f"
 	  param in name "size" explicit_type "float"
 	  param in name "color" explicit_type "gf::Color4f"
-	cpp_decl "    ${comment}${inline}${name}${(}${t0} * ${p0}${v0}, ${t1} * ${p1}${v1}, ${t2} * ${p2}${v2}, ${t3} ${p3}${v3}, ${t4} ${p4}${v4}, ${t5} ${p5}${v5}${)}${volatile}${throw}${abstract};
+	  param in name "angle" explicit_type "float"
+	    defaultvalue "0.0f"
+	cpp_decl "    ${comment}${inline}${name}${(}${t0} * ${p0}${v0}, ${t1} * ${p1}${v1}, ${t2} * ${p2}${v2}, ${t3} ${p3}${v3}, ${t4} ${p4}${v4}, ${t5} ${p5}${v5}, ${t6} ${p6}${v6}${)}${volatile}${throw}${abstract};
 "
-	cpp_def "${comment}${inline}${class}::${name}${(}${)}${volatile}${throw} {
+	cpp_def "${comment}${inline}${class}::${name}${(}${t0} * ${p0}, ${t1} * ${p1}, ${t2} * ${p2}, ${t3} ${p3}, ${t4} ${p4}, ${t5} ${p5}, ${t6} ${p6}${)}${throw}{
   ${body}}
 "
 	
@@ -353,7 +425,7 @@ ${inlines}
 	  param inout name "graphics" type class_ref 142088 // Graphics
 	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} & ${p0}${v0}, ${t1} & ${p1}${v1}${)}${const}${volatile}${throw}${abstract};
 "
-	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${t0} & ${p0}, ${t1} & ${p1}${)}${const}${volatile}${throw}${staticnl}{
   ${body}}
 "
 	
@@ -368,7 +440,7 @@ ${inlines}
 	  param inout name "graphics" type class_ref 142088 // Graphics
 	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} & ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
 "
-	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${t0} & ${p0}${)}${const}${volatile}${throw}${staticnl}{
   ${body}}
 "
 	
@@ -415,7 +487,6 @@ ${inlines}
 	    classrelation_ref 158600 // graphics_ (<unidirectional association>)
 	  b parent class_ref 135048 // GraphicsComponent
       end
-
     end
 
     class 134920 "InputComponent"
@@ -466,7 +537,6 @@ ${inlines}
 	
 	
       end
-
     end
 
     class 135176 "PhysicsComponent"
@@ -498,7 +568,7 @@ ${inlines}
 	nparams 2
 	  param inout name "obj" type class_ref 128008 // GameObject
 	  param inout name "level" type class_ref 128392 // Level
-	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} & ${p0}${v0}, ${t1} & ${p1}${v1}${)}${const}${volatile}${throw}${abstract};
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} & ${p0}${v0}, ${t1} * ${p1}${v1}${)}${const}${volatile}${throw}${abstract};
 "
 	
 	
@@ -506,6 +576,27 @@ ${inlines}
 	
       end
 
+      operation 144392 "startContact"
+	abstract cpp_virtual public explicit_return_type "void"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	
+	
+	
+	
+      end
+
+      operation 144520 "endContact"
+	abstract cpp_virtual public explicit_return_type "void"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	
+	
+	
+	
+      end
     end
 
     class 135048 "GraphicsComponent"
@@ -544,7 +635,6 @@ ${inlines}
 	
 	
       end
-
     end
 
     class 135304 "XInputComponent"
@@ -628,10 +718,11 @@ ${inlines}
       
       operation 136456 "Graphics"
 	preserve_cpp_body_indent public explicit_return_type ""
-	nparams 0
-	cpp_decl "    ${comment}${inline}${name}${(}${)}${volatile}${throw}${abstract};
+	nparams 1
+	  param in name "screenSize" explicit_type "gf::Vector2u"
+	cpp_decl "    ${comment}${inline}${name}${(}${t0} ${p0}${v0}${)}${volatile}${throw}${abstract};
 "
-	cpp_def "${comment}${inline}${class}::${name}${(}${)}${volatile}${throw} {
+	cpp_def "${comment}${inline}${class}::${name}${(}${t0} ${p0}${)}${throw}{
   ${body}}
 "
 	
@@ -660,7 +751,7 @@ ${inlines}
 	  param in name "obj" type class_ref 128008 // GameObject
 	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
 "
-	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${t0} ${p0}${)}${const}${volatile}${throw}${staticnl}{
   ${body}}
 "
 	
@@ -675,7 +766,7 @@ ${inlines}
 	  param inout name "shape" explicit_type "gf::RectangleShape"
 	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} * ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
 "
-	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${t0} * ${p0}${)}${const}${volatile}${throw}${staticnl}{
   ${body}}
 "
 	
@@ -690,7 +781,7 @@ ${inlines}
 	  param in name "obj" type class_ref 128008 // GameObject
 	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
 "
-	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${t0} ${p0}${)}${const}${volatile}${throw}${staticnl}{
   ${body}}
 "
 	
@@ -705,7 +796,7 @@ ${inlines}
 	  param inout name "tileLayer" type class_ref 128136 // gf::TileLayer
 	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} * ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
 "
-	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${t0} * ${p0}${)}${const}${volatile}${throw}${staticnl}{
   ${body}}
 "
 	
@@ -722,6 +813,21 @@ ${inlines}
 	    defaultvalue "nullptr"
 	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} * ${p0}${v0}, ${t1} * ${p1}${v1}${)}${const}${volatile}${throw}${abstract};
 "
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${t0} * ${p0}, ${t1} * ${p1}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 144904 "setViewCenter"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 1
+	  param in name "center" explicit_type "gf::Vector2f"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
 	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
   ${body}}
 "
@@ -736,7 +842,7 @@ ${inlines}
 	nparams 0
 	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} * ${name}${(}${)}${const}${volatile}${throw}${abstract};
 "
-	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+	cpp_def "${comment}${inline}${type} * ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
   ${body}}
 "
 	
@@ -750,7 +856,7 @@ ${inlines}
 	nparams 0
 	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} * ${name}${(}${)}${const}${volatile}${throw}${abstract};
 "
-	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+	cpp_def "${comment}${inline}${type} * ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
   ${body}}
 "
 	
@@ -773,6 +879,18 @@ ${inlines}
 
       attribute 143624 "m_renderer"
 	private explicit_type "gf::RenderWindow"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 151048 "m_view"
+	private explicit_type "gf::View"
 	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} * ${name}${value};
 "
 	java_decl ""
@@ -806,9 +924,92 @@ ${inlines}
 	mysql_decl ""
 	MysqlColumn
       end
-
     end
 
+    class 148616 "ContactListener"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment " http://www.iforce2d.net/b2dtut/collision-callbacks"
+      classrelation 165256 // <generalisation>
+	relation 164104 ---|>
+	  a public
+	    cpp default "${type}"
+	    classrelation_ref 165256 // <generalisation>
+	  b parent class_ref 148744 // typedef1
+      end
+
+      operation 144648 "BeginContact"
+	cpp_inline private explicit_return_type "void"
+	nparams 1
+	  param inout name "contact" explicit_type "b2Contact"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} * ${p0}${v0}${)}${const}${volatile}${throw}${abstract} {
+
+        //check if fixture A was a ball
+        void* bodyUserData = contact->GetFixtureA()->GetBody()->GetUserData();
+        if ( bodyUserData )
+            static_cast<PhysicsComponent*>( bodyUserData )->startContact();
+
+        
+        //check if fixture B was a ball
+        bodyUserData = contact->GetFixtureB()->GetBody()->GetUserData();
+        if ( bodyUserData )
+            static_cast<PhysicsComponent*>( bodyUserData )->startContact();
+
+    };
+"
+	
+	
+	
+	
+      end
+
+      operation 144776 "EndContact"
+	cpp_inline private explicit_return_type "void"
+	nparams 1
+	  param inout name "contact" explicit_type "b2Contact"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${t0} * ${p0}${v0}${)}${const}${volatile}${throw}${abstract} {
+
+        //check if fixture A was a ball
+        void* bodyUserData = contact->GetFixtureA()->GetBody()->GetUserData();
+        if ( bodyUserData )
+            static_cast<PhysicsComponent*>( bodyUserData )->endContact();
+
+        //check if fixture B was a ball
+        bodyUserData = contact->GetFixtureB()->GetBody()->GetUserData();
+        if ( bodyUserData )
+            static_cast<PhysicsComponent*>( bodyUserData )->endContact();
+
+    };
+"
+	
+	
+	
+	
+      end
+    end
+
+    class 148744 "typedef1"
+      visibility package stereotype "typedef" explicit_base_type "b2ContactListener"
+      cpp_decl "${comment}typedef ${type} ${name};
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
   end
 
   deploymentview 128008 "depl"
@@ -927,6 +1128,8 @@ ${members}
 ${namespace_end}"
       associated_elems
 	class_ref 135176 // PhysicsComponent
+	class_ref 148744 // typedef1
+	class_ref 148616 // ContactListener
       end
     end
 

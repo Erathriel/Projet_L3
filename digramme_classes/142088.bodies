@@ -1,9 +1,14 @@
 class Graphics
-!!!136456.cpp!!!	Graphics()
-    static constexpr gf::Vector2u ScreenSize(500, 500);
-    m_window = new gf::Window("le jeu", ScreenSize);
+!!!136456.cpp!!!	Graphics(in screenSize : gf::Vector2u)
+    m_window = new gf::Window("le jeu", screenSize);
     m_renderer = new gf::RenderWindow(*m_window);
+    m_view = new gf::View;
+    
     m_renderer->clear(gf::Color::White);
+    
+    m_view->reset({ 0.0f, 0.0f, (float)screenSize.x, (float)screenSize.y });
+    m_renderer->setView(*m_view);
+    
     
     tileTexture = new gf::Texture;
     if( !tileTexture->loadFromFile(TILESET_FILE_NAME) ){
@@ -29,6 +34,9 @@ class Graphics
         m_renderer->draw(*spr, *states);
     else
         m_renderer->draw(*spr);
+!!!144904.cpp!!!	setViewCenter(in center : gf::Vector2f) : void
+    m_view->setCenter(center);
+    m_renderer->setView(*m_view);
 !!!137352.cpp!!!	getTileTexture() : gf::Texture
     return tileTexture;
 !!!137480.cpp!!!	getBGTexture() : gf::Texture

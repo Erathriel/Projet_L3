@@ -1,5 +1,5 @@
 class GameObject
-!!!135688.cpp!!!	GameObject(inout input : InputComponent, inout physics : PhysicsComponent, inout graphics : GraphicsComponent, in position : gf::Vector2f, in size : float, in color : gf::Color4f)
+!!!135688.cpp!!!	GameObject(inout input : InputComponent, inout physics : PhysicsComponent, inout graphics : GraphicsComponent, in position : gf::Vector2f, in size : float, in color : gf::Color4f, in angle : float = 0.0f)
     input_ = input;
     physics_= physics;
     graphics_ = graphics;
@@ -7,10 +7,11 @@ class GameObject
     m_size = size;
     m_color = color;
     m_position = position;
+    m_angle = angle;
 
 !!!135816.cpp!!!	update(inout level : Level, inout graphics : Graphics) : void
     input_->update(*this, &level);
-    physics_->update(*this, level);
+    physics_->update(*this, &level);
     graphics_->update(*this, &graphics);
 !!!135944.cpp!!!	update(inout graphics : Graphics) : void
     graphics_->update(*this, &graphics);

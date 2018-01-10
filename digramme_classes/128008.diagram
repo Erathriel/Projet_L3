@@ -2,7 +2,7 @@ format 215
 
 classcanvas 128008 class_ref 128008 // GameObject
   classdiagramsettings member_max_width 0 end
-  xyz 30 332 2000
+  xyz 34 335 2000
 end
 classcanvas 128136 class_ref 128136 // gf::TileLayer
   classdiagramsettings member_max_width 0 end
@@ -10,11 +10,11 @@ classcanvas 128136 class_ref 128136 // gf::TileLayer
 end
 classcanvas 128392 class_ref 128392 // Level
   classdiagramsettings member_max_width 0 end
-  xyz 464 60 2000
+  xyz 464 23 2000
 end
 classcanvas 129928 class_ref 134920 // InputComponent
   classdiagramsettings member_max_width 0 end
-  xyz 15 541 2000
+  xyz 13 551 2000
 end
 classcanvas 130056 class_ref 135048 // GraphicsComponent
   classdiagramsettings member_max_width 0 end
@@ -58,32 +58,32 @@ relationcanvas 133640 relation_ref 150024 // <dependency>
 end
 relationcanvas 134152 relation_ref 157192 // <unidirectional association>
   from ref 128008 z 2001 to ref 129928
-  role_a_pos 202 514 3000 no_role_b
+  role_a_pos 209 525 3000 no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 134280 relation_ref 157320 // <unidirectional association>
   from ref 128008 z 2001 to ref 130184
-  role_a_pos 410 522 3000 no_role_b
+  role_a_pos 420 522 3000 no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 134408 relation_ref 157448 // <unidirectional association>
   from ref 128008 z 2001 to ref 130056
-  role_a_pos 556 534 3000 no_role_b
+  role_a_pos 560 535 3000 no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 134536 relation_ref 156808 // <unidirectional association>
   from ref 128392 z 2001 to ref 128008
-  role_a_pos 469 311 3000 no_role_b
-  multiplicity_a_pos 334 311 3000 no_multiplicity_b
+  role_a_pos 496 314 3000 no_role_b
+  multiplicity_a_pos 361 314 3000 no_multiplicity_b
 end
 relationcanvas 134664 relation_ref 156936 // <unidirectional association>
   from ref 128392 z 2001 to ref 133768
-  role_a_pos 328 138 3000 no_role_b
+  role_a_pos 328 149 3000 no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 134792 relation_ref 157064 // <unidirectional association>
   from ref 128392 z 2001 to ref 128136
-  role_a_pos 700 151 3000 no_role_b
+  role_a_pos 700 150 3000 no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 end
