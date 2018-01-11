@@ -10,7 +10,7 @@ Lorsque vous ajoutez un .cc, il faut:
 - modifier le CMakeLists.txt du dossier game et ajouter les .cc là où le commentaire l'indique
 - modifier code/XUnityBuild.cc et y ajouter les .cc également
 
-Pour compiler pour la première fois, supprimez le dossier CMakesFiles et le fichier CMakeLists.txt dans /jeu et dans /jeu/game puis mettez-vous dans /jeu, faire
+Pour compiler pour la première fois, supprimez le dossier CMakesFiles et le fichier CMakeCache.txt dans /jeu et dans /jeu/game puis mettez-vous dans /jeu, faire
 
 cmake .
 
