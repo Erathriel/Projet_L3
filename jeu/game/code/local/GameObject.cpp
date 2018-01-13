@@ -19,9 +19,15 @@ GameObject::GameObject(InputComponent* input, PhysicsComponent* physics, Graphic
 
 }
 
+void GameObject::initialize(Level& level, Graphics& graphics){
+    //input_->initialize(*this, &level);
+    physics_->initialize(*this, &level);
+    graphics_->initialize(*this, &graphics);
+}
+
 void GameObject::update(Level& level, Graphics& graphics){
     input_->update(*this, &level);
-    physics_->update(*this, &level);
+    physics_->update(*this);
     graphics_->update(*this, &graphics);
 }
 

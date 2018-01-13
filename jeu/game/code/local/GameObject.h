@@ -25,6 +25,7 @@ public:
 
     GameObject(InputComponent* input, PhysicsComponent* physics, GraphicsComponent* graphics, gf::Vector2f position, float size, gf::Color4f color, float angle = 0.0f);
 
+    void initialize(Level& level, Graphics& graphics);
     void update(Level& level, Graphics& graphics);
 
     void update(Graphics& graphics);

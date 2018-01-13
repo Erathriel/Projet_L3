@@ -184,37 +184,6 @@ game/CMakeFiles/game.dir/build: game/game
 
 .PHONY : game/CMakeFiles/game.dir/build
 
-# Object files for target game
-game_OBJECTS = \
-"CMakeFiles/game.dir/code/main.cc.o" \
-"CMakeFiles/game.dir/code/local/Level.cpp.o" \
-"CMakeFiles/game.dir/code/local/GameObject.cpp.o" \
-"CMakeFiles/game.dir/code/local/Graphics.cpp.o"
-
-# External object files for target game
-game_EXTERNAL_OBJECTS =
-
-game/CMakeFiles/CMakeRelink.dir/game: game/CMakeFiles/game.dir/code/main.cc.o
-game/CMakeFiles/CMakeRelink.dir/game: game/CMakeFiles/game.dir/code/local/Level.cpp.o
-game/CMakeFiles/CMakeRelink.dir/game: game/CMakeFiles/game.dir/code/local/GameObject.cpp.o
-game/CMakeFiles/CMakeRelink.dir/game: game/CMakeFiles/game.dir/code/local/Graphics.cpp.o
-game/CMakeFiles/CMakeRelink.dir/game: game/CMakeFiles/game.dir/build.make
-game/CMakeFiles/CMakeRelink.dir/game: library/libgf0.so.0.6.0
-game/CMakeFiles/CMakeRelink.dir/game: /usr/lib/x86_64-linux-gnu/libSDL2.so
-game/CMakeFiles/CMakeRelink.dir/game: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-game/CMakeFiles/CMakeRelink.dir/game: /usr/lib/x86_64-linux-gnu/libboost_system.so
-game/CMakeFiles/CMakeRelink.dir/game: /usr/lib/x86_64-linux-gnu/libfreetype.so
-game/CMakeFiles/CMakeRelink.dir/game: /usr/lib/x86_64-linux-gnu/libz.so
-game/CMakeFiles/CMakeRelink.dir/game: library/libBox2D.a
-game/CMakeFiles/CMakeRelink.dir/game: game/CMakeFiles/game.dir/relink.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/evan/Documents/Projet_L3/jeu/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable CMakeFiles/CMakeRelink.dir/game"
-	cd /home/evan/Documents/Projet_L3/jeu/game && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/game.dir/relink.txt --verbose=$(VERBOSE)
-
-# Rule to relink during preinstall.
-game/CMakeFiles/game.dir/preinstall: game/CMakeFiles/CMakeRelink.dir/game
-
-.PHONY : game/CMakeFiles/game.dir/preinstall
-
 game/CMakeFiles/game.dir/requires: game/CMakeFiles/game.dir/code/main.cc.o.requires
 game/CMakeFiles/game.dir/requires: game/CMakeFiles/game.dir/code/local/Level.cpp.o.requires
 game/CMakeFiles/game.dir/requires: game/CMakeFiles/game.dir/code/local/GameObject.cpp.o.requires

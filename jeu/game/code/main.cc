@@ -16,7 +16,6 @@
 #include <gf/Shapes.h>
 #include <gf/Vector.h>
 
-#include "local/CarrePhysicsComponent.h"
 #include "local/CarreGraphicsComponent.h"
 #include "local/ProtagInputComponent.h"
 #include "local/EmptyInputComponent.h"
@@ -33,6 +32,8 @@
 
 #include <Box2D/Box2D.h>
 #include <cstdio>
+
+int numFootContacts;
 
 
 int main() {
@@ -74,10 +75,10 @@ int main() {
     //puis on l'ajoute au niveau
     level.addGameObject(&carre);
     
-    GameObject carre2(input2, physics2, graphicsComp2, position*100, 21.0f, gf::Color::Blue);
+    GameObject carre2(input2, physics2, graphicsComp2, position*100, 15.0f, gf::Color::Blue);
     level.addGameObject(&carre2);
     
-    GameObject sprite1(input3, physics3, graphicsComp3, position*50, 21.0f, gf::Color::Blue);
+    GameObject sprite1(input3, physics3, graphicsComp3, position*50, 15.0f, gf::Color::Blue);
     level.addGameObject(&sprite1);
 
     
@@ -87,7 +88,7 @@ int main() {
         float dt = clock.restart().asSeconds();
         sleep(timeStep - dt);
         
-        level.world->Step(dt, velocityIterations, positionIterations);
+        level.world->Step(timeStep, velocityIterations, positionIterations);
         
         //level demande à tout les objets à la suite de lancer update pour chacun de leur
         //component, il prend dt en paramètre.

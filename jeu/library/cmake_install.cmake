@@ -33,11 +33,35 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  foreach(file
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libgf0.so.0.6.0"
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libgf0.so.0"
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libgf0.so"
+      )
+    if(EXISTS "${file}" AND
+       NOT IS_SYMLINK "${file}")
+      file(RPATH_CHECK
+           FILE "${file}"
+           RPATH "")
+    endif()
+  endforeach()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/home/evan/Documents/Projet_L3/jeu/library/CMakeFiles/CMakeRelink.dir/libgf0.so.0.6.0"
-    "/home/evan/Documents/Projet_L3/jeu/library/CMakeFiles/CMakeRelink.dir/libgf0.so.0"
-    "/home/evan/Documents/Projet_L3/jeu/library/CMakeFiles/CMakeRelink.dir/libgf0.so"
+    "/home/evan/Documents/Projet_L3/jeu/library/libgf0.so.0.6.0"
+    "/home/evan/Documents/Projet_L3/jeu/library/libgf0.so.0"
+    "/home/evan/Documents/Projet_L3/jeu/library/libgf0.so"
     )
+  foreach(file
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libgf0.so.0.6.0"
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libgf0.so.0"
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libgf0.so"
+      )
+    if(EXISTS "${file}" AND
+       NOT IS_SYMLINK "${file}")
+      if(CMAKE_INSTALL_DO_STRIP)
+        execute_process(COMMAND "/usr/bin/strip" "${file}")
+      endif()
+    endif()
+  endforeach()
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")

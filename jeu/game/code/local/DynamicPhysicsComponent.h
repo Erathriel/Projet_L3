@@ -16,28 +16,31 @@ class DynamicPhysicsComponent  : public PhysicsComponent
 public:
     ~DynamicPhysicsComponent() {}
     
-    void update(GameObject& obj, Level *level){
-        if(!initialised){
-            
-            bodyDef.type = b2_dynamicBody;
-            bodyDef.position.Set(obj.m_position.x, obj.m_position.y);
-            body = level->world->CreateBody(&bodyDef);
+    void initialize(GameObject& obj, Level *level) {
+        
+        bodyDef.type = b2_dynamicBody;
+        bodyDef.position.Set(obj.m_position.x, obj.m_position.y);
+        body = level->world->CreateBody(&bodyDef);
 
-            // Define another box shape for our dynamic body.
-            dynamicBox.SetAsBox(obj.m_size, obj.m_size);
+        // Define another box shape for our dynamic body.
+        dynamicBox.SetAsBox(obj.m_size, obj.m_size);
 
-            // Define the dynamic body fixture.
-            fixtureDef.shape = &dynamicBox;
-            // Set the box density to be non-zero, so it will be dynamic.
-            fixtureDef.density = 1.0f;
-            // Override the default friction.
-            fixtureDef.friction = 0.3f; //0.3f
+        // Define the dynamic body fixture.
+        fixtureDef.shape = &dynamicBox;
+        // Set the box density to be non-zero, so it will be dynamic.
+        fixtureDef.density = 1.0f;
+        // Override the default friction.
+        fixtureDef.friction = 0.3f; //0.3f
+        //filtre de collisions
+        fixtureDef.filter.categoryBits = DEFAULT;
+        fixtureDef.filter.maskBits = DEFAULT | SOLID | PROTAG;
 
-            // Add the shape to the body.
-            body->CreateFixture(&fixtureDef);
-            
-            initialised = true;
-        }
+        // Add the shape to the body.
+        body->CreateFixture(&fixtureDef);
+        
+    }
+    
+    void update(GameObject& obj){
         
         obj.m_position.x = body->GetPosition().x;
         obj.m_position.y = body->GetPosition().y;
@@ -50,8 +53,8 @@ public:
     
     void startContact(){};
     void endContact(){};
+    int getEntityType() { return ENT_DEFAULT; }
     
-    bool initialised = false;
     b2BodyDef bodyDef;
     b2Body* body;
     b2PolygonShape dynamicBox;

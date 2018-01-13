@@ -78,17 +78,6 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: install/local
-
-.PHONY : install/local/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -99,6 +88,28 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+
+.PHONY : install/local/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -157,11 +168,6 @@ game: game/CMakeFiles/game.dir/rule
 game/fast:
 	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/build
 .PHONY : game/fast
-
-# Manual pre-install relink rule for target.
-game/preinstall:
-	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f CMakeFiles/Makefile2 game/CMakeFiles/game.dir/preinstall
-.PHONY : game/preinstall
 
 code/local/GameObject.o: code/local/GameObject.cpp.o
 
@@ -279,9 +285,10 @@ help:
 	@echo "... depend"
 	@echo "... install"
 	@echo "... list_install_components"
-	@echo "... game"
-	@echo "... install/local"
 	@echo "... rebuild_cache"
+	@echo "... game"
+	@echo "... install/strip"
+	@echo "... install/local"
 	@echo "... edit_cache"
 	@echo "... code/local/GameObject.o"
 	@echo "... code/local/GameObject.i"

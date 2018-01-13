@@ -294,7 +294,6 @@ game/CMakeFiles/game.dir/code/local/Level.cpp.o
  include/gf/Window.h
 game/CMakeFiles/game.dir/code/main.cc.o
  /home/evan/Documents/Projet_L3/jeu/game/code/local/CarreGraphicsComponent.h
- /home/evan/Documents/Projet_L3/jeu/game/code/local/CarrePhysicsComponent.h
  /home/evan/Documents/Projet_L3/jeu/game/code/local/DynamicPhysicsComponent.h
  /home/evan/Documents/Projet_L3/jeu/game/code/local/EmptyInputComponent.h
  /home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.h

@@ -78,6 +78,7 @@ void Level::updateGameObjects(float ndt){
 }
 
 void Level::addGameObject(GameObject *obj){
+    obj->initialize(*this, *graphicsG);
     listGameObjects[nb_objects] = obj;
     nb_objects++;
 }
@@ -85,3 +86,4 @@ void Level::addGameObject(GameObject *obj){
 gf::Window* Level::getWindow(){
     return graphicsG->m_window;
 }
+

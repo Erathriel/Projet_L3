@@ -78,6 +78,17 @@ install/local/fast: install/local
 
 .PHONY : install/local/fast
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
+
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -202,11 +213,6 @@ gf0: library/CMakeFiles/gf0.dir/rule
 gf0/fast:
 	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f library/CMakeFiles/gf0.dir/build.make library/CMakeFiles/gf0.dir/build
 .PHONY : gf0/fast
-
-# Manual pre-install relink rule for target.
-gf0/preinstall:
-	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f CMakeFiles/Makefile2 library/CMakeFiles/gf0.dir/preinstall
-.PHONY : gf0/preinstall
 
 Action.o: Action.cc.o
 
@@ -2916,6 +2922,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... install/local"
+	@echo "... install/strip"
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... gfdev_source_file"

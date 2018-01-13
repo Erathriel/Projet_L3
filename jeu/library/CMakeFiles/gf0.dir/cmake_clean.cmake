@@ -102,10 +102,6 @@ file(REMOVE_RECURSE
   "libgf0.so"
   "libgf0.so.0.6.0"
   "libgf0.so.0"
-  "libgf0.pdb"
-  "CMakeFiles/CMakeRelink.dir/libgf0.so"
-  "CMakeFiles/CMakeRelink.dir/libgf0.so.0.6.0"
-  "CMakeFiles/CMakeRelink.dir/libgf0.so.0"
 )
 
 # Per-language clean rules from dependency scanning.

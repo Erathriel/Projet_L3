@@ -15,13 +15,12 @@ class Graphics;
 class CarreGraphicsComponent : public GraphicsComponent
 {
 public:
-
+        void initialize(GameObject& obj, Graphics *graphics){
+            shape = new gf::RectangleShape({obj.m_size,obj.m_size});
+            shape->setColor(obj.m_color);
+        }
+    
 	void update(GameObject& obj, Graphics *graphics){
-            if(!initialised){
-		shape = new gf::RectangleShape({obj.m_size,obj.m_size});
-                shape->setColor(obj.m_color);
-                initialised = true;
-            }
             shape->setPosition(obj.m_position);
             
             graphics->draw(shape);
@@ -29,7 +28,6 @@ public:
 	~CarreGraphicsComponent(){}
 	
 private:
-        bool initialised = false;
 	gf::RectangleShape *shape;
 };
 

@@ -20,12 +20,6 @@ gf/Vector.h
 gf/Color.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/game/code/local/CarrePhysicsComponent.h
-GameObject.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.h
-Level.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/Level.h
-
 /home/evan/Documents/Projet_L3/jeu/game/code/local/DynamicPhysicsComponent.h
 GameObject.h
 /home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.h
@@ -207,8 +201,6 @@ gf/Shapes.h
 -
 gf/Vector.h
 -
-local/CarrePhysicsComponent.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/CarrePhysicsComponent.h
 local/CarreGraphicsComponent.h
 /home/evan/Documents/Projet_L3/jeu/game/code/local/CarreGraphicsComponent.h
 local/ProtagInputComponent.h
