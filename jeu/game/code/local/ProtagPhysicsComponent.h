@@ -71,7 +71,7 @@ public:
         body->ApplyLinearImpulse( b2Vec2(impulse,0), body->GetWorldCenter(), true );
         
         if(obj.m_velocity.y < -0.1f && onGround){
-            float impulse = body->GetMass() * -80.0;
+            float impulse = body->GetMass() * -40.0;
             body->ApplyLinearImpulse( b2Vec2(0,impulse), body->GetWorldCenter(), false );
             jumpTimeout = 30;
         }

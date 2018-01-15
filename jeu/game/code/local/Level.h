@@ -13,7 +13,7 @@
 
 #define MAX_GAMEOBJECTS 1024
 
-#define GRAVITY 36.0f
+#define GRAVITY 9.8f
 
 #define NUMBER_OF_TILES_ROWS 30
 #define SIZE_OF_A_TILE 21
