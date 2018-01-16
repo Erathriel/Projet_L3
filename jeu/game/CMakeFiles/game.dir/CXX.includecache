@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/evan/Documents/Projet_L3/jeu/game/code/local/CarreGraphicsComponent.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/CarreGraphicsComponent.h
 GameObject.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/GameObject.h
 Graphics.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/Graphics.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/Graphics.h
 gf/Shapes.h
 -
 gf/Event.h
@@ -20,43 +20,43 @@ gf/Vector.h
 gf/Color.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/game/code/local/DynamicPhysicsComponent.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/DynamicPhysicsComponent.h
 GameObject.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/GameObject.h
 Level.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/Level.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/Level.h
 
-/home/evan/Documents/Projet_L3/jeu/game/code/local/EmptyInputComponent.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/EmptyInputComponent.h
 InputComponent.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/InputComponent.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/InputComponent.h
 
-/home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.cpp
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/GameObject.cpp
 GameObject.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/GameObject.h
 
-/home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/GameObject.h
 gf/Vector.h
 -
 InputComponent.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/InputComponent.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/InputComponent.h
 PhysicsComponent.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/PhysicsComponent.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/PhysicsComponent.h
 GraphicsComponent.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/GraphicsComponent.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/GraphicsComponent.h
 Graphics.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/Graphics.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/Graphics.h
 Level.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/Level.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/Level.h
 
-/home/evan/Documents/Projet_L3/jeu/game/code/local/Graphics.cpp
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/Graphics.cpp
 gf/Sprite.h
 -
 Graphics.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/Graphics.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/Graphics.h
 
-/home/evan/Documents/Projet_L3/jeu/game/code/local/Graphics.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/Graphics.h
 GameObject.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/GameObject.h
 gf/RenderWindow.h
 -
 gf/RenderWindow.h
@@ -82,31 +82,31 @@ gf/Vector.h
 gf/TileLayer.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/game/code/local/GraphicsComponent.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/GraphicsComponent.h
 GameObject.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/GameObject.h
 Graphics.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/Graphics.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/Graphics.h
 
-/home/evan/Documents/Projet_L3/jeu/game/code/local/InputComponent.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/InputComponent.h
 GameObject.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/GameObject.h
 Level.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/Level.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/Level.h
 Graphics.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/Graphics.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/Graphics.h
 gf/Event.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/game/code/local/Level.cpp
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/Level.cpp
 Level.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/Level.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/Level.h
 
-/home/evan/Documents/Projet_L3/jeu/game/code/local/Level.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/Level.h
 GameObject.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/GameObject.h
 Graphics.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/Graphics.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/Graphics.h
 gf/Window.h
 -
 gf/TileLayer.h
@@ -120,21 +120,21 @@ gf/RenderStates.h
 Box2D/Box2D.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/game/code/local/PhysicsComponent.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/PhysicsComponent.h
 GameObject.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/GameObject.h
 Level.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/Level.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/Level.h
 Box2D/Box2D.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/game/code/local/ProtagGraphicsComponent.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/ProtagGraphicsComponent.h
 GameObject.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/GameObject.h
 Graphics.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/Graphics.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/Graphics.h
 GraphicsComponent.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/GraphicsComponent.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/GraphicsComponent.h
 gf/Shapes.h
 -
 gf/Event.h
@@ -144,23 +144,23 @@ gf/Vector.h
 gf/Color.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/game/code/local/ProtagInputComponent.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/ProtagInputComponent.h
 InputComponent.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/InputComponent.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/InputComponent.h
 
-/home/evan/Documents/Projet_L3/jeu/game/code/local/ProtagPhysicsComponent.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/ProtagPhysicsComponent.h
 GameObject.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/GameObject.h
 Level.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/Level.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/Level.h
 
-/home/evan/Documents/Projet_L3/jeu/game/code/local/SpriteGraphicsComponents.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/SpriteGraphicsComponents.h
 GameObject.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/GameObject.h
 Graphics.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/Graphics.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/Graphics.h
 GraphicsComponent.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/GraphicsComponent.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/GraphicsComponent.h
 gf/Shapes.h
 -
 gf/Event.h
@@ -170,7 +170,7 @@ gf/Vector.h
 gf/Color.h
 -
 
-/home/evan/Documents/Projet_L3/jeu/game/code/main.cc
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/main.cc
 cassert
 -
 cstdio
@@ -202,25 +202,25 @@ gf/Shapes.h
 gf/Vector.h
 -
 local/CarreGraphicsComponent.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/CarreGraphicsComponent.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/CarreGraphicsComponent.h
 local/ProtagInputComponent.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/ProtagInputComponent.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/ProtagInputComponent.h
 local/EmptyInputComponent.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/EmptyInputComponent.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/EmptyInputComponent.h
 local/SpriteGraphicsComponents.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/SpriteGraphicsComponents.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/SpriteGraphicsComponents.h
 local/ProtagGraphicsComponent.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/ProtagGraphicsComponent.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/ProtagGraphicsComponent.h
 local/DynamicPhysicsComponent.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/DynamicPhysicsComponent.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/DynamicPhysicsComponent.h
 local/ProtagPhysicsComponent.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/ProtagPhysicsComponent.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/ProtagPhysicsComponent.h
 local/Level.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/Level.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/Level.h
 local/GameObject.h
-/home/evan/Documents/Projet_L3/jeu/game/code/local/GameObject.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/local/GameObject.h
 config.h
-/home/evan/Documents/Projet_L3/jeu/game/code/config.h
+/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code/config.h
 Box2D/Box2D.h
 -
 cstdio

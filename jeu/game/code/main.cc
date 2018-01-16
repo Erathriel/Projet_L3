@@ -45,7 +45,8 @@ int main() {
     // second (60Hz) and 10 iterations. This provides a high quality simulation
     // in most game scenarios.
     float timeStep = 1.0f / 60.0f;
-    int32 velocityIterations = 10;
+    float timeStepUs = timeStep *1000000.0f;
+    int32 velocityIterations = 8;
     int32 positionIterations = 4;
     
     gf::Clock clock;        //pour calculer dt
@@ -95,9 +96,9 @@ int main() {
         graphicsG.display();
         
         dt = clock.getElapsedTime().asMicroseconds();
-        if( timeStep > dt)
-            usleep( timeStep*1000000.0f - dt );
-        //printf("%f\n", timeStep*1000000.0f - dt );
+        if( timeStepUs > dt)
+            usleep( timeStepUs - dt );
+        printf("%f\n", timeStepUs- dt );
         
     }
     

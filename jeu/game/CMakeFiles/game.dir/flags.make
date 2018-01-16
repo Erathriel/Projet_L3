@@ -6,5 +6,5 @@ CXX_FLAGS = -Wall -Wextra -std=c++11 -O2 -g
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/evan/Documents/Projet_L3/jeu/game/code -I/home/evan/Documents/Projet_L3/jeu/game -I/home/evan/Documents/Projet_L3/jeu/include 
+CXX_INCLUDES = -I/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/code -I/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game -I/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/include 
 
