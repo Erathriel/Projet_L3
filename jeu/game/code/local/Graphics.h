@@ -16,8 +16,8 @@
 #include <gf/Vector.h>
 #include <gf/TileLayer.h>
 
-#define TILESET_FILE_NAME "data/spritesheet.png"
-#define BACKGROUND_FILE_NAME "data/backgrounds.png"
+#define TILESET_FILE_NAME "spritesheet.png"
+#define BACKGROUND_FILE_NAME "backgrounds.png"
 
 class GameObject;
 

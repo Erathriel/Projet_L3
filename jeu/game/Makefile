@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu
+CMAKE_SOURCE_DIR = /home/evan/Documents/Projet_L3/jeu
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu
+CMAKE_BINARY_DIR = /home/evan/Documents/Projet_L3/jeu
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -124,14 +124,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu && $(CMAKE_COMMAND) -E cmake_progress_start /afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/CMakeFiles /afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/CMakeFiles/progress.marks
-	cd /afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu && $(MAKE) -f CMakeFiles/Makefile2 game/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/CMakeFiles 0
+	cd /home/evan/Documents/Projet_L3/jeu && $(CMAKE_COMMAND) -E cmake_progress_start /home/evan/Documents/Projet_L3/jeu/CMakeFiles /home/evan/Documents/Projet_L3/jeu/game/CMakeFiles/progress.marks
+	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f CMakeFiles/Makefile2 game/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/evan/Documents/Projet_L3/jeu/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu && $(MAKE) -f CMakeFiles/Makefile2 game/clean
+	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f CMakeFiles/Makefile2 game/clean
 .PHONY : clean
 
 # The main clean target
@@ -141,22 +141,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu && $(MAKE) -f CMakeFiles/Makefile2 game/preinstall
+	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f CMakeFiles/Makefile2 game/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu && $(MAKE) -f CMakeFiles/Makefile2 game/preinstall
+	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f CMakeFiles/Makefile2 game/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/evan/Documents/Projet_L3/jeu && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 game/CMakeFiles/game.dir/rule:
-	cd /afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu && $(MAKE) -f CMakeFiles/Makefile2 game/CMakeFiles/game.dir/rule
+	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f CMakeFiles/Makefile2 game/CMakeFiles/game.dir/rule
 .PHONY : game/CMakeFiles/game.dir/rule
 
 # Convenience name for target.
@@ -166,7 +166,7 @@ game: game/CMakeFiles/game.dir/rule
 
 # fast build rule for target.
 game/fast:
-	cd /afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/build
+	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/build
 .PHONY : game/fast
 
 code/local/GameObject.o: code/local/GameObject.cpp.o
@@ -175,7 +175,7 @@ code/local/GameObject.o: code/local/GameObject.cpp.o
 
 # target to build an object file
 code/local/GameObject.cpp.o:
-	cd /afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/GameObject.cpp.o
+	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/GameObject.cpp.o
 .PHONY : code/local/GameObject.cpp.o
 
 code/local/GameObject.i: code/local/GameObject.cpp.i
@@ -184,7 +184,7 @@ code/local/GameObject.i: code/local/GameObject.cpp.i
 
 # target to preprocess a source file
 code/local/GameObject.cpp.i:
-	cd /afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/GameObject.cpp.i
+	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/GameObject.cpp.i
 .PHONY : code/local/GameObject.cpp.i
 
 code/local/GameObject.s: code/local/GameObject.cpp.s
@@ -193,7 +193,7 @@ code/local/GameObject.s: code/local/GameObject.cpp.s
 
 # target to generate assembly for a file
 code/local/GameObject.cpp.s:
-	cd /afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/GameObject.cpp.s
+	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/GameObject.cpp.s
 .PHONY : code/local/GameObject.cpp.s
 
 code/local/Graphics.o: code/local/Graphics.cpp.o
@@ -202,7 +202,7 @@ code/local/Graphics.o: code/local/Graphics.cpp.o
 
 # target to build an object file
 code/local/Graphics.cpp.o:
-	cd /afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/Graphics.cpp.o
+	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/Graphics.cpp.o
 .PHONY : code/local/Graphics.cpp.o
 
 code/local/Graphics.i: code/local/Graphics.cpp.i
@@ -211,7 +211,7 @@ code/local/Graphics.i: code/local/Graphics.cpp.i
 
 # target to preprocess a source file
 code/local/Graphics.cpp.i:
-	cd /afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/Graphics.cpp.i
+	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/Graphics.cpp.i
 .PHONY : code/local/Graphics.cpp.i
 
 code/local/Graphics.s: code/local/Graphics.cpp.s
@@ -220,7 +220,7 @@ code/local/Graphics.s: code/local/Graphics.cpp.s
 
 # target to generate assembly for a file
 code/local/Graphics.cpp.s:
-	cd /afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/Graphics.cpp.s
+	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/Graphics.cpp.s
 .PHONY : code/local/Graphics.cpp.s
 
 code/local/Level.o: code/local/Level.cpp.o
@@ -229,7 +229,7 @@ code/local/Level.o: code/local/Level.cpp.o
 
 # target to build an object file
 code/local/Level.cpp.o:
-	cd /afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/Level.cpp.o
+	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/Level.cpp.o
 .PHONY : code/local/Level.cpp.o
 
 code/local/Level.i: code/local/Level.cpp.i
@@ -238,7 +238,7 @@ code/local/Level.i: code/local/Level.cpp.i
 
 # target to preprocess a source file
 code/local/Level.cpp.i:
-	cd /afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/Level.cpp.i
+	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/Level.cpp.i
 .PHONY : code/local/Level.cpp.i
 
 code/local/Level.s: code/local/Level.cpp.s
@@ -247,7 +247,7 @@ code/local/Level.s: code/local/Level.cpp.s
 
 # target to generate assembly for a file
 code/local/Level.cpp.s:
-	cd /afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/Level.cpp.s
+	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/local/Level.cpp.s
 .PHONY : code/local/Level.cpp.s
 
 code/main.o: code/main.cc.o
@@ -256,7 +256,7 @@ code/main.o: code/main.cc.o
 
 # target to build an object file
 code/main.cc.o:
-	cd /afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/main.cc.o
+	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/main.cc.o
 .PHONY : code/main.cc.o
 
 code/main.i: code/main.cc.i
@@ -265,7 +265,7 @@ code/main.i: code/main.cc.i
 
 # target to preprocess a source file
 code/main.cc.i:
-	cd /afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/main.cc.i
+	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/main.cc.i
 .PHONY : code/main.cc.i
 
 code/main.s: code/main.cc.s
@@ -274,7 +274,7 @@ code/main.s: code/main.cc.s
 
 # target to generate assembly for a file
 code/main.cc.s:
-	cd /afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/main.cc.s
+	cd /home/evan/Documents/Projet_L3/jeu && $(MAKE) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/code/main.cc.s
 .PHONY : code/main.cc.s
 
 # Help Target
@@ -313,6 +313,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/evan/Documents/Projet_L3/jeu && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -1,4 +1,4 @@
-# Install script for directory: /afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game
+# Install script for directory: /home/evan/Documents/Projet_L3/jeu/game
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,12 +39,12 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/games/game"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/games" TYPE EXECUTABLE FILES "/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/game")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/games" TYPE EXECUTABLE FILES "/home/evan/Documents/Projet_L3/jeu/game/game")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/games/game" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/games/game")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/games/game"
-         OLD_RPATH "/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/library:"
+         OLD_RPATH "/home/evan/Documents/Projet_L3/jeu/library:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/games/game")
@@ -53,6 +53,6 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/game" TYPE DIRECTORY FILES "/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/game/data/game")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/game" TYPE DIRECTORY FILES "/home/evan/Documents/Projet_L3/jeu/game/data/game")
 endif()
 

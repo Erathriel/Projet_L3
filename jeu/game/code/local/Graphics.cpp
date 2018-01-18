@@ -1,5 +1,6 @@
 #include <gf/Sprite.h>
 #include "Graphics.h"
+#include "config.h"
 
 class GameObject;
 
@@ -14,13 +15,16 @@ Graphics::Graphics(gf::Vector2u screenSize){
     m_view->reset({ 0.0f, 0.0f, (float)screenSize.x, (float)screenSize.y });
     m_renderer->setView(*m_view);
     
+    char fileName[255];
     
     tileTexture = new gf::Texture;
-    if( !tileTexture->loadFromFile(TILESET_FILE_NAME) ){
+    sprintf(fileName, "%s/%s", GAME_DATA_DIR, TILESET_FILE_NAME );
+    if( !tileTexture->loadFromFile(fileName) ){
         exit(1);
     }
     bgTexture = new gf::Texture;
-    if( !bgTexture->loadFromFile(BACKGROUND_FILE_NAME) ){
+    sprintf(fileName, "%s/%s", GAME_DATA_DIR, BACKGROUND_FILE_NAME );
+    if( !bgTexture->loadFromFile(fileName) ){
         exit(1);
     }
 }

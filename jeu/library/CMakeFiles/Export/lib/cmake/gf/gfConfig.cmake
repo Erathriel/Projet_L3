@@ -49,7 +49,7 @@ add_library(gf::gf0 SHARED IMPORTED)
 
 set_target_properties(gf::gf0 PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "/usr/include"
-  INTERFACE_LINK_LIBRARIES "/usr/lib/x86_64-linux-gnu/libSDL2.so;-lpthread;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;/usr/lib/x86_64-linux-gnu/libboost_system.so;/usr/lib/x86_64-linux-gnu/libfreetype.so;/usr/lib/x86_64-linux-gnu/libz.so;/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/library/libBox2D.a;gcc_s;gcc"
+  INTERFACE_LINK_LIBRARIES "/usr/lib/x86_64-linux-gnu/libSDL2.so;-lpthread;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;/usr/lib/x86_64-linux-gnu/libboost_system.so;/usr/lib/x86_64-linux-gnu/libfreetype.so;/usr/lib/x86_64-linux-gnu/libz.so;/home/evan/Documents/Projet_L3/jeu/library/libBox2D.a;gcc_s;gcc"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)

@@ -23,17 +23,34 @@ Level::Level(Graphics* ngraphicsG){
     background = new gf::Sprite();
     background->setTexture(*graphicsG->getBGTexture());
     background->setTextureRect({ 0.0f, 0.0f, 1.0f, 0.333f });
+    background->scale(8);
     gf::Vector2f position(0,0);
     background->setPosition(position);
     
-    bgRenderState = new gf::RenderStates();
-    gf::Matrix3f matrice = gf::identityTransform();
-    gf::scale(matrice, {8,8});                      //8 fois plus grand
-    bgRenderState->transform = matrice;
+//     bgRenderState = new gf::RenderStates();
+//     gf::Matrix3f matrice = gf::identityTransform();
+//     gf::scale(matrice, {8,8});                      //8 fois plus grand
+//     bgRenderState->transform = matrice;
 
-    placeTiles();
+    generateLevel(5);
     
 }
+
+void Level::generateLevel(int nb_rooms){
+    
+    gf::Array2D<int> rooms(gf::Vector2f(NB_ROOMS_X,NB_ROOMS_Y));
+    srand (time(NULL));
+    unsigned int i;
+    
+    while(i < nb_rooms){
+        
+        i++;
+    }
+    
+    
+    placeTiles();
+}
+
 
 void Level::placeTiles(){
     //mise en place des tuiles
@@ -70,7 +87,7 @@ void Level::update(GameObject& obj){
 
 void Level::updateGameObjects(float ndt){
     dt = ndt;
-    graphicsG->draw(background, bgRenderState); //rendu du fond en 1er pour qu'il soit au fond
+    graphicsG->draw(background); //rendu du fond en 1er pour qu'il soit au fond
     graphicsG->draw(tileLayer);                 //puis des tuiles
     unsigned int i;
     for(i = 0; i < nb_objects && i < MAX_GAMEOBJECTS; i++)

@@ -9,6 +9,9 @@
 #include "GameObject.h"
 #include "Level.h"
 
+#define JUMP_TIME_MAX   25
+#define JUMP_TIMEOUT    30
+
 extern int numFootContacts;
 
 class Level;
@@ -60,25 +63,37 @@ public:
         obj.m_position.x = body->GetPosition().x;
         obj.m_position.y = body->GetPosition().y;
         
-        if(numFootContacts > 0 && (jumpTimeout < 0 || jumpTimeout > 60))
-            onGround = true;
-        else
-            onGround = false;
+        float impulseX = 0.0f;
+        float impulseY = 0.0f;
         
+        if(numFootContacts > 0 && (jumpTimeout < 0 || jumpTimeout > 60)){
+            onGround = true;
+            jumpTime = 0;
+        }
+        else{
+            onGround = false;
+            if(obj.m_velocity.y >= 0.0f)
+                jumpTime = JUMP_TIME_MAX;
+        }
+        
+            
         b2Vec2 vel = body->GetLinearVelocity();
         float velChange = obj.m_velocity.x - vel.x;
-        float impulse = body->GetMass() * velChange; //disregard time factor
-        body->ApplyLinearImpulse( b2Vec2(impulse,0), body->GetWorldCenter(), true );
+        impulseX = body->GetMass() * velChange; //disregard time factor
         
-        if(obj.m_velocity.y < -0.1f && onGround){
-            float impulse = body->GetMass() * -1000.0;
-            body->ApplyLinearImpulse( b2Vec2(0,impulse), body->GetWorldCenter(), false );
-            jumpTimeout = 30;
+        if(obj.m_velocity.y < -0.1f && (onGround || (jumpTime > 0 && jumpTime < JUMP_TIME_MAX) )){
+            velChange = obj.m_velocity.y - vel.y;
+            impulseY = body->GetMass() * velChange;
+            jumpTimeout = JUMP_TIMEOUT;
+            jumpTime ++;
         }
+        
+        body->ApplyLinearImpulse( b2Vec2(impulseX, impulseY), body->GetWorldCenter(), true );
+        
         //obj.m_angle = body->GetAngle();
         //obj.m_position += obj.m_velocity;
         obj.m_velocity = {0.0f,0.0f};
-        //printf("%f %f\n", obj.m_position.x, obj.m_velocity.x);
+        //printf("%f %f\n", impulseX, impulseY);
         
         jumpTimeout--;
         
@@ -90,6 +105,7 @@ public:
 
     bool onGround = false;
     int jumpTimeout = 0;
+    int jumpTime = JUMP_TIME_MAX;
     b2BodyDef bodyDef;
     b2Body* body;
     b2PolygonShape dynamicBox;

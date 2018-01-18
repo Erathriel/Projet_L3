@@ -6,5 +6,5 @@ CXX_FLAGS = -Wall -Wextra -std=c++11 -O2 -g -fPIC
 
 CXX_DEFINES = -DGF_DEBUG -DGF_EXPORT_SYMBOLS -DZLIB_CONST -Dgf0_EXPORTS
 
-CXX_INCLUDES = -I/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/include -I/usr/include/SDL2 -I/usr/include/freetype2 -I/usr/include/x86_64-linux-gnu/freetype2 -I/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/library -I/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/library/vendor/glad/include 
+CXX_INCLUDES = -I/home/evan/Documents/Projet_L3/jeu/include -I/usr/include/SDL2 -I/usr/include/freetype2 -I/usr/include/x86_64-linux-gnu/freetype2 -I/home/evan/Documents/Projet_L3/jeu/library -I/home/evan/Documents/Projet_L3/jeu/library/vendor/glad/include 
 

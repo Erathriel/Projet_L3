@@ -1,4 +1,4 @@
-# Install script for directory: /afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/library
+# Install script for directory: /home/evan/Documents/Projet_L3/jeu/library
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -46,9 +46,9 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
     endif()
   endforeach()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/library/libgf0.so.0.6.0"
-    "/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/library/libgf0.so.0"
-    "/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/library/libgf0.so"
+    "/home/evan/Documents/Projet_L3/jeu/library/libgf0.so.0.6.0"
+    "/home/evan/Documents/Projet_L3/jeu/library/libgf0.so.0"
+    "/home/evan/Documents/Projet_L3/jeu/library/libgf0.so"
     )
   foreach(file
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libgf0.so.0.6.0"
@@ -68,7 +68,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/gf/gfConfig.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/gf/gfConfig.cmake"
-         "/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/library/CMakeFiles/Export/lib/cmake/gf/gfConfig.cmake")
+         "/home/evan/Documents/Projet_L3/jeu/library/CMakeFiles/Export/lib/cmake/gf/gfConfig.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/gf/gfConfig-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -77,9 +77,9 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/gf" TYPE FILE FILES "/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/library/CMakeFiles/Export/lib/cmake/gf/gfConfig.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/gf" TYPE FILE FILES "/home/evan/Documents/Projet_L3/jeu/library/CMakeFiles/Export/lib/cmake/gf/gfConfig.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/gf" TYPE FILE FILES "/afs/deptinfo-st.univ-fcomte.fr/users/emeiss/Documents/Projet/Projet_L3/jeu/library/CMakeFiles/Export/lib/cmake/gf/gfConfig-relwithdebinfo.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/gf" TYPE FILE FILES "/home/evan/Documents/Projet_L3/jeu/library/CMakeFiles/Export/lib/cmake/gf/gfConfig-relwithdebinfo.cmake")
   endif()
 endif()
 

@@ -38,8 +38,8 @@ int numFootContacts;
 
 int main() {
     
-    gf::Font font;
-    font.loadFromFile("data/ClearSans-Bold.ttf");
+    //gf::Font font;
+    //font.loadFromFile("data/ClearSans-Bold.ttf");
     
     // Prepare for simulation. Typically we use a time step of 1/60 of a
     // second (60Hz) and 10 iterations. This provides a high quality simulation
@@ -90,7 +90,7 @@ int main() {
         //component, il prend dt en paramètre.
         level.updateGameObjects( dt );
         
-        level.world->Step( timeStep, velocityIterations, positionIterations);
+        level.world->Step( dt, velocityIterations, positionIterations);
         
         //draw
         graphicsG.display();
@@ -98,7 +98,7 @@ int main() {
         dt = clock.getElapsedTime().asMicroseconds();
         if( timeStepUs > dt)
             usleep( timeStepUs - dt );
-        printf("%f\n", timeStepUs- dt );
+        //printf("%f\n", timeStepUs- dt );
         
     }
     
