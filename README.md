@@ -2,6 +2,32 @@
 
 http://gamedevframework.github.io/v0.6.0/build_and_install.html
 
+# Réunion de projet 3
+
+transformable::scale pour le fond à la place de renderState
+
+dt à la place de timescale dans le step de la physique
+
+article génération procédurale: http://fbksoft.com/procedural-level-generation-for-a-2d-platformer/
+
+utiliser array de gf pour faire un tableau à 2 dimensions avec la structure du niveau
+
+config.h.in pour mettre les ressources de data en local
+
+RAPPORT:
+
+page de couverture, de haut en bas: logo de l'univ, nos noms, notre classe, ce que c'est, le titre du projet, une image, la date, l'encadrant, l'année
+
+Remerciements (facultatif)
+
+Intro 1 ou 2 pages, commencer par parler du projet
+
+I Conception: modèles UML, génération procéd, choix techniques (box2d), outils utilisés...
+
+II Réalisation: implémentation, boucle jeu, components, gameprogrammingpatterns...
+
+Conclusion (ou 3e partie): génie logiciel, gestion de projet, comment on a travaillé, github, IDE, virtualbox, métaprojet
+
 # Modifier/ajouter du code au projet
 
 Tout ce qui est à modifier est dans /jeu/game normalement.
