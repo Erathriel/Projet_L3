@@ -14,6 +14,10 @@
 #include <gf/Vector.h>
 #include <gf/Color.h>
 
+
+#define SIZE 0.033333333334
+#define PERSONNAGE 19
+
 class Graphics;
 
 class SpriteGraphicsComponent : public GraphicsComponent
@@ -24,7 +28,7 @@ public:
         sprite = new gf::Sprite();
         sprite->setAnchor(gf::Anchor::Center);
         sprite->setTexture(*graphics->getTileTexture());
-        sprite->setTextureRect({ 0.635f, 0.0f, 0.035f, 0.035f });
+        sprite->setTextureRect({ (PERSONNAGE*SIZE), (3*SIZE), SIZE, SIZE });
         sprite->setPosition(obj.m_position);
         renderState = new gf::RenderStates();
 
