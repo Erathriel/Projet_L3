@@ -20,12 +20,24 @@
 #define SIZE_OF_A_TILE 21
 #define TILESET_SPACING 2
 #define TILESET_MARGIN 2
-#define NB_ROOMS_X 10
+
+#define NB_ROOMS_X 10           //nb de rooms max en x et y
 #define NB_ROOMS_Y 10
+#define SIZE_ROOM_X 8          //taille d'une room en tuiles
+#define SIZE_ROOM_Y 6
+
+enum{
+    UP, RIGHT, DOWN, LEFT
+};
 
 class GameObject;
 class Graphics;
 class ContactListener;
+
+struct roomstruct{
+    bool wall[4] = {true};
+    bool generated = false;
+};
 
 class Level {
 public:
@@ -52,6 +64,8 @@ private:
     gf::Sprite *background;
     gf::RenderStates *bgRenderState;
     b2Vec2 *gravity;
+    
+    gf::Array2D<roomstruct> rooms;
 };
 
 
