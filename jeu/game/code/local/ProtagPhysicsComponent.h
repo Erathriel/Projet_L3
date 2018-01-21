@@ -9,7 +9,7 @@
 #include "GameObject.h"
 #include "Level.h"
 
-#define JUMP_TIME_MAX   1000
+#define JUMP_TIME_MAX   25
 #define JUMP_TIMEOUT    30
 
 extern int numFootContacts;

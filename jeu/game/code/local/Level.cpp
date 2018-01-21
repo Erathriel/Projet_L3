@@ -149,9 +149,13 @@ void Level::placeTiles(int nb_rooms){
         } 
     }
     
-     printf("1\n");
 
-    printf("2\n");
+    b2BodyDef groundBodyDef;
+    groundBodyDef.position.Set(0.0f, 20.0f*(SIZE_OF_A_TILE+1));
+    tilePhysicBody = world->CreateBody(&groundBodyDef);
+    b2PolygonShape groundBox;
+    groundBox.SetAsBox(1000.0f, SIZE_OF_A_TILE);
+    tilePhysicBody->CreateFixture(&groundBox, 0.0f);
 }
 
 float Level::getdt(){
