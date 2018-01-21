@@ -23,8 +23,8 @@
 
 #define NB_ROOMS_X 10           //nb de rooms max en x et y
 #define NB_ROOMS_Y 10
-#define SIZE_ROOM_X 8          //taille d'une room en tuiles
-#define SIZE_ROOM_Y 6
+#define SIZE_ROOM_X 10          //taille d'une room en tuiles
+#define SIZE_ROOM_Y 8
 
 enum{
     UP, RIGHT, DOWN, LEFT
@@ -35,7 +35,7 @@ class Graphics;
 class ContactListener;
 
 struct roomstruct{
-    bool wall[4] = {true};
+    bool wall[4] = {true,true,true,true};
     bool generated = false;
 };
 
@@ -52,7 +52,7 @@ private:
     float dt;
     void update(GameObject& obj);
     void generateLevel(int nb_rooms);
-    void placeTiles();
+    void placeTiles(int nb_rooms);
     
     GameObject *listGameObjects[MAX_GAMEOBJECTS];
     unsigned int nb_objects;
@@ -64,6 +64,8 @@ private:
     gf::Sprite *background;
     gf::RenderStates *bgRenderState;
     b2Vec2 *gravity;
+    b2Body *tileBody;
+    b2BodyDef tileBodyDef;
     
     gf::Array2D<roomstruct> rooms;
 };

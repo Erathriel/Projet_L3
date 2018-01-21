@@ -70,7 +70,6 @@ void Level::generateLevel(int nb_rooms){
             x_end = x; y_end = y;
             break;
         }
-        
         do{
             rand_num = rand() % 4;
             direction[rand_num] = false;
@@ -79,7 +78,6 @@ void Level::generateLevel(int nb_rooms){
             for(j = 0; j < 4; j++)
                 nb_directions += (int)direction[j];
         }while( nb_directions > 1);
-        
         if(direction[UP]){
             rooms(gf::Vector2f(x,y)).wall[UP] = false;
             y -= 1;
@@ -105,36 +103,45 @@ void Level::generateLevel(int nb_rooms){
         
         i++;
     }
-    
-    placeTiles();
+    placeTiles(i);
 }
 
 
-void Level::placeTiles(){
+void Level::placeTiles(int nb_rooms){
     //mise en place des tuiles
     tileLayer->clear();
+    b2PolygonShape box;
+    b2FixtureDef fixtureDef;
+    tileBodyDef.position.Set(0,0);
+    tileBodyDef.type = b2_staticBody;
+    //tileBody = world->CreateBody(&tileBodyDef);
+    printf("0\n");
     unsigned int x, y, i;
     int wall_tile = 4;
     for(x = 0; x < NB_ROOMS_X; x++){
         for(y = 0; y < NB_ROOMS_Y; y++){
             if(rooms(gf::Vector2f(x,y)).generated){
                 if(rooms(gf::Vector2f(x,y)).wall[UP]){
-                    printf("up\n");
+                    //printf("up %i %i\n", x ,y);
+                    //tileBodyDef.position.Set(x*SIZE_ROOM_X*SIZE_OF_A_TILE, y*SIZE_ROOM_Y*SIZE_OF_A_TILE);
+                    //box.SetAsBox(SIZE_ROOM_X*SIZE_OF_A_TILE, SIZE_OF_A_TILE);
+                    //fixtureDef.shape = &box;
+                    //tileBody->CreateFixture(&fixtureDef);
                     for(i = 0; i < SIZE_ROOM_X; i++)
                         tileLayer->setTile({x*SIZE_ROOM_X + i, y*SIZE_ROOM_Y},wall_tile);
                 }
                 if(rooms(gf::Vector2f(x,y)).wall[DOWN]){
-                    printf("down\n");
+                    //printf("down\n");
                     for(i = 0; i < SIZE_ROOM_X; i++)
                         tileLayer->setTile({x*SIZE_ROOM_X + i, (y+1)*SIZE_ROOM_Y-1},wall_tile);
                 }
                 if(rooms(gf::Vector2f(x,y)).wall[RIGHT]){
-                    printf("right\n");
+                    //printf("right\n");
                     for(i = 0; i < SIZE_ROOM_Y; i++)
                         tileLayer->setTile({(x+1)*SIZE_ROOM_X -1, y*SIZE_ROOM_Y + i},wall_tile);
                 }
                 if(rooms(gf::Vector2f(x,y)).wall[LEFT]){
-                    printf("left\n");
+                    //printf("left\n");
                     for(i = 0; i < SIZE_ROOM_Y; i++)
                         tileLayer->setTile({x*SIZE_ROOM_X, y*SIZE_ROOM_Y + i},wall_tile);
                 }
@@ -142,22 +149,9 @@ void Level::placeTiles(){
         } 
     }
     
-     
-    //physique pour les tuiles
-    // Define the ground body.
-    b2BodyDef groundBodyDef;
-    groundBodyDef.position.Set(0.0f, 20.0f*(SIZE_OF_A_TILE+1));
-    // Call the body factory which allocates memory for the ground body
-    // from a pool and creates the ground box shape (also from a pool).
-    // The body is also added to the world.
-    tilePhysicBody = world->CreateBody(&groundBodyDef);
-    // Define the ground box shape.
-    b2PolygonShape groundBox;
-    // The extents are the half-widths of the box.
-    groundBox.SetAsBox(1000.0f, SIZE_OF_A_TILE);
-    // Add the ground fixture to the ground body.
-    tilePhysicBody->CreateFixture(&groundBox, 0.0f);
-    
+     printf("1\n");
+
+    printf("2\n");
 }
 
 float Level::getdt(){
