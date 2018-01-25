@@ -41,8 +41,8 @@ void Level::generateLevel(int nb_rooms){
     rooms = gf::Array2D<roomstruct>(gf::Vector2f(NB_ROOMS_X,NB_ROOMS_Y));
     srand (time(NULL));
     int i, j;
-    int x_start = 0;
-    int y_start = 0;
+    int x_start = NB_ROOMS_X/2;
+    int y_start = NB_ROOMS_Y/2;
     int x_end, y_end;
     int x = x_start;
     int y = y_start;
@@ -104,6 +104,7 @@ void Level::generateLevel(int nb_rooms){
         i++;
     }
     placeTiles(i);
+    printf("4\n");
 }
 
 
@@ -112,19 +113,19 @@ void Level::placeTiles(int nb_rooms){
     tileLayer->clear();
     b2PolygonShape box;
     b2FixtureDef fixtureDef;
-    tileBodyDef.position.Set(0,0);
     tileBodyDef.type = b2_staticBody;
-    //tileBody = world->CreateBody(&tileBodyDef);
-    printf("0\n");
+    tileBodyDef.position.Set(0,0);
     unsigned int x, y, i;
     int wall_tile = 4;
+    tileBody = world->CreateBody(&tileBodyDef);
+    
+
     for(x = 0; x < NB_ROOMS_X; x++){
         for(y = 0; y < NB_ROOMS_Y; y++){
             if(rooms(gf::Vector2f(x,y)).generated){
                 if(rooms(gf::Vector2f(x,y)).wall[UP]){
-                    //printf("up %i %i\n", x ,y);
-                    //tileBodyDef.position.Set(x*SIZE_ROOM_X*SIZE_OF_A_TILE, y*SIZE_ROOM_Y*SIZE_OF_A_TILE);
-                    //box.SetAsBox(SIZE_ROOM_X*SIZE_OF_A_TILE, SIZE_OF_A_TILE);
+                    printf("up %i %i\n", x ,y);
+                    //box.SetAsBox( (SIZE_ROOM_X*SIZE_OF_A_TILE)/2.0f, (SIZE_OF_A_TILE)/2.0f, b2Vec2((x+0.5f)*SIZE_ROOM_X*SIZE_OF_A_TILE, y*SIZE_ROOM_Y*SIZE_OF_A_TILE), 0);
                     //fixtureDef.shape = &box;
                     //tileBody->CreateFixture(&fixtureDef);
                     for(i = 0; i < SIZE_ROOM_X; i++)
@@ -132,30 +133,40 @@ void Level::placeTiles(int nb_rooms){
                 }
                 if(rooms(gf::Vector2f(x,y)).wall[DOWN]){
                     //printf("down\n");
+                    //box.SetAsBox(SIZE_ROOM_X*SIZE_OF_A_TILE, SIZE_OF_A_TILE, b2Vec2(x*SIZE_ROOM_X*SIZE_OF_A_TILE, (y+1)*SIZE_ROOM_Y*(SIZE_OF_A_TILE-1)),0);
+                    //fixtureDef.shape = &box;
+                    //tileBody->CreateFixture(&fixtureDef);
                     for(i = 0; i < SIZE_ROOM_X; i++)
                         tileLayer->setTile({x*SIZE_ROOM_X + i, (y+1)*SIZE_ROOM_Y-1},wall_tile);
                 }
                 if(rooms(gf::Vector2f(x,y)).wall[RIGHT]){
                     //printf("right\n");
+                    //box.SetAsBox(SIZE_OF_A_TILE, SIZE_ROOM_X*SIZE_OF_A_TILE, b2Vec2((x+1)*SIZE_ROOM_X*(SIZE_OF_A_TILE-1), y*SIZE_ROOM_Y*SIZE_OF_A_TILE), 0);
+                    //fixtureDef.shape = &box;
+                    //tileBody->CreateFixture(&fixtureDef);
                     for(i = 0; i < SIZE_ROOM_Y; i++)
                         tileLayer->setTile({(x+1)*SIZE_ROOM_X -1, y*SIZE_ROOM_Y + i},wall_tile);
                 }
                 if(rooms(gf::Vector2f(x,y)).wall[LEFT]){
                     //printf("left\n");
+                    //box.SetAsBox(SIZE_OF_A_TILE, SIZE_ROOM_X*SIZE_OF_A_TILE, b2Vec2(x*SIZE_ROOM_X*SIZE_OF_A_TILE, y*SIZE_ROOM_Y*SIZE_OF_A_TILE), 0);
+                    //fixtureDef.shape = &box;
+                    //tileBody->CreateFixture(&fixtureDef);
                     for(i = 0; i < SIZE_ROOM_Y; i++)
                         tileLayer->setTile({x*SIZE_ROOM_X, y*SIZE_ROOM_Y + i},wall_tile);
                 }
             }
         } 
     }
-    
-
+        
     b2BodyDef groundBodyDef;
     groundBodyDef.position.Set(0.0f, 20.0f*(SIZE_OF_A_TILE+1));
     tilePhysicBody = world->CreateBody(&groundBodyDef);
     b2PolygonShape groundBox;
     groundBox.SetAsBox(1000.0f, SIZE_OF_A_TILE);
     tilePhysicBody->CreateFixture(&groundBox, 0.0f);
+    
+
 }
 
 float Level::getdt(){

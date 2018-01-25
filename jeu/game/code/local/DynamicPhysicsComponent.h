@@ -23,7 +23,7 @@ public:
         body = level->world->CreateBody(&bodyDef);
 
         // Define another box shape for our dynamic body.
-        dynamicBox.SetAsBox(obj.m_size, obj.m_size);
+        dynamicBox.SetAsBox(obj.m_size/2.0f, obj.m_size/2.0f, b2Vec2(obj.m_size/2.0f, obj.m_size/2.0f),0);
 
         // Define the dynamic body fixture.
         fixtureDef.shape = &dynamicBox;

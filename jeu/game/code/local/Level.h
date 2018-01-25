@@ -23,8 +23,8 @@
 
 #define NB_ROOMS_X 10           //nb de rooms max en x et y
 #define NB_ROOMS_Y 10
-#define SIZE_ROOM_X 10          //taille d'une room en tuiles
-#define SIZE_ROOM_Y 8
+#define SIZE_ROOM_X 3          //taille d'une room en tuiles
+#define SIZE_ROOM_Y 3
 
 enum{
     UP, RIGHT, DOWN, LEFT

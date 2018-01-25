@@ -76,12 +76,11 @@ int main() {
     //puis on l'ajoute au niveau
     level.addGameObject(&carre);
     
-    GameObject carre2(input2, physics2, graphicsComp2, position*100, 15.0f, gf::Color::Blue);
+    GameObject carre2(input2, physics2, graphicsComp2, position*100, 21.0f,
+    gf::Color::Blue);
     level.addGameObject(&carre2);
-    
-    GameObject sprite1(input3, physics3, graphicsComp3, position*50, 15.0f, gf::Color::Blue);
+    GameObject sprite1(input3, physics3, graphicsComp3, position*50, 21.0f, gf::Color::Blue);
     level.addGameObject(&sprite1);
-
     // game loop
     while (true) {
         float dt = clock.restart().asSeconds();
@@ -89,12 +88,9 @@ int main() {
         //level demande à tout les objets à la suite de lancer update pour chacun de leur
         //component, il prend dt en paramètre.
         level.updateGameObjects( dt );
-        
         level.world->Step( dt, velocityIterations, positionIterations);
-        
         //draw
         graphicsG.display();
-        
         dt = clock.getElapsedTime().asMicroseconds();
         if( timeStepUs > dt)
             usleep( timeStepUs - dt );

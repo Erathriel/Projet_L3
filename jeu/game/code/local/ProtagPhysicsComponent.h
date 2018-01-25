@@ -9,7 +9,7 @@
 #include "GameObject.h"
 #include "Level.h"
 
-#define JUMP_TIME_MAX   25
+#define JUMP_TIME_MAX   2500
 #define JUMP_TIMEOUT    30
 
 extern int numFootContacts;
@@ -31,7 +31,7 @@ public:
         body = level->world->CreateBody(&bodyDef);
 
         // Define another box shape for our dynamic body.
-        dynamicBox.SetAsBox(obj.m_size, obj.m_size);
+        dynamicBox.SetAsBox(obj.m_size/2.0f, obj.m_size/2.0f, b2Vec2(obj.m_size/2.0f, obj.m_size/2.0f),0);
 
         // Define the dynamic body fixture.
         fixtureDef.shape = &dynamicBox;
