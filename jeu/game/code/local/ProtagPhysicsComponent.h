@@ -76,10 +76,14 @@ public:
                 jumpTime = JUMP_TIME_MAX;
         }
         
-            
+        
         b2Vec2 vel = body->GetLinearVelocity();
         float velChange = obj.m_velocity.x - vel.x;
-        impulseX = body->GetMass() * velChange; //disregard time factor
+        //if( (velChange > 0 && obj.m_velocity.x > 0)
+        //    || (velChange < 0 && obj.m_velocity.x < 0))
+            impulseX = body->GetMass() * velChange; //disregard time factor
+        //if(!onGround && jumpTime > 30)
+        //    impulseX /= 10;
         
         if(obj.m_velocity.y < -0.1f && (onGround || (jumpTime > 0 && jumpTime < JUMP_TIME_MAX) )){
             velChange = obj.m_velocity.y - vel.y;
@@ -88,7 +92,8 @@ public:
             jumpTime ++;
         }
         
-        body->ApplyLinearImpulse( b2Vec2(impulseX, impulseY), body->GetWorldCenter(), true );
+        if(impulseX != 0.0f || impulseY != 0.0f)
+            body->ApplyLinearImpulse( b2Vec2(impulseX, impulseY), body->GetWorldCenter(), true );
         
         //obj.m_angle = body->GetAngle();
         //obj.m_position += obj.m_velocity;

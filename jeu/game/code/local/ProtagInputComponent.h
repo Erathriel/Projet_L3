@@ -62,8 +62,8 @@ public:
             }
         }
         
-        float velocity = 5000.0f;
-        float jump = 10000.0f;
+        float velocity = 3000.0f;
+        float jump = 5000.0f;
         if(up_pressed)
             gb.m_velocity.y -= jump * level->getdt();
         //if(down_pressed)

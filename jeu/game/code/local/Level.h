@@ -14,17 +14,19 @@
 
 #define MAX_GAMEOBJECTS 1024
 
-#define GRAVITY 500.0f
+#define GRAVITY 300.0f
 
-#define NUMBER_OF_TILES_ROWS 30
 #define SIZE_OF_A_TILE 21
 #define TILESET_SPACING 2
 #define TILESET_MARGIN 2
 
 #define NB_ROOMS_X 10           //nb de rooms max en x et y
 #define NB_ROOMS_Y 10
-#define SIZE_ROOM_X 3          //taille d'une room en tuiles
-#define SIZE_ROOM_Y 3
+#define SIZE_ROOM_X 8          //taille d'une room en tuiles
+#define SIZE_ROOM_Y 8
+
+#define NUMBER_OF_TILES_X ((NB_ROOMS_X+1)*SIZE_ROOM_X)
+#define NUMBER_OF_TILES_Y ((NB_ROOMS_Y+1)*SIZE_ROOM_Y)
 
 enum{
     UP, RIGHT, DOWN, LEFT
@@ -52,7 +54,7 @@ private:
     float dt;
     void update(GameObject& obj);
     void generateLevel(int nb_rooms);
-    void placeTiles(int nb_rooms);
+    void placeTiles();
     
     GameObject *listGameObjects[MAX_GAMEOBJECTS];
     unsigned int nb_objects;

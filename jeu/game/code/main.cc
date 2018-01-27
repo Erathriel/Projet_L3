@@ -88,7 +88,7 @@ int main() {
         //level demande à tout les objets à la suite de lancer update pour chacun de leur
         //component, il prend dt en paramètre.
         level.updateGameObjects( dt );
-        level.world->Step( dt, velocityIterations, positionIterations);
+        level.world->Step( dt*2, velocityIterations, positionIterations);
         //draw
         graphicsG.display();
         dt = clock.getElapsedTime().asMicroseconds();
