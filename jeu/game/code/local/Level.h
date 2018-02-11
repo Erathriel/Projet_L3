@@ -14,7 +14,7 @@
 
 #define MAX_GAMEOBJECTS 1024
 
-#define GRAVITY 300.0f
+#define GRAVITY 30.0f
 
 #define SIZE_OF_A_TILE 21
 #define TILESET_SPACING 2
@@ -22,11 +22,16 @@
 
 #define NB_ROOMS_X 10           //nb de rooms max en x et y
 #define NB_ROOMS_Y 10
-#define SIZE_ROOM_X 8          //taille d'une room en tuiles
-#define SIZE_ROOM_Y 8
+#define SIZE_ROOM_X 16          //taille d'une room en tuiles
+#define SIZE_ROOM_Y 12
+#define SIZE_ROOM_X_px (SIZE_ROOM_X*SIZE_OF_A_TILE) //taille d'une room en pixels
+#define SIZE_ROOM_Y_px (SIZE_ROOM_Y*SIZE_OF_A_TILE)
 
-#define NUMBER_OF_TILES_X ((NB_ROOMS_X+1)*SIZE_ROOM_X)
-#define NUMBER_OF_TILES_Y ((NB_ROOMS_Y+1)*SIZE_ROOM_Y)
+#define NUMBER_OF_TILES_X ((NB_ROOMS_X*2)*SIZE_ROOM_X)
+#define NUMBER_OF_TILES_Y ((NB_ROOMS_Y*2)*SIZE_ROOM_Y)
+
+#define JUMP_WIDTH_MAX      5   //longueur maximale parcourue par un saut en tuiles
+#define JUMP_HEIGHT_MAX     5   //hauteur
 
 enum{
     UP, RIGHT, DOWN, LEFT
@@ -39,6 +44,8 @@ class ContactListener;
 struct roomstruct{
     bool wall[4] = {true,true,true,true};
     bool generated = false;
+    int next_room = -1;
+    int number = -1;
 };
 
 class Level {
@@ -54,7 +61,8 @@ private:
     float dt;
     void update(GameObject& obj);
     void generateLevel(int nb_rooms);
-    void placeTiles();
+    void placeWalls();
+    void placePlatforms();
     
     GameObject *listGameObjects[MAX_GAMEOBJECTS];
     unsigned int nb_objects;

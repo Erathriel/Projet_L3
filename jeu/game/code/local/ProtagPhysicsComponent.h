@@ -38,7 +38,7 @@ public:
         // Set the box density to be non-zero, so it will be dynamic.
         fixtureDef.density = 1.0f;
         // Override the default friction.
-        fixtureDef.friction = 0.3f; //0.3f
+        fixtureDef.friction = 0.1f; //0.3f
         //filtre de collisions
         fixtureDef.filter.categoryBits = PROTAG;
         fixtureDef.filter.maskBits = DEFAULT | SOLID;

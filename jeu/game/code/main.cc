@@ -68,18 +68,17 @@ int main() {
     ProtagPhysicsComponent* physics3 = new ProtagPhysicsComponent();
     ProtagGraphicsComponent* graphicsComp3 = new ProtagGraphicsComponent();
     
-    
-    gf::Vector2f position(1,1);
+    gf::Vector2f position(NB_ROOMS_X/2 * SIZE_ROOM_X_px + SIZE_ROOM_X_px/2,NB_ROOMS_Y/2 * SIZE_ROOM_Y_px + SIZE_ROOM_X_px/2);
     
     //on créé un GameObject...
     GameObject carre(input, physics, graphicsComp, position, 100.0f, gf::Color::Red);
     //puis on l'ajoute au niveau
-    level.addGameObject(&carre);
+    //level.addGameObject(&carre);
     
-    GameObject carre2(input2, physics2, graphicsComp2, position*100, 21.0f,
+    GameObject carre2(input2, physics2, graphicsComp2, position, 21.0f,
     gf::Color::Blue);
-    level.addGameObject(&carre2);
-    GameObject sprite1(input3, physics3, graphicsComp3, position*50, 21.0f, gf::Color::Blue);
+    //level.addGameObject(&carre2);
+    GameObject sprite1(input3, physics3, graphicsComp3, position, 21.0f, gf::Color::Blue);
     level.addGameObject(&sprite1);
     // game loop
     while (true) {
