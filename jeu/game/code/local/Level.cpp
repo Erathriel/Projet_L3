@@ -112,6 +112,7 @@ void Level::generateLevel(int nb_rooms){
     tileLayer->clear();
     placeWalls();
     placePlatforms();
+    
 }
 
 
@@ -168,20 +169,69 @@ void Level::placeWalls(){
 }
 
 void Level::placePlatforms(){
+    unsigned int x_dest, y_dest, x_room, y_room, x_start, y_start;
+    bool found = false;
+    gf::Vector2f vector;
+    
+    for(x_room = 0; x_room < NB_ROOMS_X && !found; x_room++){
+        for(y_room = 0; y_room < NB_ROOMS_Y && !found; y_room++)
+            if(rooms(gf::Vector2f(x_room,y_room)).number == 0)
+                found = true;
+    }
+    
+    x_room--;
+    y_room--;
+    
+    while(rooms(gf::Vector2f(x_room,y_room)).next_room != -1){
+        //printf("b %i\n", rooms(gf::Vector2f(x_room,y_room)).next_room);
+        x_start = x_room*SIZE_ROOM_X + SIZE_ROOM_X/2;
+        y_start = y_room*SIZE_ROOM_Y + SIZE_ROOM_Y/2;
+        if(rooms(gf::Vector2f(x_room,y_room)).next_room == UP)
+            y_room += -1;
+        else if(rooms(gf::Vector2f(x_room,y_room)).next_room == DOWN)
+            y_room += 1;
+        else if(rooms(gf::Vector2f(x_room,y_room)).next_room == RIGHT)
+            x_room += 1;
+        else if(rooms(gf::Vector2f(x_room,y_room)).next_room == LEFT)
+            x_room += -1;
+        else break;
+        x_dest = x_room*SIZE_ROOM_X + SIZE_ROOM_X/2;
+        y_dest = y_room*SIZE_ROOM_Y + SIZE_ROOM_Y/2;
+        
+        do{
+            vector = placePlatform(x_start, y_start, x_dest, y_dest);
+            x_start = vector.x;
+            y_start = vector.y;
+        }while( vector != gf::Vector2f(x_dest, y_dest) );
+
+        
+    }
+    
+}
+
+gf::Vector2f Level::placePlatform(unsigned int x_start, unsigned int y_start, unsigned int x_dest, unsigned int y_dest){
     b2PolygonShape box;
     b2FixtureDef fixtureDef;
-    unsigned int x, y, i;
-    int x_start, y_start;
+    unsigned int modifier_x, modifier_y;
     
-    for(x = 0; x < NB_ROOMS_X; x++)
-        for(y = 0; y < NB_ROOMS_Y; y++)
-            if(rooms(gf::Vector2f(x,y)).number == 0){
-                x_start = x*SIZE_ROOM_X_px + SIZE_ROOM_X_px/2 - 1;
-                y_start = y*SIZE_ROOM_Y_px + SIZE_ROOM_Y_px/2 + 1;
-            }
+    if(x_start < x_dest)
+        modifier_x = 1;
+    if(x_start > x_dest)
+        modifier_x = -1;
+    if(y_start < y_dest)
+        modifier_y = 1;
+    if(y_start > y_dest)
+        modifier_y = -1;
+
+    tileLayer->setTile({x_start, y_start},4);
+    tileLayer->setTile({x_start + modifier_x, y_start + modifier_y},4);
+
+    x_dest = x_start + modifier_x;
+    y_dest = y_start + modifier_y;
     
     
-    
+    //printf("lol\n");
+    return gf::Vector2f(x_dest, y_dest);
     
 }
 

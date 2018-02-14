@@ -14,7 +14,7 @@
 
 #define MAX_GAMEOBJECTS 1024
 
-#define GRAVITY 30.0f
+#define GRAVITY 100.0f
 
 #define SIZE_OF_A_TILE 21
 #define TILESET_SPACING 2
@@ -27,10 +27,10 @@
 #define SIZE_ROOM_X_px (SIZE_ROOM_X*SIZE_OF_A_TILE) //taille d'une room en pixels
 #define SIZE_ROOM_Y_px (SIZE_ROOM_Y*SIZE_OF_A_TILE)
 
-#define NUMBER_OF_TILES_X ((NB_ROOMS_X*2)*SIZE_ROOM_X)
-#define NUMBER_OF_TILES_Y ((NB_ROOMS_Y*2)*SIZE_ROOM_Y)
+#define NUMBER_OF_TILES_X ((NB_ROOMS_X+1)*SIZE_ROOM_X)
+#define NUMBER_OF_TILES_Y ((NB_ROOMS_Y+1)*SIZE_ROOM_Y)
 
-#define JUMP_WIDTH_MAX      5   //longueur maximale parcourue par un saut en tuiles
+#define JUMP_WIDTH_MAX      5   //longueur maximale parcourue par un saut en tuiles (pour génération)
 #define JUMP_HEIGHT_MAX     5   //hauteur
 
 enum{
@@ -63,6 +63,7 @@ private:
     void generateLevel(int nb_rooms);
     void placeWalls();
     void placePlatforms();
+    gf::Vector2f placePlatform(unsigned int x_start, unsigned int y_start, unsigned int x_dest, unsigned int y_dest);
     
     GameObject *listGameObjects[MAX_GAMEOBJECTS];
     unsigned int nb_objects;
