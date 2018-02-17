@@ -19,10 +19,14 @@ class Level;
 class ProtagPhysicsComponent  : public PhysicsComponent
 {
 public:
-    ~ProtagPhysicsComponent() {}
+    ~ProtagPhysicsComponent() {
+        level->world->DestroyBody(body);
+        delete fixtureFS;
+    }
     
-    void initialize(GameObject& obj, Level *level) {
+    void initialize(GameObject& obj, Level *nlevel) {
         numFootContacts = 0;
+        level = nlevel;
         
         bodyDef.type = b2_dynamicBody;
         bodyDef.position.Set(obj.m_position.x, obj.m_position.y);
@@ -118,6 +122,7 @@ public:
     b2FixtureDef fixtureDef;
     b2FixtureDef fixtureDefFS;
     b2Fixture* fixtureFS;
+    Level *level;
 };
 
 #endif //GF_PHYSICSCOMPONENT_H

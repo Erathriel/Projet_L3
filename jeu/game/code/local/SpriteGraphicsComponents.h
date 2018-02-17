@@ -41,7 +41,10 @@ public:
         renderState->transform = matrice;
         graphics->draw(sprite, renderState);
     }
-    ~SpriteGraphicsComponent(){}
+    ~SpriteGraphicsComponent(){
+        delete sprite;
+        delete renderState;
+    }
 
 private:
     gf::Sprite *sprite;

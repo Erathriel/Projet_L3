@@ -38,7 +38,10 @@ public:
         graphics->setViewCenter(obj.m_position);
         graphics->draw(sprite, renderState);
     }
-    ~ProtagGraphicsComponent(){}
+    ~ProtagGraphicsComponent(){
+        delete sprite;
+        delete renderState;
+    }
 
 private:
     gf::Sprite *sprite;

@@ -14,10 +14,13 @@ class Level;
 class DynamicPhysicsComponent  : public PhysicsComponent
 {
 public:
-    ~DynamicPhysicsComponent() {}
+    ~DynamicPhysicsComponent() {
+        level->world->DestroyBody(body);
+    }
     
-    void initialize(GameObject& obj, Level *level) {
+    void initialize(GameObject& obj, Level *nlevel) {
         
+        level = nlevel;
         bodyDef.type = b2_dynamicBody;
         bodyDef.position.Set(obj.m_position.x, obj.m_position.y);
         body = level->world->CreateBody(&bodyDef);
@@ -59,6 +62,7 @@ public:
     b2Body* body;
     b2PolygonShape dynamicBox;
     b2FixtureDef fixtureDef;
+    Level *level;
 };
 
 #endif //GF_PHYSICSCOMPONENT_H

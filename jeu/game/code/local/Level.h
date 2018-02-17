@@ -12,9 +12,7 @@
 #include <Box2D/Box2D.h>
 #include <time.h>
 
-#define MAX_GAMEOBJECTS 1024
-
-#define GRAVITY 100.0f
+#define GRAVITY 200.0f
 
 #define SIZE_OF_A_TILE 21
 #define TILESET_SPACING 2
@@ -63,18 +61,18 @@ private:
     void generateLevel(int nb_rooms);
     void placeWalls();
     void placePlatforms();
-    gf::Vector2f placePlatform(unsigned int x_start, unsigned int y_start, unsigned int x_dest, unsigned int y_dest);
+    gf::Vector2f placePlatform(unsigned int x_start, unsigned int y_start, unsigned int x_dest, unsigned int y_dest, unsigned int room_x, unsigned int room_y);
     
-    GameObject *listGameObjects[MAX_GAMEOBJECTS];
+    std::vector<GameObject> listGameObjects;
     unsigned int nb_objects;
     Graphics* graphicsG;
     
     ContactListener *contactListener;
     gf::TileLayer *tileLayer;
     b2Body* tilePhysicBody;
-    gf::Sprite *background;
-    gf::RenderStates *bgRenderState;
-    b2Vec2 *gravity;
+    gf::Sprite background;
+    //gf::RenderStates *bgRenderState;
+    b2Vec2 gravity;
     b2Body *tileBody;
     b2BodyDef tileBodyDef;
     

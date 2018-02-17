@@ -36,3 +36,8 @@ void GameObject::update(Graphics& graphics){
     graphics_->update(*this, &graphics);
 }
 
+GameObject::~GameObject(){
+    delete input_;
+    delete physics_;
+    delete graphics_;
+}

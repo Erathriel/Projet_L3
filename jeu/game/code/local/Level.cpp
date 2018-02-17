@@ -6,9 +6,9 @@ Level::Level(Graphics* ngraphicsG){
     graphicsG = ngraphicsG;
     
     // Define the gravity vector.
-    gravity = new b2Vec2(0.0f, GRAVITY);
+    gravity = b2Vec2(0.0f, GRAVITY);
     // Construct a world object, which will hold and simulate the rigid bodies.
-    world = new b2World(*gravity);
+    world = new b2World(gravity);
     contactListener = new ContactListener;
     world->SetContactListener(contactListener);
     
@@ -20,12 +20,11 @@ Level::Level(Graphics* ngraphicsG){
     tileLayer->setSpacing(TILESET_SPACING);
     
     //fond du niveau
-    background = new gf::Sprite();
-    background->setTexture(*graphicsG->getBGTexture());
-    background->setTextureRect({ 0.0f, 0.0f, 1.0f, 0.333f });
-    background->scale(8);
+    background.setTexture(*graphicsG->getBGTexture());
+    background.setTextureRect({ 0.0f, 0.0f, 1.0f, 0.333f });
+    background.scale(8);
     gf::Vector2f position(0,0);
-    background->setPosition(position);
+    background.setPosition(position);
     
 //     bgRenderState = new gf::RenderStates();
 //     gf::Matrix3f matrice = gf::identityTransform();
@@ -169,7 +168,7 @@ void Level::placeWalls(){
 }
 
 void Level::placePlatforms(){
-    unsigned int x_dest, y_dest, x_room, y_room, x_start, y_start;
+    unsigned int x_dest, y_dest, x_room, y_room, x_start, y_start, rand_num;
     bool found = false;
     gf::Vector2f vector;
     
@@ -182,10 +181,10 @@ void Level::placePlatforms(){
     x_room--;
     y_room--;
     
+    x_start = x_room*SIZE_ROOM_X + SIZE_ROOM_X/2;
+    y_start = y_room*SIZE_ROOM_Y + SIZE_ROOM_Y/2;
     while(rooms(gf::Vector2f(x_room,y_room)).next_room != -1){
         //printf("b %i\n", rooms(gf::Vector2f(x_room,y_room)).next_room);
-        x_start = x_room*SIZE_ROOM_X + SIZE_ROOM_X/2;
-        y_start = y_room*SIZE_ROOM_Y + SIZE_ROOM_Y/2;
         if(rooms(gf::Vector2f(x_room,y_room)).next_room == UP)
             y_room += -1;
         else if(rooms(gf::Vector2f(x_room,y_room)).next_room == DOWN)
@@ -195,13 +194,16 @@ void Level::placePlatforms(){
         else if(rooms(gf::Vector2f(x_room,y_room)).next_room == LEFT)
             x_room += -1;
         else break;
-        x_dest = x_room*SIZE_ROOM_X + SIZE_ROOM_X/2;
-        y_dest = y_room*SIZE_ROOM_Y + SIZE_ROOM_Y/2;
+        rand_num = (rand() % (SIZE_ROOM_X-2)) +1 ;
+        x_dest = x_room*SIZE_ROOM_X + rand_num;
+        rand_num = (rand() % (SIZE_ROOM_Y-4)) +3 ;
+        y_dest = y_room*SIZE_ROOM_Y + rand_num;
         
         do{
-            vector = placePlatform(x_start, y_start, x_dest, y_dest);
+            vector = placePlatform(x_start, y_start, x_dest, y_dest, x_room*SIZE_ROOM_X, y_room*SIZE_ROOM_Y);
             x_start = vector.x;
             y_start = vector.y;
+            //printf("%i lol\n", y_start);
         }while( vector != gf::Vector2f(x_dest, y_dest) );
 
         
@@ -209,29 +211,75 @@ void Level::placePlatforms(){
     
 }
 
-gf::Vector2f Level::placePlatform(unsigned int x_start, unsigned int y_start, unsigned int x_dest, unsigned int y_dest){
+gf::Vector2f Level::placePlatform(unsigned int x_start, unsigned int y_start, unsigned int x_dest, unsigned int y_dest, unsigned int room_x, unsigned int room_y){
     b2PolygonShape box;
     b2FixtureDef fixtureDef;
-    unsigned int modifier_x, modifier_y;
+    unsigned int nx_dest, ny_dest;
+    int modifier_x = 0;
+    int modifier_y = 0;
+    int space_x = 0;
+    int space_y = 0;
+    unsigned int i;
+    //bool horizontal = false;
+    
+    //if( abs(x_start - x_dest) >= abs(y_start - y_dest) )
+    //    horizontal = true;
+        
     
     if(x_start < x_dest)
-        modifier_x = 1;
-    if(x_start > x_dest)
-        modifier_x = -1;
-    if(y_start < y_dest)
-        modifier_y = 1;
-    if(y_start > y_dest)
-        modifier_y = -1;
-
-    tileLayer->setTile({x_start, y_start},4);
-    tileLayer->setTile({x_start + modifier_x, y_start + modifier_y},4);
-
-    x_dest = x_start + modifier_x;
-    y_dest = y_start + modifier_y;
+        modifier_x = (rand() % (SIZE_ROOM_X/2) ) +2;
+    if(x_start >= x_dest)
+        modifier_x = -(rand() % (SIZE_ROOM_X/2) ) -2;;
+    //if(y_start < y_dest)
+    //    modifier_y = (rand() % (JUMP_HEIGHT_MAX-3) ) +2;;
+    //if(y_start > y_dest)
+    //    modifier_y = -(rand() % (JUMP_HEIGHT_MAX-3) ) -2;;
+    if(x_start + modifier_x <= room_x)
+        modifier_x = 2;
+    if(x_start + modifier_x >= (room_x+SIZE_ROOM_X))
+        modifier_x = -2;
     
+    if(x_start + modifier_x <= x_dest)
+        space_x = (rand() % (JUMP_WIDTH_MAX-3)) +3;
+    if(x_start + modifier_x > x_dest)
+        space_x = - (rand() % (JUMP_WIDTH_MAX-3)) -3;
+    if(y_start + modifier_y <= y_dest)
+        space_y = (rand() % (JUMP_HEIGHT_MAX-3))+3;
+    if(y_start + modifier_y > y_dest)
+        space_y = - (rand() % (JUMP_HEIGHT_MAX-3))-3;
+
+    if(modifier_x >= 0)
+        for(i = x_start; i < x_start + modifier_x; i++)
+            tileLayer->setTile({i, y_start},4);
+    else
+        for(i = x_start; i >= x_start + modifier_x && i > room_x; i--)
+            tileLayer->setTile({i, y_start},4);
+    //for(i = y_start; i < y_start + modifier_y; i++)
+    //    tileLayer->setTile({x_start, i},4);
+
+    nx_dest = x_start + modifier_x;
+    ny_dest = y_start + modifier_y;
     
-    //printf("lol\n");
-    return gf::Vector2f(x_dest, y_dest);
+    if( ( (nx_dest < x_dest) && (x_dest < nx_dest + JUMP_WIDTH_MAX) )
+        || ( (nx_dest > x_dest) && ( x_dest > nx_dest- JUMP_WIDTH_MAX) ) )
+        if( ( (ny_dest < y_dest) && (y_dest < ny_dest + JUMP_HEIGHT_MAX) )
+            || ( (ny_dest > y_dest) && (y_dest > ny_dest - JUMP_HEIGHT_MAX) ) ){
+                return gf::Vector2f(x_dest, y_dest);
+        }
+        
+    nx_dest += space_x;
+    ny_dest += space_y;
+    
+    //printf("%i %i space: %i %i \n", modifier_x, modifier_y, space_x, space_y);
+    if( (x_start >= x_dest && x_start <= nx_dest) || (x_start < x_dest && x_start >= nx_dest) )
+        if( (y_start >= y_dest && y_start <= ny_dest) || (y_start < y_dest && y_start >= ny_dest) ){
+            nx_dest = x_dest;
+            ny_dest = y_dest;
+        }
+    
+
+    
+    return gf::Vector2f(nx_dest, ny_dest);
     
 }
 
@@ -245,16 +293,16 @@ void Level::update(GameObject& obj){
 
 void Level::updateGameObjects(float ndt){
     dt = ndt;
-    graphicsG->draw(background); //rendu du fond en 1er pour qu'il soit au fond
+    graphicsG->draw(&background); //rendu du fond en 1er pour qu'il soit au fond
     graphicsG->draw(tileLayer);                 //puis des tuiles
     unsigned int i;
-    for(i = 0; i < nb_objects && i < MAX_GAMEOBJECTS; i++)
-        update(*listGameObjects[i]);            //mise à jour des GameObjects
+    for(i = 0; i < listGameObjects.size(); i++)
+        update( listGameObjects.at(i) );            //mise à jour des GameObjects
 }
 
 void Level::addGameObject(GameObject *obj){
     obj->initialize(*this, *graphicsG);
-    listGameObjects[nb_objects] = obj;
+    listGameObjects.push_back(*obj);
     nb_objects++;
 }
 

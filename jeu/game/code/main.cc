@@ -56,13 +56,13 @@ int main() {
     Level level(&graphicsG);
     
     //un GameObject a besoin de 3 components, input, physics et graphics
-    EmpyInputComponent* input = new EmpyInputComponent();
-    DynamicPhysicsComponent* physics = new DynamicPhysicsComponent();
-    CarreGraphicsComponent* graphicsComp = new CarreGraphicsComponent();
+    //EmpyInputComponent* input = new EmpyInputComponent();
+    //DynamicPhysicsComponent* physics = new DynamicPhysicsComponent();
+    //CarreGraphicsComponent* graphicsComp = new CarreGraphicsComponent();
     
-    EmpyInputComponent* input2 = new EmpyInputComponent();
-    DynamicPhysicsComponent* physics2 = new DynamicPhysicsComponent();
-    SpriteGraphicsComponent* graphicsComp2 = new SpriteGraphicsComponent();
+    //EmpyInputComponent* input2 = new EmpyInputComponent();
+    //DynamicPhysicsComponent* physics2 = new DynamicPhysicsComponent();
+    //SpriteGraphicsComponent* graphicsComp2 = new SpriteGraphicsComponent();
     
     ProtagInputComponent* input3 = new ProtagInputComponent();
     ProtagPhysicsComponent* physics3 = new ProtagPhysicsComponent();
@@ -71,12 +71,11 @@ int main() {
     gf::Vector2f position(NB_ROOMS_X/2 * SIZE_ROOM_X_px + SIZE_ROOM_X_px/2,NB_ROOMS_Y/2 * SIZE_ROOM_Y_px + SIZE_ROOM_X_px/2);
     
     //on créé un GameObject...
-    GameObject carre(input, physics, graphicsComp, position, 100.0f, gf::Color::Red);
+    //GameObject carre(input, physics, graphicsComp, position, 100.0f, gf::Color::Red);
     //puis on l'ajoute au niveau
     //level.addGameObject(&carre);
     
-    GameObject carre2(input2, physics2, graphicsComp2, position, 21.0f,
-    gf::Color::Blue);
+    //GameObject carre2(input2, physics2, graphicsComp2, position, 21.0f, gf::Color::Blue);
     //level.addGameObject(&carre2);
     GameObject sprite1(input3, physics3, graphicsComp3, position, 21.0f, gf::Color::Blue);
     level.addGameObject(&sprite1);
