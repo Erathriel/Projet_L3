@@ -36,7 +36,7 @@ public:
         fixtureDef.friction = 0.3f; //0.3f
         //filtre de collisions
         fixtureDef.filter.categoryBits = DEFAULT;
-        fixtureDef.filter.maskBits = DEFAULT | SOLID | PROTAG;
+        fixtureDef.filter.maskBits = DEFAULT | TILE | PROTAG;
 
         // Add the shape to the body.
         body->CreateFixture(&fixtureDef);

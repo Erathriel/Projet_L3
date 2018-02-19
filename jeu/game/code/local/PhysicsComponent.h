@@ -20,10 +20,14 @@ enum _entityCategory{   //catégories pour les filtres de collision
     DEFAULT =           0x0001,
     PROTAG   =          0x0002,
     FOOT_SENSOR =     0x0004, //la zone où le protag détectera le sol
-    SOLID =             0x0008,
+    TILE =             0x0008,
  //   ENEMY_AIRCRAFT =    0x0010,
  //   FRIENDLY_TOWER =    0x0020,
  //   RADAR_SENSOR =      0x0040,
+};
+
+enum _user_date{   //user_data pour les collisions
+    UD_DEFAULT, UD_FOOT_SENSOR
 };
 
 class PhysicsComponent
@@ -46,22 +50,23 @@ class ContactListener : public b2ContactListener{
      void BeginContact(b2Contact* contact) {
           //check if fixture A was the foot sensor
           void* fixtureUserData = contact->GetFixtureA()->GetUserData();
-          if ( (intptr_t)fixtureUserData == 3 )
+          //printf("mdr %i %i\n", contact->GetFixtureA()->GetFilterData().maskBits, contact->GetFixtureA()->GetFilterData().categoryBits );
+          if ( (intptr_t)fixtureUserData == UD_FOOT_SENSOR )
               numFootContacts++;
           //check if fixture B was the foot sensor
           fixtureUserData = contact->GetFixtureB()->GetUserData();
-          if ( (intptr_t)fixtureUserData == 3 )
+          if ( (intptr_t)fixtureUserData == UD_FOOT_SENSOR )
               numFootContacts++;
       }
   
       void EndContact(b2Contact* contact) {
           //check if fixture A was the foot sensor
           void* fixtureUserData = contact->GetFixtureA()->GetUserData();
-          if ( (intptr_t)fixtureUserData == 3 )
+          if ( (intptr_t)fixtureUserData == UD_FOOT_SENSOR )
               numFootContacts--;
           //check if fixture B was the foot sensor
           fixtureUserData = contact->GetFixtureB()->GetUserData();
-          if ( (intptr_t)fixtureUserData == 3 )
+          if ( (intptr_t)fixtureUserData == UD_FOOT_SENSOR )
              numFootContacts--;
       }
 };

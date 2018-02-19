@@ -77,7 +77,7 @@ int main() {
     
     //GameObject carre2(input2, physics2, graphicsComp2, position, 21.0f, gf::Color::Blue);
     //level.addGameObject(&carre2);
-    GameObject sprite1(input3, physics3, graphicsComp3, position, 21.0f, gf::Color::Blue);
+    GameObject sprite1(input3, physics3, graphicsComp3, position, 20.0f, gf::Color::Blue);
     level.addGameObject(&sprite1);
     // game loop
     while (true) {

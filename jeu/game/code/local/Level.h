@@ -20,8 +20,8 @@
 
 #define NB_ROOMS_X 10           //nb de rooms max en x et y
 #define NB_ROOMS_Y 10
-#define SIZE_ROOM_X 16          //taille d'une room en tuiles
-#define SIZE_ROOM_Y 12
+#define SIZE_ROOM_X 20          //taille d'une room en tuiles
+#define SIZE_ROOM_Y 18
 #define SIZE_ROOM_X_px (SIZE_ROOM_X*SIZE_OF_A_TILE) //taille d'une room en pixels
 #define SIZE_ROOM_Y_px (SIZE_ROOM_Y*SIZE_OF_A_TILE)
 
@@ -29,7 +29,8 @@
 #define NUMBER_OF_TILES_Y ((NB_ROOMS_Y+1)*SIZE_ROOM_Y)
 
 #define JUMP_WIDTH_MAX      5   //longueur maximale parcourue par un saut en tuiles (pour génération)
-#define JUMP_HEIGHT_MAX     5   //hauteur
+#define JUMP_HEIGHT_MAX     4   //hauteur
+#define JUMP_DISTANCE_MAX   8        //sqrt(JUMP_WIDTH_MAX*JUMP_HEIGHT_MAX)
 
 enum{
     UP, RIGHT, DOWN, LEFT
@@ -61,7 +62,7 @@ private:
     void generateLevel(int nb_rooms);
     void placeWalls();
     void placePlatforms();
-    gf::Vector2f placePlatform(unsigned int x_start, unsigned int y_start, unsigned int x_dest, unsigned int y_dest, unsigned int room_x, unsigned int room_y);
+    gf::Vector2f placePlatform(unsigned int x_start, unsigned int y_start, unsigned int x_dest, unsigned int y_dest, int room_x, int room_y);
     
     std::vector<GameObject> listGameObjects;
     unsigned int nb_objects;

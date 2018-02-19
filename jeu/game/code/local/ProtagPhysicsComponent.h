@@ -9,7 +9,7 @@
 #include "GameObject.h"
 #include "Level.h"
 
-#define JUMP_TIME_MAX   2500
+#define JUMP_TIME_MAX   35
 #define JUMP_TIMEOUT    30
 
 extern int numFootContacts;
@@ -42,10 +42,10 @@ public:
         // Set the box density to be non-zero, so it will be dynamic.
         fixtureDef.density = 1.0f;
         // Override the default friction.
-        fixtureDef.friction = 0.1f; //0.3f
+        fixtureDef.friction = 0.0f; //0.3f
         //filtre de collisions
         fixtureDef.filter.categoryBits = PROTAG;
-        fixtureDef.filter.maskBits = DEFAULT | SOLID;
+        fixtureDef.filter.maskBits = DEFAULT | TILE;
 
         // Add the shape to the body.
         body->CreateFixture(&fixtureDef);
@@ -57,8 +57,10 @@ public:
         boxShapeGS.SetAsBox(obj.m_size/1.25, 1.0, b2Vec2(0,obj.m_size), 0);
         fixtureDefFS.shape = &boxShapeGS;
         fixtureDefFS.isSensor = true;
+        fixtureDef.filter.categoryBits = FOOT_SENSOR;
+        fixtureDef.filter.maskBits = DEFAULT | TILE;
         fixtureFS = body->CreateFixture(&fixtureDefFS);
-        fixtureFS->SetUserData( (void*)3 );
+        fixtureFS->SetUserData( (void*)UD_FOOT_SENSOR );
         
     }
     
