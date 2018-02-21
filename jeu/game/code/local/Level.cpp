@@ -172,7 +172,9 @@ void Level::placeWalls(){
 }
 
 void Level::placePlatforms(){
-    unsigned int x_dest, y_dest, x_room, y_room, x_start, y_start, rand_num;
+    unsigned int x_dest = 1;
+    unsigned int y_dest = 1;
+    unsigned int x_room, y_room, x_start, y_start, rand_num;
     bool found = false;
     gf::Vector2f vector;
     
@@ -186,7 +188,7 @@ void Level::placePlatforms(){
     y_room--;
     
     x_start = x_room*SIZE_ROOM_X + SIZE_ROOM_X/2;
-    y_start = y_room*SIZE_ROOM_Y + SIZE_ROOM_Y/2 +2;
+    y_start = y_room*SIZE_ROOM_Y + SIZE_ROOM_Y/2 +3;
     while(rooms(gf::Vector2f(x_room,y_room)).next_room != -1){
         //printf("b %i\n", rooms(gf::Vector2f(x_room,y_room)).next_room);
         if(rooms(gf::Vector2f(x_room,y_room)).next_room == UP)
@@ -220,10 +222,14 @@ gf::Vector2f Level::placePlatform(unsigned int x_start, unsigned int y_start, un
     fixtureDef.filter.categoryBits = TILE;
     fixtureDef.filter.maskBits = DEFAULT | PROTAG;
     fixtureDef.density = 0.0f;
+    b2Fixture* fixture;
     unsigned int nx_dest, ny_dest;
     int modifier_x = 0; int modifier_y = 0;
     int space_x = 0; int space_y = 0;
     int i = 0;
+    int tile_left = 129;
+    int tile_right = 159;
+    int tile_middle = 158;
     //bool horizontal = false;
     
     //if( abs(x_start - x_dest) >= abs(y_start - y_dest) )
@@ -233,73 +239,72 @@ gf::Vector2f Level::placePlatform(unsigned int x_start, unsigned int y_start, un
     if(x_start < x_dest)
         modifier_x = (rand() % (SIZE_ROOM_X/2 -2) ) +2;
     if(x_start >= x_dest)
-        modifier_x = -(rand() % (SIZE_ROOM_X/2 -2) ) -2;;
+        modifier_x = -(rand() % (SIZE_ROOM_X/2 -2) ) -2;
     //if(y_start < y_dest)
     //    modifier_y = (rand() % (JUMP_HEIGHT_MAX-3) ) +2;;
     //if(y_start > y_dest)
     //    modifier_y = -(rand() % (JUMP_HEIGHT_MAX-3) ) -2;;
 
     if(modifier_x >= 0){
-        for(i = 0; i < modifier_x && i + x_start < room_x+SIZE_ROOM_X-2; i++)
-            tileLayer->setTile({i + x_start, y_start},4);
+        tileLayer->setTile({x_start, y_start},tile_left);
+        for(i = 1; i < modifier_x && i + x_start < room_x+SIZE_ROOM_X-2; i++)
+            tileLayer->setTile({i + x_start, y_start},tile_middle);
+        tileLayer->setTile({i-1 + x_start, y_start},tile_right);
         modifier_x = i;
         box.SetAsBox( (modifier_x*SIZE_OF_A_TILE)/2.0f, (SIZE_OF_A_TILE)/2.0f, b2Vec2((x_start)*SIZE_OF_A_TILE + (modifier_x/2.0f)*SIZE_OF_A_TILE, y_start*SIZE_OF_A_TILE+ SIZE_OF_A_TILE*0.4), 0);
     }
     else{
-        for(i = 0; i > modifier_x && i + x_start > room_x+2; i--)
-            tileLayer->setTile({i + x_start, y_start},4);
+        tileLayer->setTile({x_start, y_start},tile_right);
+        for(i = -1; i > modifier_x && i + x_start > room_x+2; i--)
+            tileLayer->setTile({i + x_start, y_start},tile_middle);
+        tileLayer->setTile({i+1 + x_start, y_start},tile_left);
         modifier_x = i;
         box.SetAsBox( (-modifier_x*SIZE_OF_A_TILE)/2.0f, (SIZE_OF_A_TILE)/2.0f, b2Vec2((x_start+1)*SIZE_OF_A_TILE + (modifier_x/2.0f)*SIZE_OF_A_TILE, y_start*SIZE_OF_A_TILE+ SIZE_OF_A_TILE*0.4), 0);
     }
-    
     fixtureDef.shape = &box;
-    tileBody->CreateFixture(&fixtureDef);
+    fixture = tileBody->CreateFixture(&fixtureDef);
+    fixture->SetUserData( (void*)UD_ONE_WAY_PLATFORM );
 
     nx_dest = x_start + modifier_x;
     ny_dest = y_start + modifier_y;
     
-    /*if( ( (nx_dest < x_dest) && (x_dest < nx_dest + JUMP_WIDTH_MAX) )
-        || ( (nx_dest > x_dest) && ( x_dest > nx_dest- JUMP_WIDTH_MAX) ) )
-        if( ( (ny_dest < y_dest) && (y_dest < ny_dest + JUMP_HEIGHT_MAX) )
-            || ( (ny_dest > y_dest) && (y_dest > ny_dest - JUMP_HEIGHT_MAX) ) )
-                return gf::Vector2f(x_dest, y_dest);*/
-    
-    if( abs(nx_dest-x_dest)*abs(ny_dest-y_dest) < JUMP_DISTANCE_MAX )
-            ;//return gf::Vector2f(x_dest, y_dest);
+    //printf("%i\n", abs(nx_dest-x_dest)*abs(ny_dest-y_dest));
+    if( abs(nx_dest-x_dest)+abs(ny_dest-y_dest) < JUMP_DISTANCE_MAX &&
+        abs(nx_dest-x_dest) < JUMP_WIDTH_MAX && abs(ny_dest-y_dest) < JUMP_HEIGHT_MAX )
+            return gf::Vector2f(x_dest, y_dest);
     
     if(nx_dest <= x_dest)
-        space_x = (rand() % (JUMP_WIDTH_MAX-3)) +3;
+        space_x = (rand() % (JUMP_WIDTH_MAX-2)) +2;
     if(nx_dest > x_dest)
-        space_x = - (rand() % (JUMP_WIDTH_MAX-3)) -3;
+        space_x = - (rand() % (JUMP_WIDTH_MAX-2)) -2;
     if(ny_dest <= y_dest)
         space_y = (rand() % (JUMP_HEIGHT_MAX-3))+3;
     if(ny_dest > y_dest)
         space_y = - (rand() % (JUMP_HEIGHT_MAX-3))-3;
     
-    while( abs(nx_dest+space_x-x_dest)*abs(ny_dest+space_y-y_dest) > JUMP_DISTANCE_MAX){
-        if(space_x>3)
+    while( abs(space_x)+abs(space_y) > JUMP_DISTANCE_MAX){
+        if(space_x>1)
             space_x--;
-        else if(space_x<-3)
+        else if(space_x<-1)
             space_x++;
-        else
-            break;
-        if(space_y>2)
+        if(space_y>3)
             space_y--;
-        else if(space_y<-2)
+        else if(space_y<-3)
             space_y++;
-        else
+        if( space_x <= 1 && space_x >= -1 && space_y <=3 && space_y >= -3 )
             break;
     }
+    
 
     nx_dest += space_x;
     ny_dest += space_y;
     
     //printf("%i %i space: %i %i \n", modifier_x, modifier_y, space_x, space_y);
-    if( (x_start >= x_dest && x_dest >= nx_dest) || (x_start < x_dest && x_dest <= nx_dest) )
-        if( (y_start >= y_dest && y_dest >= ny_dest) || (y_start < y_dest && y_dest <= ny_dest) )
+    if( (x_start >= x_dest && x_dest >= nx_dest) || (x_start <= x_dest && x_dest <= nx_dest) )
+        if( (y_start >= y_dest && y_dest >= ny_dest) || (y_start <= y_dest && y_dest <= ny_dest) )
             return gf::Vector2f(x_dest, y_dest);
     
-
+    //317
     
     return gf::Vector2f(nx_dest, ny_dest);
     

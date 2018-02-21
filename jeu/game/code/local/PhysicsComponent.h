@@ -27,7 +27,7 @@ enum _entityCategory{   //catégories pour les filtres de collision
 };
 
 enum _user_date{   //user_data pour les collisions
-    UD_DEFAULT, UD_FOOT_SENSOR
+    UD_DEFAULT, UD_FOOT_SENSOR, UD_ONE_WAY_PLATFORM
 };
 
 class PhysicsComponent
@@ -57,9 +57,62 @@ class ContactListener : public b2ContactListener{
           fixtureUserData = contact->GetFixtureB()->GetUserData();
           if ( (intptr_t)fixtureUserData == UD_FOOT_SENSOR )
               numFootContacts++;
+         
+         
+            b2Fixture* fixtureA = contact->GetFixtureA();
+            b2Fixture* fixtureB = contact->GetFixtureB();
+        
+            //check if one of the fixtures is the platform
+            b2Fixture* platformFixture = NULL;
+            b2Fixture* otherFixture = NULL;
+            if ( (intptr_t)fixtureA->GetUserData() == UD_ONE_WAY_PLATFORM ) {
+                platformFixture = fixtureA;
+                otherFixture = fixtureB;
+            }
+            else if ( (intptr_t)fixtureB->GetUserData() == UD_ONE_WAY_PLATFORM ) {
+                platformFixture = fixtureB;
+                otherFixture = fixtureA;
+            }
+        
+            if ( !platformFixture )
+                return;
+                
+            b2Body* platformBody = platformFixture->GetBody();
+            b2Body* otherBody = otherFixture->GetBody();
+        
+            int numPoints = contact->GetManifold()->pointCount;
+            b2WorldManifold worldManifold;
+            contact->GetWorldManifold( &worldManifold );
+        
+            //check if contact points are moving downward
+            for (int i = 0; i < numPoints; i++) {
+                b2Vec2 pointVelPlatform =
+                    platformBody->GetLinearVelocityFromWorldPoint( worldManifold.points[i] );
+                b2Vec2 pointVelOther =
+                    otherBody->GetLinearVelocityFromWorldPoint( worldManifold.points[i] );
+                b2Vec2 relativeVel = platformBody->GetLocalVector( pointVelOther - pointVelPlatform );
+                
+                if ( relativeVel.y > 0.1f ) //if moving down faster than 1 m/s, handle as before
+                    return;//point is moving into platform, leave contact solid and exit
+                else if ( relativeVel.y > -0.1f ) { //if moving slower than 1 m/s
+                    //borderline case, moving only slightly out of platform
+                    b2Vec2 relativePoint = platformBody->GetLocalPoint( worldManifold.points[i] );
+                    float platformFaceY = 0.5f;//front of platform, from fixture definition :(
+                    if ( relativePoint.y > platformFaceY - 0.05 )
+                        return;//contact point is less than 5cm inside front face of platfrom
+                }
+                else
+                    ;//moving up faster than 1 m/s
+            }
+        
+            //no points are moving downward, contact should not be solid
+            //printf("lol\n");
+            contact->SetEnabled(false);
       }
   
       void EndContact(b2Contact* contact) {
+          //contact->SetEnabled(true);
+          
           //check if fixture A was the foot sensor
           void* fixtureUserData = contact->GetFixtureA()->GetUserData();
           if ( (intptr_t)fixtureUserData == UD_FOOT_SENSOR )

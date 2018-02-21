@@ -9,7 +9,7 @@
 #include "GameObject.h"
 #include "Level.h"
 
-#define JUMP_TIME_MAX   35
+#define JUMP_TIME_MAX   45
 #define JUMP_TIMEOUT    30
 
 extern int numFootContacts;
@@ -54,7 +54,7 @@ public:
         //body->SetUserData( this );
         
         //add foot sensor fixture
-        boxShapeGS.SetAsBox(obj.m_size/1.25, 1.0, b2Vec2(0,obj.m_size), 0);
+        boxShapeGS.SetAsBox(obj.m_size/2.1f, 1.0f, b2Vec2(obj.m_size/2.0f,obj.m_size), 0);
         fixtureDefFS.shape = &boxShapeGS;
         fixtureDefFS.isSensor = true;
         fixtureDef.filter.categoryBits = FOOT_SENSOR;

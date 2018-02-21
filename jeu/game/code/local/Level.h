@@ -28,9 +28,9 @@
 #define NUMBER_OF_TILES_X ((NB_ROOMS_X+1)*SIZE_ROOM_X)
 #define NUMBER_OF_TILES_Y ((NB_ROOMS_Y+1)*SIZE_ROOM_Y)
 
-#define JUMP_WIDTH_MAX      5   //longueur maximale parcourue par un saut en tuiles (pour génération)
+#define JUMP_WIDTH_MAX      6   //longueur maximale parcourue par un saut en tuiles (pour génération)
 #define JUMP_HEIGHT_MAX     4   //hauteur
-#define JUMP_DISTANCE_MAX   8        //sqrt(JUMP_WIDTH_MAX*JUMP_HEIGHT_MAX)
+#define JUMP_DISTANCE_MAX   7        //sqrt(JUMP_WIDTH_MAX*JUMP_HEIGHT_MAX)
 
 enum{
     UP, RIGHT, DOWN, LEFT
