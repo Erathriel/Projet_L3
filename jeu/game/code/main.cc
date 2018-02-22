@@ -34,12 +34,17 @@
 #include <cstdio>
 
 int numFootContacts;
+int numFootContactsLadder;
 
 
 int main() {
     
-    //gf::Font font;
-    //font.loadFromFile("data/ClearSans-Bold.ttf");
+    gf::Font font;
+    char fileName[255];
+    sprintf(fileName, "%s/%s", GAME_DATA_DIR, "ClearSans-Bold.ttf" );
+    if( !font.loadFromFile(fileName) ){
+        exit(1);
+    }
     
     // Prepare for simulation. Typically we use a time step of 1/60 of a
     // second (60Hz) and 10 iterations. This provides a high quality simulation

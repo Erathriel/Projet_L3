@@ -11,6 +11,7 @@
 #include <Box2D/Box2D.h>
 
 extern int numFootContacts;    //nombre de contacts avec le sol du protag
+extern int numFootContactsLadder;
 
 enum{   //noms des objets pour les collisions
     ENT_DEFAULT, ENT_PROTAG
@@ -21,13 +22,13 @@ enum _entityCategory{   //catégories pour les filtres de collision
     PROTAG   =          0x0002,
     FOOT_SENSOR =     0x0004, //la zone où le protag détectera le sol
     TILE =             0x0008,
- //   ENEMY_AIRCRAFT =    0x0010,
+    LADDER =    0x0010,
  //   FRIENDLY_TOWER =    0x0020,
  //   RADAR_SENSOR =      0x0040,
 };
 
 enum _user_date{   //user_data pour les collisions
-    UD_DEFAULT, UD_FOOT_SENSOR, UD_ONE_WAY_PLATFORM
+    UD_DEFAULT, UD_FOOT_SENSOR, UD_ONE_WAY_PLATFORM, UD_LADDER
 };
 
 class PhysicsComponent
@@ -53,10 +54,14 @@ class ContactListener : public b2ContactListener{
           //printf("mdr %i %i\n", contact->GetFixtureA()->GetFilterData().maskBits, contact->GetFixtureA()->GetFilterData().categoryBits );
           if ( (intptr_t)fixtureUserData == UD_FOOT_SENSOR )
               numFootContacts++;
+          if ( (intptr_t)fixtureUserData == UD_LADDER )
+              numFootContactsLadder++;
           //check if fixture B was the foot sensor
           fixtureUserData = contact->GetFixtureB()->GetUserData();
           if ( (intptr_t)fixtureUserData == UD_FOOT_SENSOR )
               numFootContacts++;
+          if ( (intptr_t)fixtureUserData == UD_LADDER )
+              numFootContactsLadder++;
          
          
             b2Fixture* fixtureA = contact->GetFixtureA();
@@ -98,11 +103,11 @@ class ContactListener : public b2ContactListener{
                     //borderline case, moving only slightly out of platform
                     b2Vec2 relativePoint = platformBody->GetLocalPoint( worldManifold.points[i] );
                     float platformFaceY = 0.5f;//front of platform, from fixture definition :(
-                    if ( relativePoint.y > platformFaceY - 0.05 )
+                    if ( relativePoint.y < platformFaceY + 0.05 )
                         return;//contact point is less than 5cm inside front face of platfrom
                 }
-                else
-                    ;//moving up faster than 1 m/s
+                //else
+                //    ;//moving up faster than 1 m/s
             }
         
             //no points are moving downward, contact should not be solid
@@ -111,16 +116,20 @@ class ContactListener : public b2ContactListener{
       }
   
       void EndContact(b2Contact* contact) {
-          //contact->SetEnabled(true);
+          contact->SetEnabled(true);
           
           //check if fixture A was the foot sensor
           void* fixtureUserData = contact->GetFixtureA()->GetUserData();
           if ( (intptr_t)fixtureUserData == UD_FOOT_SENSOR )
               numFootContacts--;
+          if ( (intptr_t)fixtureUserData == UD_LADDER )
+              numFootContactsLadder--;
           //check if fixture B was the foot sensor
           fixtureUserData = contact->GetFixtureB()->GetUserData();
           if ( (intptr_t)fixtureUserData == UD_FOOT_SENSOR )
              numFootContacts--;
+          if ( (intptr_t)fixtureUserData == UD_LADDER )
+              numFootContactsLadder--;
       }
 };
 

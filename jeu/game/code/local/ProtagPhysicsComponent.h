@@ -10,9 +10,10 @@
 #include "Level.h"
 
 #define JUMP_TIME_MAX   45
-#define JUMP_TIMEOUT    30
+#define JUMP_TIMEOUT    20
 
 extern int numFootContacts;
+extern int numFootContactsLadder;
 
 class Level;
 
@@ -26,6 +27,7 @@ public:
     
     void initialize(GameObject& obj, Level *nlevel) {
         numFootContacts = 0;
+        numFootContactsLadder = 0;
         level = nlevel;
         
         bodyDef.type = b2_dynamicBody;
@@ -45,7 +47,7 @@ public:
         fixtureDef.friction = 0.0f; //0.3f
         //filtre de collisions
         fixtureDef.filter.categoryBits = PROTAG;
-        fixtureDef.filter.maskBits = DEFAULT | TILE;
+        fixtureDef.filter.maskBits = DEFAULT | TILE | LADDER;
 
         // Add the shape to the body.
         body->CreateFixture(&fixtureDef);
@@ -58,7 +60,7 @@ public:
         fixtureDefFS.shape = &boxShapeGS;
         fixtureDefFS.isSensor = true;
         fixtureDef.filter.categoryBits = FOOT_SENSOR;
-        fixtureDef.filter.maskBits = DEFAULT | TILE;
+        fixtureDef.filter.maskBits = DEFAULT | TILE | LADDER;
         fixtureFS = body->CreateFixture(&fixtureDefFS);
         fixtureFS->SetUserData( (void*)UD_FOOT_SENSOR );
         
@@ -71,6 +73,8 @@ public:
         
         float impulseX = 0.0f;
         float impulseY = 0.0f;
+        
+        //if(numFootContactsLadder > 0) printf("lol %i\n", numFootContactsLadder);
         
         if(numFootContacts > 0 && (jumpTimeout < 0 || jumpTimeout > 60)){
             onGround = true;

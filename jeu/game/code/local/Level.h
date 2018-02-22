@@ -62,7 +62,7 @@ private:
     void generateLevel(int nb_rooms);
     void placeWalls();
     void placePlatforms();
-    gf::Vector2f placePlatform(unsigned int x_start, unsigned int y_start, unsigned int x_dest, unsigned int y_dest, int room_x, int room_y);
+    gf::Vector2f placePlatform(unsigned int x_start, unsigned int y_start, unsigned int x_dest, unsigned int y_dest, int room_x, int room_y, bool ladder);
     
     std::vector<GameObject> listGameObjects;
     unsigned int nb_objects;

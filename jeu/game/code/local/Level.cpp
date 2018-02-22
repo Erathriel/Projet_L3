@@ -60,11 +60,11 @@ void Level::generateLevel(int nb_rooms){
         
         if(x-1 < 0 || rooms(gf::Vector2f(x-1,y)).generated)
             direction[LEFT] = false;
-        if(x+1 > NB_ROOMS_X || rooms(gf::Vector2f(x+1,y)).generated)
+        if(x+1 > NB_ROOMS_X-1 || rooms(gf::Vector2f(x+1,y)).generated)
             direction[RIGHT] = false;
         if(y-1 < 0 || rooms(gf::Vector2f(x,y-1)).generated)
             direction[UP] = false;
-        if(y+1 > NB_ROOMS_Y || rooms(gf::Vector2f(x,y+1)).generated)
+        if(y+1 > NB_ROOMS_Y-1 || rooms(gf::Vector2f(x,y+1)).generated)
             direction[DOWN] = false;
         if(!direction[LEFT] && !direction[RIGHT] && !direction[UP] && !direction[DOWN]){
             //x_end = x; y_end = y;
@@ -176,6 +176,7 @@ void Level::placePlatforms(){
     unsigned int y_dest = 1;
     unsigned int x_room, y_room, x_start, y_start, rand_num;
     bool found = false;
+    bool ladder = false;
     gf::Vector2f vector;
     
     for(x_room = 0; x_room < NB_ROOMS_X && !found; x_room++){
@@ -191,6 +192,8 @@ void Level::placePlatforms(){
     y_start = y_room*SIZE_ROOM_Y + SIZE_ROOM_Y/2 +3;
     while(rooms(gf::Vector2f(x_room,y_room)).next_room != -1){
         //printf("b %i\n", rooms(gf::Vector2f(x_room,y_room)).next_room);
+        if(rooms(gf::Vector2f(x_room,y_room)).next_room != DOWN)
+            ladder = true;
         if(rooms(gf::Vector2f(x_room,y_room)).next_room == UP)
             y_room += -1;
         else if(rooms(gf::Vector2f(x_room,y_room)).next_room == DOWN)
@@ -204,11 +207,11 @@ void Level::placePlatforms(){
         x_dest = x_room*SIZE_ROOM_X + rand_num;
         rand_num = (rand() % (SIZE_ROOM_Y-4)) +2 ;
         y_dest = y_room*SIZE_ROOM_Y + rand_num;
-        
         do{
-            vector = placePlatform(x_start, y_start, x_dest, y_dest, x_room*SIZE_ROOM_X, y_room*SIZE_ROOM_Y);
+            vector = placePlatform(x_start, y_start, x_dest, y_dest, x_room*SIZE_ROOM_X, y_room*SIZE_ROOM_Y, ladder);
             x_start = vector.x;
             y_start = vector.y;
+            ladder = false;
             //printf("%i lol\n", y_start);
         }while( vector != gf::Vector2f(x_dest, y_dest) );
     }
@@ -216,7 +219,7 @@ void Level::placePlatforms(){
     
 }
 
-gf::Vector2f Level::placePlatform(unsigned int x_start, unsigned int y_start, unsigned int x_dest, unsigned int y_dest, int room_x, int room_y){
+gf::Vector2f Level::placePlatform(unsigned int x_start, unsigned int y_start, unsigned int x_dest, unsigned int y_dest, int room_x, int room_y, bool ladder){
     b2PolygonShape box;
     b2FixtureDef fixtureDef;
     fixtureDef.filter.categoryBits = TILE;
@@ -230,6 +233,8 @@ gf::Vector2f Level::placePlatform(unsigned int x_start, unsigned int y_start, un
     int tile_left = 129;
     int tile_right = 159;
     int tile_middle = 158;
+    int tile_ladder = 102;
+    int tile_ladder_up = 103;
     //bool horizontal = false;
     
     //if( abs(x_start - x_dest) >= abs(y_start - y_dest) )
@@ -264,6 +269,25 @@ gf::Vector2f Level::placePlatform(unsigned int x_start, unsigned int y_start, un
     fixtureDef.shape = &box;
     fixture = tileBody->CreateFixture(&fixtureDef);
     fixture->SetUserData( (void*)UD_ONE_WAY_PLATFORM );
+    
+    if(ladder){
+        tileLayer->setTile({x_start+modifier_x, y_start},tile_ladder_up);
+        i = 1;
+        while( tileLayer->getTile({x_start+modifier_x, y_start+i}) == -1
+                && y_start+i < NUMBER_OF_TILES_Y ){
+            tileLayer->setTile({x_start+modifier_x, y_start+i},tile_ladder);
+            i++;
+        }
+        box.SetAsBox( (SIZE_OF_A_TILE)/2.0f, (SIZE_OF_A_TILE*(i-1))/2.0f,
+                      b2Vec2((x_start+modifier_x)*SIZE_OF_A_TILE + SIZE_OF_A_TILE/2.0f, y_start*SIZE_OF_A_TILE+ ((i-1)/2.0f)*SIZE_OF_A_TILE), 0);
+        
+        fixtureDef.filter.categoryBits = LADDER;
+        fixtureDef.isSensor = true;
+        fixtureDef.shape = &box;
+        fixture = tileBody->CreateFixture(&fixtureDef);
+        fixture->SetUserData( (void*)UD_LADDER );
+    }
+    
 
     nx_dest = x_start + modifier_x;
     ny_dest = y_start + modifier_y;
@@ -304,10 +328,9 @@ gf::Vector2f Level::placePlatform(unsigned int x_start, unsigned int y_start, un
         if( (y_start >= y_dest && y_dest >= ny_dest) || (y_start <= y_dest && y_dest <= ny_dest) )
             return gf::Vector2f(x_dest, y_dest);
     
-    //317
-    
     return gf::Vector2f(nx_dest, ny_dest);
     
+    //71
 }
 
 float Level::getdt(){
