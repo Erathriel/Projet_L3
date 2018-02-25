@@ -15,12 +15,13 @@ class Graphics;
 class CarreGraphicsComponent : public GraphicsComponent
 {
 public:
-        void initialize(GameObject& obj, Graphics *graphics){
+        void initialize(GameObject& obj, Graphics *ngraphics){
+            graphics = ngraphics;
             shape = new gf::RectangleShape({obj.m_size,obj.m_size});
             shape->setColor(obj.m_color);
         }
     
-	void update(GameObject& obj, Graphics *graphics){
+	void update(GameObject& obj){
             shape->setPosition(obj.m_position);
             
             graphics->draw(shape);
@@ -29,6 +30,7 @@ public:
 	
 private:
 	gf::RectangleShape *shape;
+        Graphics *graphics;
 };
 
 #endif

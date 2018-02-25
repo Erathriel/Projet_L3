@@ -23,6 +23,7 @@ Level::Level(Graphics* ngraphicsG){
     background.setTexture(*graphicsG->getBGTexture());
     background.setTextureRect({ 0.0f, 0.0f, 1.0f, 0.333f });
     background.scale(8);
+    background.setAnchor(gf::Anchor::Center);
     gf::Vector2f position(0,0);
     background.setPosition(position);
     
@@ -33,6 +34,29 @@ Level::Level(Graphics* ngraphicsG){
 
     generateLevel(9);
     
+}
+
+Level::~Level(){
+    printf("0\n");
+    emptyLevel();
+    printf("1\n");
+    delete tileLayer;
+    printf("1.5\n");
+    delete world;
+    printf("2\n");
+    delete contactListener;
+    printf("3\n");
+}
+
+void Level::emptyLevel(){
+    nb_objects = 0;
+    tileLayer->clear();;
+    world->DestroyBody(tileBody);
+    int i;
+    for(i = 0; i < nb_objects; i++)
+        delete listGameObjects[i];
+    //if(listGameObjects.size() > 0)
+    //    listGameObjects.erase(listGameObjects.begin(), listGameObjects.end()-1);
 }
 
 void Level::generateLevel(int nb_rooms){
@@ -108,7 +132,7 @@ void Level::generateLevel(int nb_rooms){
         
         i++;
     }
-    tileLayer->clear();
+    
     tileBodyDef.type = b2_staticBody;
     tileBodyDef.position.Set(0,0);
     tileBody = world->CreateBody(&tileBodyDef);
@@ -338,21 +362,27 @@ float Level::getdt(){
 }
 
 void Level::update(GameObject& obj){
-    obj.update(*this, *graphicsG);
+    obj.update();
 }
 
 void Level::updateGameObjects(float ndt){
     dt = ndt;
+    gf::Vector2f position;
+    background.setPosition(graphicsG->getViewCenter());
     graphicsG->draw(&background); //rendu du fond en 1er pour qu'il soit au fond
     graphicsG->draw(tileLayer);                 //puis des tuiles
     unsigned int i;
-    for(i = 0; i < listGameObjects.size(); i++)
-        update( listGameObjects.at(i) );            //mise à jour des GameObjects
+    printf("a\n");
+    for(i = 0; i < nb_objects /*listGameObjects.size()*/; i++)
+        //update( listGameObjects.at(i) );            //mise à jour des GameObjects
+        update( *listGameObjects[i] );
+    printf("b\n");
 }
 
 void Level::addGameObject(GameObject *obj){
     obj->initialize(*this, *graphicsG);
-    listGameObjects.push_back(*obj);
+    listGameObjects[nb_objects] = obj;
+    //listGameObjects.push_back(*obj);
     nb_objects++;
 }
 

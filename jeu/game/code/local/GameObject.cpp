@@ -20,20 +20,24 @@ GameObject::GameObject(InputComponent* input, PhysicsComponent* physics, Graphic
 }
 
 void GameObject::initialize(Level& level, Graphics& graphics){
-    //input_->initialize(*this, &level);
+    input_->initialize(*this, &level, &graphics);
     physics_->initialize(*this, &level);
     graphics_->initialize(*this, &graphics);
 }
 
-void GameObject::update(Level& level, Graphics& graphics){
-    input_->update(*this, &level);
+void GameObject::update(){
+    printf("0\n");
+    input_->update(*this);
+    printf("1\n");
     physics_->update(*this);
-    graphics_->update(*this, &graphics);
+    printf("2\n");
+    graphics_->update(*this);
+    printf("3\n");
 }
 
 
-void GameObject::update(Graphics& graphics){
-    graphics_->update(*this, &graphics);
+void GameObject::updateGraphics(){
+    graphics_->update(*this);
 }
 
 GameObject::~GameObject(){

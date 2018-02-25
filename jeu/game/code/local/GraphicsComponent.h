@@ -16,7 +16,7 @@ class GraphicsComponent
 public:
     virtual ~GraphicsComponent() {}
     virtual void initialize(GameObject& obj, Graphics *graphics) = 0;
-    virtual void update(GameObject& obj, Graphics *graphics) = 0;
+    virtual void update(GameObject& obj) = 0;
 };
 
 

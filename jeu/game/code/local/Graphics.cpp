@@ -29,17 +29,29 @@ Graphics::Graphics(gf::Vector2u screenSize){
     }
 }
 
+Graphics::~Graphics(){
+    delete bgTexture;
+    delete tileTexture;
+    delete m_view;
+    delete m_renderer;
+    delete m_window;
+}
+
+void Graphics::resizeView(gf::Vector2u screenSize){
+    m_view->reset({ 0.0f, 0.0f, (float)screenSize.x, (float)screenSize.y });
+}
+
 void Graphics::display(){
     m_renderer->display();
     m_renderer->clear();
 }
 
 void Graphics::draw(gf::RectangleShape* shape){   m_renderer->draw(*shape);      }
-void Graphics::draw(GameObject obj){              obj.update(*this);             }
+void Graphics::draw(GameObject obj){              obj.updateGraphics();             }
 void Graphics::draw(gf::TileLayer* tileLayer){    m_renderer->draw(*tileLayer);  }
 
 void Graphics::update(GameObject obj){
-    obj.update(*this);
+    obj.updateGraphics();
 }
 
 void Graphics::draw(gf::Sprite* spr, gf::RenderStates *states){
@@ -62,6 +74,9 @@ void Graphics::setViewCenter(gf::Vector2f center){
     m_renderer->setView(*m_view);
 }
 
+gf::Vector2f Graphics::getViewCenter(){
+    return m_view->getCenter();
+}
 
 
 

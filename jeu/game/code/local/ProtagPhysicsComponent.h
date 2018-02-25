@@ -74,7 +74,8 @@ public:
         float impulseX = 0.0f;
         float impulseY = 0.0f;
         
-        //if(numFootContactsLadder > 0) printf("lol %i\n", numFootContactsLadder);
+        if(numFootContactsLadder > 0)
+            jumpTime = 1;
         
         if(numFootContacts > 0 && (jumpTimeout < 0 || jumpTimeout > 60)){
             onGround = true;

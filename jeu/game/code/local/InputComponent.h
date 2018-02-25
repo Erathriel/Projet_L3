@@ -21,7 +21,8 @@ class InputComponent
 public:
     gf::Event event;
     virtual ~InputComponent() {}
-    virtual void update(GameObject& obj, Level *level) = 0;
+    virtual void initialize(GameObject& obj, Level *level, Graphics *graphics) = 0;
+    virtual void update(GameObject& obj) = 0;
 };
 
 

@@ -27,9 +27,9 @@ public:
     ~GameObject();
 
     void initialize(Level& level, Graphics& graphics);
-    void update(Level& level, Graphics& graphics);
+    void update();
 
-    void update(Graphics& graphics);
+    void updateGraphics();
 
     void setVelocity(gf::Vector2f velocity);
 

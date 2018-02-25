@@ -21,6 +21,7 @@
 #include "local/EmptyInputComponent.h"
 #include "local/SpriteGraphicsComponents.h"
 #include "local/ProtagGraphicsComponent.h"
+#include "local/BeeGraphicsComponent.h"
 #include "local/DynamicPhysicsComponent.h"
 #include "local/ProtagPhysicsComponent.h"
 
@@ -61,13 +62,13 @@ int main() {
     Level level(&graphicsG);
     
     //un GameObject a besoin de 3 components, input, physics et graphics
-    //EmpyInputComponent* input = new EmpyInputComponent();
+    //EmptyInputComponent* input = new EmptyInputComponent();
     //DynamicPhysicsComponent* physics = new DynamicPhysicsComponent();
     //CarreGraphicsComponent* graphicsComp = new CarreGraphicsComponent();
     
-    //EmpyInputComponent* input2 = new EmpyInputComponent();
-    //DynamicPhysicsComponent* physics2 = new DynamicPhysicsComponent();
-    //SpriteGraphicsComponent* graphicsComp2 = new SpriteGraphicsComponent();
+    EmptyInputComponent* input2 = new EmptyInputComponent();
+    DynamicPhysicsComponent* physics2 = new DynamicPhysicsComponent();
+    BeeGraphicsComponent* graphicsComp2 = new BeeGraphicsComponent();
     
     ProtagInputComponent* input3 = new ProtagInputComponent();
     ProtagPhysicsComponent* physics3 = new ProtagPhysicsComponent();
@@ -80,8 +81,8 @@ int main() {
     //puis on l'ajoute au niveau
     //level.addGameObject(&carre);
     
-    //GameObject carre2(input2, physics2, graphicsComp2, position, 21.0f, gf::Color::Blue);
-    //level.addGameObject(&carre2);
+    GameObject carre2(input2, physics2, graphicsComp2, position, 21.0f, gf::Color::Blue);
+    level.addGameObject(&carre2);
     GameObject sprite1(input3, physics3, graphicsComp3, position, 20.0f, gf::Color::Blue);
     level.addGameObject(&sprite1);
     // game loop
@@ -99,6 +100,8 @@ int main() {
             usleep( timeStepUs - dt );
         //printf("%f\n", timeStepUs- dt );
         
+        //level.~Level();
+        //printf("lol\n");
     }
     
     

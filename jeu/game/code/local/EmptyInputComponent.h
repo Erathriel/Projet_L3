@@ -5,12 +5,16 @@
 #include "InputComponent.h"
 
 
-class EmpyInputComponent : public InputComponent
+class EmptyInputComponent : public InputComponent
 {
 public:
 
-    ~EmpyInputComponent(){}
-    void update(GameObject& gb, Level *level)
+    ~EmptyInputComponent(){}
+    void initialize(GameObject& obj, Level *level, Graphics *graphics){
+        
+    }
+    
+    void update(GameObject& gb)
     {
         
     }

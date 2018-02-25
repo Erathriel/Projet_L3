@@ -2,8 +2,8 @@
 // Created by root on 22/12/17.
 //
 
-#ifndef _SPRITEGRAPHICSC_H
-#define _SPRITEGRAPHICSC_H
+#ifndef _BEEGRAPHICSC_H
+#define _BEEGRAPHICSC_H
 
 
 #include "GameObject.h"
@@ -16,20 +16,19 @@
 
 
 #define SIZE 0.033333333334
-#define PERSONNAGE 19
 
 class Graphics;
 
-class SpriteGraphicsComponent : public GraphicsComponent
+class BeeGraphicsComponent : public GraphicsComponent
 {
 public:
     
-    void initialize(GameObject& obj, Graphics &ngraphics){
-        graphics = &ngraphics;
+    void initialize(GameObject& obj, Graphics *ngraphics){
+        graphics = ngraphics;
         sprite = new gf::Sprite();
         sprite->setAnchor(gf::Anchor::Center);
         sprite->setTexture(*graphics->getTileTexture());
-        sprite->setTextureRect({ (PERSONNAGE*SIZE), (3*SIZE), SIZE, SIZE });
+        sprite->setTextureRect({ (24*SIZE), (12*SIZE), SIZE, SIZE });
         sprite->setPosition(obj.m_position);
         renderState = new gf::RenderStates();
 
@@ -42,15 +41,15 @@ public:
         renderState->transform = matrice;
         graphics->draw(sprite, renderState);
     }
-    ~SpriteGraphicsComponent(){
+    ~BeeGraphicsComponent(){
         delete sprite;
         delete renderState;
     }
 
 private:
+    Graphics *graphics;
     gf::Sprite *sprite;
     gf::RenderStates *renderState;
-    Graphics *graphics;
 };
 
 #endif

@@ -20,7 +20,8 @@ class ProtagGraphicsComponent : public GraphicsComponent
 {
 public:
     
-    void initialize(GameObject& obj, Graphics *graphics){
+    void initialize(GameObject& obj, Graphics *ngraphics){
+        graphics = ngraphics;
         sprite = new gf::Sprite();
         sprite->setAnchor(gf::Anchor::Center);
         sprite->setTexture(*graphics->getTileTexture());
@@ -29,7 +30,7 @@ public:
         renderState = new gf::RenderStates();
     }
 
-    void update(GameObject& obj, Graphics *graphics){
+    void update(GameObject& obj){
         sprite->setPosition(obj.m_position);
         gf::Matrix3f matrice = gf::identityTransform();
         gf::rotate(matrice, obj.m_angle, obj.m_position);
@@ -46,6 +47,7 @@ public:
 private:
     gf::Sprite *sprite;
     gf::RenderStates *renderState;
+    Graphics *graphics;
 };
 
 #endif

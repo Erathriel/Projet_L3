@@ -10,13 +10,19 @@ class ProtagInputComponent : public InputComponent
 public:
 
     ~ProtagInputComponent(){}
-    void update(GameObject& gb, Level *level)
+    void initialize(GameObject& obj, Level *nlevel, Graphics *ngraphics){
+        level = nlevel;
+        graphics = ngraphics;
+    }
+    void update(GameObject& gb)
     {
-        
         while (level->getWindow()->pollEvent(event)) {
             switch (event.type) {
                 case gf::EventType::Closed:
                     exit(0);
+                    break;
+                case gf::EventType::Resized:
+                    graphics->resizeView(event.size);
                     break;
                 case gf::EventType::KeyPressed:
                     switch (event.key.keycode) {
@@ -76,6 +82,8 @@ public:
     }
 private:
     gf::Event event;
+    Level *level;
+    Graphics *graphics;
     
     bool up_pressed;
     bool down_pressed;

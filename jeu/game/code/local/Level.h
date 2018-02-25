@@ -50,27 +50,31 @@ struct roomstruct{
 class Level {
 public:
     Level(Graphics* ngraphicsG);
+    ~Level();
     gf::Window* getWindow();
     void updateGameObjects(float ndt);
     void addGameObject(GameObject* obj);;
     float getdt();
+    void emptyLevel();
     
     b2World *world;
 private:
     float dt;
     void update(GameObject& obj);
     void generateLevel(int nb_rooms);
+    
     void placeWalls();
     void placePlatforms();
     gf::Vector2f placePlatform(unsigned int x_start, unsigned int y_start, unsigned int x_dest, unsigned int y_dest, int room_x, int room_y, bool ladder);
     
-    std::vector<GameObject> listGameObjects;
+    //std::vector<GameObject> listGameObjects;
+    GameObject* listGameObjects[255];
     unsigned int nb_objects;
     Graphics* graphicsG;
     
     ContactListener *contactListener;
     gf::TileLayer *tileLayer;
-    b2Body* tilePhysicBody;
+    //b2Body* tilePhysicBody;
     gf::Sprite background;
     //gf::RenderStates *bgRenderState;
     b2Vec2 gravity;
