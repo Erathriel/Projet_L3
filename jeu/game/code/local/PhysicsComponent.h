@@ -12,6 +12,7 @@
 
 extern int numFootContacts;    //nombre de contacts avec le sol du protag
 extern int numFootContactsLadder;
+extern bool touchedExit;
 
 enum{   //noms des objets pour les collisions
     ENT_DEFAULT, ENT_PROTAG
@@ -28,7 +29,7 @@ enum _entityCategory{   //catégories pour les filtres de collision
 };
 
 enum _user_date{   //user_data pour les collisions
-    UD_DEFAULT, UD_FOOT_SENSOR, UD_ONE_WAY_PLATFORM, UD_LADDER
+    UD_DEFAULT, UD_FOOT_SENSOR, UD_ONE_WAY_PLATFORM, UD_LADDER, UD_EXIT
 };
 
 class PhysicsComponent
@@ -56,12 +57,16 @@ class ContactListener : public b2ContactListener{
               numFootContacts++;
           if ( (intptr_t)fixtureUserData == UD_LADDER )
               numFootContactsLadder++;
+          if ( (intptr_t)fixtureUserData == UD_EXIT )
+              touchedExit++;
           //check if fixture B was the foot sensor
           fixtureUserData = contact->GetFixtureB()->GetUserData();
           if ( (intptr_t)fixtureUserData == UD_FOOT_SENSOR )
               numFootContacts++;
           if ( (intptr_t)fixtureUserData == UD_LADDER )
               numFootContactsLadder++;
+          if ( (intptr_t)fixtureUserData == UD_EXIT )
+              touchedExit++;
          
          
             b2Fixture* fixtureA = contact->GetFixtureA();

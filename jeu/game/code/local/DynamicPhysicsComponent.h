@@ -15,7 +15,9 @@ class DynamicPhysicsComponent  : public PhysicsComponent
 {
 public:
     ~DynamicPhysicsComponent() {
+        printf("D0\n");
         level->world->DestroyBody(body);
+        printf("D1\n");
     }
     
     void initialize(GameObject& obj, Level *nlevel) {
@@ -23,6 +25,7 @@ public:
         level = nlevel;
         bodyDef.type = b2_dynamicBody;
         bodyDef.position.Set(obj.m_position.x, obj.m_position.y);
+        bodyDef.fixedRotation = true;
         body = level->world->CreateBody(&bodyDef);
 
         // Define another box shape for our dynamic body.
@@ -47,10 +50,24 @@ public:
         
         obj.m_position.x = body->GetPosition().x;
         obj.m_position.y = body->GetPosition().y;
-        obj.m_angle = body->GetAngle();
-        //body->ApplyLinearImpulse( b2Vec2(obj.m_velocity.x,obj.m_velocity.y), body->GetWorldCenter(), false );
-        //obj.m_position += obj.m_velocity;
-        //obj.m_velocity = {0.0f,0.0f};
+        
+        float impulseX = 0.0f;
+        float impulseY = 0.0f;
+        
+        
+        b2Vec2 vel = body->GetLinearVelocity();
+        float velChange = obj.m_velocity.x - vel.x;
+
+        impulseX = body->GetMass() * velChange; //disregard time factor
+
+        velChange = obj.m_velocity.y - vel.y;
+        impulseY = body->GetMass() * velChange;
+        
+        if(impulseX != 0.0f || impulseY != 0.0f)
+            body->ApplyLinearImpulse( b2Vec2(impulseX, impulseY), body->GetWorldCenter(), true );
+        
+        obj.m_velocity = {0.0f,0.0f};
+        
         
     };
     

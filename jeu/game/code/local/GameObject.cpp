@@ -26,13 +26,13 @@ void GameObject::initialize(Level& level, Graphics& graphics){
 }
 
 void GameObject::update(){
-    printf("0\n");
+    //printf("0\n");
     input_->update(*this);
-    printf("1\n");
+    //printf("1\n");
     physics_->update(*this);
-    printf("2\n");
+    //printf("2\n");
     graphics_->update(*this);
-    printf("3\n");
+    //printf("3\n");
 }
 
 
@@ -41,7 +41,11 @@ void GameObject::updateGraphics(){
 }
 
 GameObject::~GameObject(){
+    printf("a\n");
     delete input_;
+    printf("b\n");
     delete physics_;
+    printf("c\n");
     delete graphics_;
+    printf("d\n");
 }

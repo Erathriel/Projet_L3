@@ -14,6 +14,7 @@
 
 extern int numFootContacts;
 extern int numFootContactsLadder;
+extern bool touchedExit;
 
 class Level;
 
@@ -21,13 +22,17 @@ class ProtagPhysicsComponent  : public PhysicsComponent
 {
 public:
     ~ProtagPhysicsComponent() {
+        printf("P0\n");
         level->world->DestroyBody(body);
-        delete fixtureFS;
+        printf("P1\n");
+        //delete fixtureFS;
+        printf("P2\n");
     }
     
     void initialize(GameObject& obj, Level *nlevel) {
         numFootContacts = 0;
         numFootContactsLadder = 0;
+        touchedExit = false;
         level = nlevel;
         
         bodyDef.type = b2_dynamicBody;
@@ -67,6 +72,11 @@ public:
     }
     
     void update(GameObject& obj){
+        
+        if(touchedExit){
+            level->endLevel();
+            touchedExit = false;
+        }
         
         obj.m_position.x = body->GetPosition().x;
         obj.m_position.y = body->GetPosition().y;

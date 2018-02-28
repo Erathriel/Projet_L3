@@ -55,13 +55,16 @@ public:
     void updateGameObjects(float ndt);
     void addGameObject(GameObject* obj);;
     float getdt();
-    void emptyLevel();
+    
+    void endLevel();
     
     b2World *world;
 private:
     float dt;
     void update(GameObject& obj);
     void generateLevel(int nb_rooms);
+    void emptyLevel();
+    void newLevel();
     
     void placeWalls();
     void placePlatforms();
@@ -80,6 +83,7 @@ private:
     b2Vec2 gravity;
     b2Body *tileBody;
     b2BodyDef tileBodyDef;
+    GameObject *protag;
     
     gf::Array2D<roomstruct> rooms;
 };

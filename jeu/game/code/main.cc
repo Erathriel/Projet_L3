@@ -36,6 +36,19 @@
 
 int numFootContacts;
 int numFootContactsLadder;
+bool touchedExit;
+
+GameObject* createProtag(){
+    gf::Vector2f position(NB_ROOMS_X/2 * SIZE_ROOM_X_px + SIZE_ROOM_X_px/2,NB_ROOMS_Y/2 * SIZE_ROOM_Y_px + SIZE_ROOM_X_px/2);
+    
+    return new GameObject(new ProtagInputComponent(),
+                          new ProtagPhysicsComponent(),
+                          new ProtagGraphicsComponent(),
+                          position, 20.0f, gf::Color::Blue
+                         );
+}
+
+
 
 
 int main() {
@@ -70,9 +83,6 @@ int main() {
     DynamicPhysicsComponent* physics2 = new DynamicPhysicsComponent();
     BeeGraphicsComponent* graphicsComp2 = new BeeGraphicsComponent();
     
-    ProtagInputComponent* input3 = new ProtagInputComponent();
-    ProtagPhysicsComponent* physics3 = new ProtagPhysicsComponent();
-    ProtagGraphicsComponent* graphicsComp3 = new ProtagGraphicsComponent();
     
     gf::Vector2f position(NB_ROOMS_X/2 * SIZE_ROOM_X_px + SIZE_ROOM_X_px/2,NB_ROOMS_Y/2 * SIZE_ROOM_Y_px + SIZE_ROOM_X_px/2);
     
@@ -81,10 +91,9 @@ int main() {
     //puis on l'ajoute au niveau
     //level.addGameObject(&carre);
     
+    
     GameObject carre2(input2, physics2, graphicsComp2, position, 21.0f, gf::Color::Blue);
     level.addGameObject(&carre2);
-    GameObject sprite1(input3, physics3, graphicsComp3, position, 20.0f, gf::Color::Blue);
-    level.addGameObject(&sprite1);
     // game loop
     while (true) {
         float dt = clock.restart().asSeconds();
@@ -107,3 +116,5 @@ int main() {
     
     return 0;
 }
+
+

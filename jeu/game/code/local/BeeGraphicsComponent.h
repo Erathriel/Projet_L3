@@ -28,7 +28,7 @@ public:
         sprite = new gf::Sprite();
         sprite->setAnchor(gf::Anchor::Center);
         sprite->setTexture(*graphics->getTileTexture());
-        sprite->setTextureRect({ (24*SIZE), (12*SIZE), SIZE, SIZE });
+        sprite->setTextureRect({ (24*SIZE), (11*SIZE), SIZE, SIZE });
         sprite->setPosition(obj.m_position);
         renderState = new gf::RenderStates();
 

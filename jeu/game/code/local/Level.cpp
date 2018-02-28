@@ -1,6 +1,8 @@
 
 #include "Level.h"
 
+GameObject* createProtag();
+
 Level::Level(Graphics* ngraphicsG){
     nb_objects = 0;
     graphicsG = ngraphicsG;
@@ -32,7 +34,7 @@ Level::Level(Graphics* ngraphicsG){
 //     gf::scale(matrice, {8,8});                      //8 fois plus grand
 //     bgRenderState->transform = matrice;
 
-    generateLevel(9);
+    newLevel();
     
 }
 
@@ -48,13 +50,26 @@ Level::~Level(){
     printf("3\n");
 }
 
+void Level::newLevel(){
+    protag = createProtag();
+    addGameObject(protag);
+    
+    generateLevel(9);
+}
+
+void Level::endLevel(){
+    emptyLevel();
+    newLevel();
+    printf("0\n");
+}
+
 void Level::emptyLevel(){
-    nb_objects = 0;
     tileLayer->clear();;
     world->DestroyBody(tileBody);
     int i;
     for(i = 0; i < nb_objects; i++)
-        delete listGameObjects[i];
+        //delete listGameObjects[i];
+    nb_objects = 0;
     //if(listGameObjects.size() > 0)
     //    listGameObjects.erase(listGameObjects.begin(), listGameObjects.end()-1);
 }
@@ -75,7 +90,7 @@ void Level::generateLevel(int nb_rooms){
     
     rooms(gf::Vector2f(x,y)).generated = true;
     rooms(gf::Vector2f(x,y)).number = 0;
-    i = 0;
+    i = 0;;
     while(i < nb_rooms){
         //printf("%i  %i\n", x, y);
         
@@ -132,14 +147,11 @@ void Level::generateLevel(int nb_rooms){
         
         i++;
     }
-    
     tileBodyDef.type = b2_staticBody;
     tileBodyDef.position.Set(0,0);
     tileBody = world->CreateBody(&tileBodyDef);
-    
     placeWalls();
     placePlatforms();
-    
 }
 
 
@@ -196,6 +208,12 @@ void Level::placeWalls(){
 }
 
 void Level::placePlatforms(){
+    b2PolygonShape box;
+    b2FixtureDef fixtureDef;
+    fixtureDef.filter.categoryBits = TILE;
+    fixtureDef.filter.maskBits = PROTAG;
+    fixtureDef.density = 0.0f;
+    b2Fixture* fixture;
     unsigned int x_dest = 1;
     unsigned int y_dest = 1;
     unsigned int x_room, y_room, x_start, y_start, rand_num;
@@ -239,7 +257,13 @@ void Level::placePlatforms(){
             //printf("%i lol\n", y_start);
         }while( vector != gf::Vector2f(x_dest, y_dest) );
     }
+    
     tileLayer->setTile({x_dest, y_dest-1},168);
+    
+    box.SetAsBox( (SIZE_OF_A_TILE)/1.5f, (SIZE_OF_A_TILE)/1.5f, b2Vec2((x_dest)*SIZE_OF_A_TILE + SIZE_OF_A_TILE/2.0f, y_dest*SIZE_OF_A_TILE- SIZE_OF_A_TILE/2.0f), 0);
+    fixtureDef.shape = &box;
+    fixture = tileBody->CreateFixture(&fixtureDef);
+    fixture->SetUserData( (void*)UD_EXIT );
     
 }
 
@@ -372,11 +396,9 @@ void Level::updateGameObjects(float ndt){
     graphicsG->draw(&background); //rendu du fond en 1er pour qu'il soit au fond
     graphicsG->draw(tileLayer);                 //puis des tuiles
     unsigned int i;
-    printf("a\n");
     for(i = 0; i < nb_objects /*listGameObjects.size()*/; i++)
         //update( listGameObjects.at(i) );            //mise à jour des GameObjects
         update( *listGameObjects[i] );
-    printf("b\n");
 }
 
 void Level::addGameObject(GameObject *obj){
